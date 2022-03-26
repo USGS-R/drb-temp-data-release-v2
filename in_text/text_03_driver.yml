@@ -1,9 +1,10 @@
 title: >-
-  XXtitle: XXsubtitle
-
+  Data release to support multiple modeling efforts in the Delaware River Basin: Driver data files 
+  
 abstract: >-
-  XX [Modify] This dataset includes model inputs including gridded weather data, a stream network distance matrix,
+  This data release includes model inputs including gridded meterological data, a stream network distance matrix,
   stream reach attributes and metadata, and reservoir characteristics.
+  
 cross-cites:
   -
     authors: ['Steven L. Markstrom']

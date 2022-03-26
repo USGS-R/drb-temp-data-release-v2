@@ -2,7 +2,7 @@
 include:
   - 1_spatial.yml
   - 2_observations.yml
-  - 4_inputs.yml
+  - 3_driver.yml
 
 packages:
   - yaml
@@ -132,15 +132,15 @@ targets:
   # ------ SB IDs --------
 
   sbid_00_parent:
-    command: c(I('XX'))
+    command: c(I('623e4418d34e915b67d7dd78'))
 
   sbid_01_spatial:
-    command: c(I('XX'))
+    command: c(I('623e54c4d34e915b67d83580'))
 
   sbid_02_observations:
-    command: c(I('XX'))
+    command: c(I('623e550ad34e915b67d8366e'))
 
-  sbid_04_inputs:
-    command: c(I('XX'))
+  sbid_03_driver:
+    command: c(I('623e5587d34e915b67d83806'))
 
 

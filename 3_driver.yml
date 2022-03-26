@@ -1,4 +1,4 @@
-target_default: 4_inputs
+target_default: 3_driver
 
 include:
 
@@ -15,11 +15,13 @@ sources:
 targets:
   4_inputs:
     depends:
-      - out_data/distance_matrix.csv
-      - out_data/reach_attributes.csv
-      - out_data/reservoir_features.csv
-      - out_data/sntemp_inputs_outputs.zip
-      - out_data/reservoir_interpolated_daily_water_budget_components.csv
+      # - out_data/distance_matrix.csv
+      # - out_data/reach_attributes.csv
+      # - out_data/reservoir_features.csv
+      # - out_data/sntemp_inputs_outputs.zip
+      # - out_data/reservoir_interpolated_daily_water_budget_components.csv
+        - out_data/gridmet_drb_agg.zip
+      
 
   #weather_drivers:
    # command: extract_weather_drivers()
