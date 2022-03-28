@@ -26,14 +26,14 @@ sources:
 targets:
   all:
     depends:
-      - 00_parent_sb_xml
-      - 01_spatial_sb_xml
-      - 01_spatial_sb_shp
-      - 02_observations_sb_data
-      - 02_observations_sb_xml
-      - 04_inputs_sb_xml
-      - 04_inputs_sb_data
-      - 04_inputs_sb_meteo
+      #- 00_parent_sb_xml
+      #- 01_spatial_sb_xml
+      #- 01_spatial_sb_shp
+      #- 02_observations_sb_data
+      #- 02_observations_sb_xml
+      #- 04_inputs_sb_xml
+      #- 04_inputs_sb_data
+      #- 04_inputs_sb_meteo
 
 # in case you want to mess w/ the xml alone:
   out_xml/00_parent.xml:
@@ -106,16 +106,14 @@ targets:
 
   04_inputs_sb_data:
     command: sb_replace_files(sbid_04_inputs,
-      "out_data/distance_matrix_drb.csv",
-      "out_data/distance_matrix_lordville.csv",
-      "out_data/reservoir_features_drb.csv",
-      "out_data/reservoir_features_lordville.csv",
-      "out_data/sntemp_inputs_outputs_drb.zip",
-      "out_data/sntemp_inputs_outputs_lordville.zip",
-      "out_data/reach_attributes_drb.csv",
-      "out_data/reach_attributes_lordville.csv",
-      "out_data/reservoir_interpolated_daily_water_budget_components.csv",
-      "out_data/noaagefs_meteo_files.zip")
+      # "out_data/distance_matrix_drb.csv",
+      # "out_data/reservoir_features_drb.csv",
+      # "out_data/sntemp_inputs_outputs_drb.zip",
+      # "out_data/reach_attributes_drb.csv",
+      # "out_data/reservoir_interpolated_daily_water_budget_components.csv",
+      # "out_data/noaagefs_meteo_files.zip",
+      # "out_data/gridMET.zip"
+      )
   
   out_xml/04_inputs_fgdc_metadata.xml:
     command: render(filename = target_name,
