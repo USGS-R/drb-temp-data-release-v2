@@ -1,8 +1,7 @@
-
 include:
-  - 1_spatial.yml
+  #- 1_spatial.yml
   - 2_observations.yml
-  - 4_inputs.yml
+  #- 4_inputs.yml
 
 packages:
   - yaml
@@ -29,83 +28,72 @@ targets:
       #- 00_parent_sb_xml
       #- 01_spatial_sb_xml
       #- 01_spatial_sb_shp
-      #- 02_observations_sb_data
+      - 02_observations_sb_data
       #- 02_observations_sb_xml
       #- 04_inputs_sb_xml
       #- 04_inputs_sb_data
       #- 04_inputs_sb_meteo
 
 # in case you want to mess w/ the xml alone:
-  out_xml/00_parent.xml:
-    command: render(filename = target_name,
-      "in_text/text_SHARED.yml",
-      "in_text/text_00_parent.yml",
-      river_metadata2)
-
-  00_parent_sb_xml:
-    command: sb_render_post_xml(sbid_00_parent,
-      xml_file = I('00_parent.xml'),
-      "in_text/text_SHARED.yml",
-      "in_text/text_00_parent.yml",
-      river_metadata2)
-
-  01_spatial_sb_xml:
-    command: sb_render_post_xml(sbid_01_spatial,
-      xml_file = I('01_spatial.xml'),
-      "in_text/text_SHARED.yml",
-      "in_text/text_01_spatial.yml",
-      river_metadata2)
-      
-  out_xml/01_spatial_fgdc_metadata.xml:
-    command: render(filename = target_name,
-      "in_text/text_SHARED.yml",
-      "in_text/text_01_spatial.yml",
-      river_metadata2)
-
-  01_spatial_sb_shp:
-    command: sb_replace_files(sbid_01_spatial,
-      "out_data/study_stream_reaches.zip",
-      "out_data/study_reservoirs.zip",
-      "out_data/study_monitoring_sites.zip")
-
-  02_observations_sb_xml:
-    command: sb_render_post_xml(sbid_02_observations,
-      xml_file = I('02_observations.xml'),
-      "in_text/text_SHARED.yml",
-      "in_text/text_02_observations.yml",
-      river_metadata2)
-      
-  out_xml/02_observations_fgdc_metadata.xml:
-    command: render(filename = target_name,
-      "in_text/text_SHARED.yml",
-      "in_text/text_02_observations.yml",
-      river_metadata2)
+  # out_xml/00_parent.xml:
+  #   command: render(filename = target_name,
+  #     "in_text/text_SHARED.yml",
+  #     "in_text/text_00_parent.yml",
+  #     river_metadata2)
+  # 
+  # 00_parent_sb_xml:
+  #   command: sb_render_post_xml(sbid_00_parent,
+  #     xml_file = I('00_parent.xml'),
+  #     "in_text/text_SHARED.yml",
+  #     "in_text/text_00_parent.yml",
+  #     river_metadata2)
+  # 
+  # 01_spatial_sb_xml:
+  #   command: sb_render_post_xml(sbid_01_spatial,
+  #     xml_file = I('01_spatial.xml'),
+  #     "in_text/text_SHARED.yml",
+  #     "in_text/text_01_spatial.yml",
+  #     river_metadata2)
+  #     
+  # out_xml/01_spatial_fgdc_metadata.xml:
+  #   command: render(filename = target_name,
+  #     "in_text/text_SHARED.yml",
+  #     "in_text/text_01_spatial.yml",
+  #     river_metadata2)
+  # 
+  # 01_spatial_sb_shp:
+  #   command: sb_replace_files(sbid_01_spatial,
+  #     "out_data/study_stream_reaches.zip",
+  #     "out_data/study_reservoirs.zip",
+  #     "out_data/study_monitoring_sites.zip")
+  # 
+  # 02_observations_sb_xml:
+  #   command: sb_render_post_xml(sbid_02_observations,
+  #     xml_file = I('02_observations.xml'),
+  #     "in_text/text_SHARED.yml",
+  #     "in_text/text_02_observations.yml",
+  #     river_metadata2)
+  #     
+  # out_xml/02_observations_fgdc_metadata.xml:
+  #   command: render(filename = target_name,
+  #     "in_text/text_SHARED.yml",
+  #     "in_text/text_02_observations.yml",
+  #     river_metadata2)
 
   02_observations_sb_data:
-    command: sb_replace_files(sbid_02_observations,
-      "out_data/temperature_observations_drb.zip",
-      "out_data/temperature_observations_lordville.zip",
-      "out_data/temperature_observations_forecast_sites.zip",
-      "out_data/flow_observations_drb.zip",
-      "out_data/flow_observations_lordville.zip",
-      "out_data/flow_observations_forecast_sites.zip",
-      "out_data/reservoir_releases_total.csv",
-      "out_data/reservoir_releases_by_type_drb.csv",
-      "out_data/reservoir_releases_by_type_lordville.csv",
-      "out_data/reservoir_realsat_monthly_surface_area.csv",
-      "out_data/reservoir_io_obs.csv",
+    command: sb_replace_files(
+      sbid_02_observations,
       "out_data/reservoir_temp_obs.csv",
       "out_data/reservoir_level_obs.csv")
 
-  04_inputs_sb_xml:
-    command: sb_render_post_xml(sbid_04_inputs,
-      xml_file = I('04_inputs.xml'),
-      "in_text/text_SHARED.yml",
-      "in_text/text_04_inputs.yml",
-      river_metadata2)
-
-  04_inputs_sb_data:
-    command: sb_replace_files(sbid_04_inputs,
+  # 04_inputs_sb_xml:
+  #   command: sb_render_post_xml(sbid_04_inputs,
+  #     xml_file = I('04_inputs.xml'),
+  #     "in_text/text_SHARED.yml",
+  #     "in_text/text_04_inputs.yml",
+  #     river_metadata2)
+      
+# 4 inputs will include
       # "out_data/distance_matrix_drb.csv",
       # "out_data/reservoir_features_drb.csv",
       # "out_data/sntemp_inputs_outputs_drb.zip",
@@ -113,32 +101,33 @@ targets:
       # "out_data/reservoir_interpolated_daily_water_budget_components.csv",
       # "out_data/noaagefs_meteo_files.zip",
       # "out_data/gridMET.zip"
-      )
-  
-  out_xml/04_inputs_fgdc_metadata.xml:
-    command: render(filename = target_name,
-      "in_text/text_SHARED.yml",
-      "in_text/text_04_inputs.yml",
-      river_metadata2)
-
-  04_inputs_sb_meteo:
-    command: sb_replace_files(sbid_04_inputs,
-      "in_data/NLDAS_time[0.367700]_x[397]_y[136].csv",
-      "in_data/NLDAS_time[0.367700]_x[401]_y[136].csv",
-      file_hash = 'log/reservoir_meteo_files.yml')
+  # 04_inputs_sb_data:
+  #   command: sb_replace_files(sbid_04_inputs)
+  # 
+  # out_xml/04_inputs_fgdc_metadata.xml:
+  #   command: render(filename = target_name,
+  #     "in_text/text_SHARED.yml",
+  #     "in_text/text_04_inputs.yml",
+  #     river_metadata2)
+  # 
+  # 04_inputs_sb_meteo:
+  #   command: sb_replace_files(sbid_04_inputs,
+  #     "in_data/NLDAS_time[0.367700]_x[397]_y[136].csv",
+  #     "in_data/NLDAS_time[0.367700]_x[401]_y[136].csv",
+  #     file_hash = 'log/reservoir_meteo_files.yml')
 
   # ------ SB IDs --------
 
   sbid_00_parent:
-    command: c(I('XX'))
+    command: c(I('623e4418d34e915b67d7dd78'))
 
   sbid_01_spatial:
-    command: c(I('XX'))
+    command: c(I('623e54c4d34e915b67d83580'))
 
   sbid_02_observations:
-    command: c(I('XX'))
+    command: c(I('623e550ad34e915b67d8366e'))
 
-  sbid_04_inputs:
-    command: c(I('XX'))
+  sbid_03_driver:
+    command: c(I('623e5587d34e915b67d83806'))
 
 

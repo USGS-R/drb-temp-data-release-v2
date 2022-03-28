@@ -16,6 +16,12 @@ targets:
       #- out_data/flow_observations_drb.zip
       - out_data/reservoir_level_obs.csv
       - out_data/reservoir_temp_obs.csv
+      
+  # files in this section are local builds
+  # in order to fetch them appropriately,
+  # fork and clone the repos lake-temperature-model-prep
+  # and delaware-model-prep into the same folder that 
+  # this project is cloned to (so the relative paths work below)
 
   ##### Transfer of files from delaware-model-prep #####
   # daily flow and temperature data
@@ -29,7 +35,7 @@ targets:
     command: zip_obs(out_file = target_name, in_file = '../delaware-model-prep/9_collaborator_data/umn/obs_flow_full.csv')
 
   # reservoir observations
-    ##### Transfer and filtering of files of file from lake-temperature-model-prep #####
+  ##### Transfer and filtering of files of file from lake-temperature-model-prep #####
   reservoir_modeling_site_ids:
     command: c(I(c(
       Pepacton = 'nhdhr_151957878',
