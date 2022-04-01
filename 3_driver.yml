@@ -59,8 +59,8 @@ targets:
   # out_data/reservoir_interpolated_daily_water_budget_components.csv:
   #   command: file.copy(from = '../delaware-model-prep/2_observations/out/interpolated_daily_reservoir_water_budget_components.csv', to = target_name)
 
-  out_data/gridmet_drb_agg_v2.zip:
-    command: file.copy(from = '../delaware-model-prep/3_driver/gridmet_drb_agg_v2.zip')
+  out_data/gridmet_drb_agg_v2.csv.zip:
+    command: file.copy(from = '/Users/msleckman/USGS/GS-WMA-IWP-PUMP/Data-driven Salinity/Inland Salinity/drb_gridmet_tools/data/OutputFolder/gridmet_drb_agg_v2.csv.zip', to = target_name)
     
     
     

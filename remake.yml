@@ -33,9 +33,9 @@ targets:
       # - 02_observations_sb_xml
       # - 03_driver_sb_xml
       - 03_driver_sb_data
-      - 03_driver_sb_meteo
+      # - 03_driver_sb_meteo
 
-# # in case you want to mess w/ the xml alone:
+##  in case you want to mess w/ the xml alone:
 #   out_xml/00_parent.xml:
 #     command: render(filename = target_name,
 #       "in_text/text_SHARED.yml",
@@ -102,7 +102,7 @@ targets:
   03_driver_sb_data:
     command: sb_replace_files(
       sbid_03_driver,
-    'in_data/gridmet_drb_agg_v2.zip')
+      'out_data/gridmet_drb_agg_v2.csv.zip')
 
   # 03_driver_sb_xml:
   #   command: sb_render_post_xml(sbid_03_driver,
