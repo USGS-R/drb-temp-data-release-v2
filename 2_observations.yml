@@ -74,3 +74,9 @@ targets:
       nwis_levels = 'out_data/reservoir_level_nwis.csv',
       nyc_levels = 'out_data/reservoir_level_nycdep.rds',
       hist_levels = 'out_data/reservoir_level_usgs_historical.rds')
+      
+  out_data/reservoir_releases_by_type.csv:
+    command: file.copy('../delaware-model-prep/2_observations/out/reservoir_releases_by_type_drb.csv', to = target_name)
+    
+  out_data/reservoir_diversions.csv:
+    command: file.copy('../delaware-model-prep/2_observations/out/reservoir_diversions.csv', to = target_name)

@@ -20,7 +20,7 @@ packages:
 
 sources:
   #- src/spatial_utils.R
-  - src/sb_functions.R
+  - src/sb_utils.R
 
 targets:
   all:
@@ -28,7 +28,7 @@ targets:
       #- 00_parent_sb_xml
       #- 01_spatial_sb_xml
       #- 01_spatial_sb_shp
-      - 02_observations_sb_data
+      - log/02_observations_sb_data.csv
       #- 02_observations_sb_xml
       #- 04_inputs_sb_xml
       #- 04_inputs_sb_data
@@ -80,11 +80,15 @@ targets:
   #     "in_text/text_02_observations.yml",
   #     river_metadata2)
 
-  02_observations_sb_data:
+  log/02_observations_sb_data.csv:
     command: sb_replace_files(
-      sbid_02_observations,
+      filename = target_name, 
+      sb_id = sbid_02_observations,
+      sources = 'src/sb_utils.R',
       "out_data/reservoir_temp_obs.csv",
-      "out_data/reservoir_level_obs.csv")
+      "out_data/reservoir_level_obs.csv",
+      'out_data/reservoir_releases_by_type.csv',
+      'out_data/reservoir_diversions.csv')
 
   # 04_inputs_sb_xml:
   #   command: sb_render_post_xml(sbid_04_inputs,
