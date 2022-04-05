@@ -20,7 +20,7 @@ targets:
       # - out_data/reservoir_features.csv
       # - out_data/sntemp_inputs_outputs.zip
       # - out_data/reservoir_interpolated_daily_water_budget_components.csv
-        - out_data/gridmet_drb_agg_v2.zip
+        - out_data/gridmet_drb_agg_v2.csv.zip
       
 
   #weather_drivers:
