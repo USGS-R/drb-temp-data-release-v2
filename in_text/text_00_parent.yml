@@ -5,6 +5,7 @@ title: >-
 abstract: >-
   <p> This data release contains spatial, observational, and driver data used as inputs for multiple XX modeling efforts in the Delaware River Basin (DRB).  
   The timeframe of the datasets range between XX and XX. 
+  **Additional lines of text**
 
   <ol>
   <li><a href="https://www.sciencebase.gov/catalog/item/623e54c4d34e915b67d83580"> 1_spatial </a> - Spatial data used for modeling efforts in the Delaware River Basin</li>
