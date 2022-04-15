@@ -2,8 +2,9 @@ title: >-
   Data release to support multiple modeling efforts in the Delaware River Basin: Driver data files XX
   
 abstract: >-
-  XX This data release includes model inputs including gridded meterological data, a stream network distance matrix,
-  stream reach attributes and metadata, and reservoir characteristics.
+  Meteorological data serve as data driving for modeling and freshwater temperature in the Delaware River Basin.  
+  Meteorological driver data pulled from gridMET climatologylab and NOAA GEFS [model] are processed and extracted to server as model inputs for temperature forcasting.
+  
   
 cross-cites:
   -
