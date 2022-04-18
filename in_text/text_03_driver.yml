@@ -1,9 +1,18 @@
 title: >-
-  XXtitle: XXsubtitle
-
+  Data release to support multiple modeling efforts in the Delaware River Basin: Driver data files XX
+  
+  TEST
+  
 abstract: >-
-  XX [Modify] This dataset includes model inputs including gridded weather data, a stream network distance matrix,
-  stream reach attributes and metadata, and reservoir characteristics.
+  Meteorological data (Met data) serve as data driving for modeling and freshwater temperature in the Delaware River Basin.  
+  Meteorological driver data pulled from gridMET climatologylab and NOAA GEFS [model] are processed and extracted to server as model inputs for temperature forcasting.
+  
+  GridMet:
+  The Meterological data variables used include temperature min (tmin) and max (tmax), short wave radiation  (srad), wind speed (vs), precipitation amount (pr), relative humidity min (rmin), relative humidity max (rmax) and specific humidity (sp).
+  Derived from 4 km2 grids. 
+  Time frame: 1979-2022, collected as daily time steps. 
+  Met data was pulled from and aggregated the PRMS catchments (NHM catchment polygons) through an area wegihted mean. 
+
 cross-cites:
   -
     authors: ['Steven L. Markstrom']
