@@ -67,7 +67,17 @@ targets:
   #     "out_data/study_stream_reaches.zip",
   #     "out_data/study_reservoirs.zip",
   #     "out_data/study_monitoring_sites.zip")
-  # 
+
+  log/02_observations_sb_data.csv:
+    command: sb_replace_files(
+      filename = target_name,
+      sb_id = sbid_02_observations,
+      sources = 'src/sb_utils.R',
+      "out_data/reservoir_temp_obs.csv",
+      "out_data/reservoir_level_obs.csv",
+      'out_data/reservoir_releases_by_type.csv',
+      'out_data/reservoir_diversions.csv')
+
   # 02_observations_sb_xml:
   #   command: sb_render_post_xml(sbid_02_observations,
   #     xml_file = I('02_observations.xml'),
@@ -81,15 +91,7 @@ targets:
   #     "in_text/text_02_observations.yml",
   #     river_metadata2)
   
-  log/02_observations_sb_data.csv:
-    command: sb_replace_files(
-      filename = target_name,
-      sb_id = sbid_02_observations,
-      sources = 'src/sb_utils.R',
-      "out_data/reservoir_temp_obs.csv",
-      "out_data/reservoir_level_obs.csv",
-      'out_data/reservoir_releases_by_type.csv',
-      'out_data/reservoir_diversions.csv')
+
   # 
   # OLD - 02_observations_sb_data - 
   # 02_observations_sb_data:
