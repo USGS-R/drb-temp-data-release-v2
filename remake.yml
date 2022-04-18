@@ -1,9 +1,8 @@
-
 include:
 #  - 1_spatial.yml
-#  - 2_observations.yml
+  - 2_observations.yml
   - 3_driver.yml
-
+  
 packages:
   - yaml
   - dplyr
@@ -21,27 +20,27 @@ packages:
 
 sources:
   #- src/spatial_utils.R
-  - src/sb_functions.R
+  - src/sb_utils.R
 
 targets:
   all:
     depends:
-      # - 00_parent_sb_xml
-      # - 01_spatial_sb_xml
-      # - 01_spatial_sb_shp
-      # - 02_observations_sb_data
-      # - 02_observations_sb_xml
+      #- 00_parent_sb_xml
+      #- 01_spatial_sb_xml
+      #- 01_spatial_sb_shp
+      - log/02_observations_sb_data.csv
+      #- 02_observations_sb_xml
       # - 03_driver_sb_xml
       - 03_driver_sb_data
       # - 03_driver_sb_meteo
 
-##  in case you want to mess w/ the xml alone:
-#   out_xml/00_parent.xml:
-#     command: render(filename = target_name,
-#       "in_text/text_SHARED.yml",
-#       "in_text/text_00_parent.yml",
-#       river_metadata2)
-
+# in case you want to mess w/ the xml alone:
+  # out_xml/00_parent.xml:
+  #   command: render(filename = target_name,
+  #     "in_text/text_SHARED.yml",
+  #     "in_text/text_00_parent.yml",
+  #     river_metadata2)
+  # 
   # 00_parent_sb_xml:
   #   command: sb_render_post_xml(sbid_00_parent,
   #     xml_file = I('00_parent.xml'),
@@ -80,7 +79,18 @@ targets:
   #     "in_text/text_SHARED.yml",
   #     "in_text/text_02_observations.yml",
   #     river_metadata2)
-  # 
+  
+  log/02_observations_sb_data.csv:
+    command: sb_replace_files(
+      filename = target_name, 
+      sb_id = sbid_02_observations,
+      sources = 'src/sb_utils.R',
+      "out_data/reservoir_temp_obs.csv",
+      "out_data/reservoir_level_obs.csv",
+      'out_data/reservoir_releases_by_type.csv',
+      'out_data/reservoir_diversions.csv')
+  
+  # OLD - 02_observations_sb_data - 
   # 02_observations_sb_data:
   #   command: sb_replace_files(sbid_02_observations,
   #     "out_data/temperature_observations_drb.zip",
@@ -118,25 +128,26 @@ targets:
   #     #river_metadata2
   #     )
   # 
-  # # 04_inputs_sb_xml:
-  #   command: sb_render_post_xml(sbid_04_inputs,
+
+#   command: sb_render_post_xml(sbid_04_inputs,
   #     xml_file = I('04_inputs.xml'),
   #     "in_text/text_SHARED.yml",
   #     "in_text/text_04_inputs.yml",
   #     river_metadata2)
-  # 
-  # 04_inputs_sb_data:
-  #   command: sb_replace_files(sbid_04_inputs,
-  #     "out_data/distance_matrix_drb.csv",
-  #     "out_data/distance_matrix_lordville.csv",
-  #     "out_data/reservoir_features_drb.csv",
-  #     "out_data/reservoir_features_lordville.csv",
-  #     "out_data/sntemp_inputs_outputs_drb.zip",
-  #     "out_data/sntemp_inputs_outputs_lordville.zip",
-  #     "out_data/reach_attributes_drb.csv",
-  #     "out_data/reach_attributes_lordville.csv",
-  #     "out_data/reservoir_interpolated_daily_water_budget_components.csv",
-  #     "out_data/noaagefs_meteo_files.zip")
+
+
+# 4 inputs will include
+      # "out_data/distance_matrix_drb.csv",
+      # "out_data/reservoir_features_drb.csv",
+      # "out_data/sntemp_inputs_outputs_drb.zip",
+      # "out_data/reach_attributes_drb.csv",
+      # "out_data/reservoir_interpolated_daily_water_budget_components.csv",
+      # "out_data/noaagefs_meteo_files.zip",
+      # "out_data/gridMET.zip"
+
+# 04_inputs_sb_data:
+  #   command: sb_replace_files(sbid_04_inputs)
+
   # 
   # out_xml/04_inputs_fgdc_metadata.xml:
   #   command: render(filename = target_name,
@@ -144,7 +155,7 @@ targets:
   #     "in_text/text_04_inputs.yml",
   #     river_metadata2)
 
-  # 04_inputs_sb_meteo:
+# 04_inputs_sb_meteo:
   #   command: sb_replace_files(sbid_04_inputs,
   #     "in_data/NLDAS_time[0.367700]_x[397]_y[136].csv",
   #     "in_data/NLDAS_time[0.367700]_x[401]_y[136].csv",

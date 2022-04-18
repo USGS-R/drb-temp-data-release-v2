@@ -2,3 +2,9 @@
 .Rhistory
 .RData
 .Ruserdata
+
+out_data/*
+!out_data/.empty
+
+in_data/*
+!in_data/.empty
