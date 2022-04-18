@@ -61,3 +61,4 @@ targets:
 
   out_data/gridmet_drb_agg_v2.csv.zip:
     command: file.copy(from = '/Users/msleckman/USGS/GS-WMA-IWP-PUMP/Data-driven Salinity/Inland Salinity/drb_gridmet_tools/data/OutputFolder/gridmet_drb_agg_v2.csv.zip', to = target_name)
+    
