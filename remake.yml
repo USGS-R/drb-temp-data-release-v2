@@ -95,7 +95,7 @@ targets:
       file_name = target_name,
       sb_id = sbid_03_driver,
       sources = 'src/sb_utils.R',
-      'out_data/gridmet_drb_agg_v2.csv.zip')
+      'out_data/gridmet_drb_agg.csv.zip')
 
   03_driver_sb_xml:
     command: sb_render_post_xml(sbid_03_driver,
