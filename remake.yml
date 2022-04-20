@@ -21,6 +21,7 @@ packages:
 sources:
   #- src/spatial_utils.R
   - src/sb_utils.R
+  - src/sb_functions.R
 
 targets:
   all:
@@ -30,7 +31,7 @@ targets:
       #- 01_spatial_sb_shp
       - log/02_observations_sb_data.csv
       #- 02_observations_sb_xml
-      # - 03_driver_sb_xml
+      - 03_driver_sb_xml
       - log/03_driver_sb_data.csv
       # - 03_driver_sb_meteo
 
@@ -97,11 +98,11 @@ targets:
       sources = 'src/sb_utils.R',
       'out_data/gridmet_drb_agg.csv.zip')
 
-  # 03_driver_sb_xml:
-  #   command: sb_render_post_xml(sbid_03_driver,
-  #     xml_file = I('03_driver.xml'),
-  #     "in_text/text_SHARED.yml",
-  #     "in_text/text_03_driver.yml")
+  03_driver_sb_xml:
+    command: sb_render_post_xml(sbid_03_driver,
+      xml_file = I('03_driver.xml'),
+      "in_text/text_SHARED.yml",
+      "in_text/text_03_driver.yml")
   #      river_metadata2
   # 
   # out_xml/03_driver_fgdc_metadata.xml:
