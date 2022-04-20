@@ -92,7 +92,7 @@ targets:
   
   log/03_driver_sb_data.csv:
     command: sb_replace_files(
-      file_name = target_name,
+      filename = target_name,
       sb_id = sbid_03_driver,
       sources = 'src/sb_utils.R',
       'out_data/gridmet_drb_agg.csv.zip')
