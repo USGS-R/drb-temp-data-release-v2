@@ -21,6 +21,9 @@ targets:
       # - out_data/sntemp_inputs_outputs.zip
       # - out_data/reservoir_interpolated_daily_water_budget_components.csv
         - out_data/gridmet_drb_agg.csv.zip
+        - out_data/gridmet_drb_agg.nc.zip
+        - out_data/reanalysis_gefs_fy22.csv.zip
+        - out_data/uncal_sntemp_input_output.nc.zip
       
 
   #weather_drivers:
