@@ -43,25 +43,25 @@ targets:
   out_data/reservoir_temp_obs.csv:
     command: fetch_filter_tibble(
       out_csv = target_name,
-      in_dat = 'in_data/drb_daily_reservoir_temps.rds',
+      in_dat = 'in_data/02_observations/drb_daily_reservoir_temps.rds',
       site_ids = reservoir_modeling_site_ids)
     
   out_data/reservoir_level_nwis.csv:
     command: fetch_filter_tibble(
       out_csv = target_name,
-      in_dat = 'in_data/drb_reservoirs_waterlevels_munged.rds',
+      in_dat = 'in_data/02_observations/drb_reservoirs_waterlevels_munged.rds',
       site_ids = reservoir_modeling_site_ids)
       
   out_data/reservoir_level_nycdep.rds:
     command: fetch_filter_nycdep(
       out_rds = target_name,
-      in_dat = 'in_data/NYC_DEP_reservoir_waterlevels.rds',
+      in_dat = 'in_data/02_observations/NYC_DEP_reservoir_waterlevels.rds',
       site_ids = reservoir_modeling_site_ids)
       
   out_data/reservoir_level_usgs_historical.rds:
     command: fetch_filter_historical(
       out_rds = target_name,
-      in_dat = 'in_data/interpolated_daily_reservoir_water_budget_components.csv',
+      in_dat = 'in_data/02_observations/interpolated_daily_reservoir_water_budget_components.csv',
       xwalk = I(c('Cannonsville' = 'nhdhr_120022743', 'Pepacton' = 'nhdhr_151957878')))
       
   out_data/reservoir_level_obs.csv:
@@ -72,5 +72,5 @@ targets:
       hist_levels = 'out_data/reservoir_level_usgs_historical.rds')
       
   out_data/reservoir_releases_by_type.csv:
-    command: file.copy('in_data/reservoir_releases_by_type_drb.csv', to = target_name)
+    command: file.copy('in_data/02_observations/reservoir_releases_by_type_drb.csv', to = target_name)
     

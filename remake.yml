@@ -76,7 +76,7 @@ targets:
       "out_data/reservoir_temp_obs.csv",
       "out_data/reservoir_level_obs.csv",
       "out_data/reservoir_releases_by_type.csv",
-      'in_data/reservoir_diversions.csv')
+      'in_data/02_observations/reservoir_diversions.csv')
 
   # 02_observations_sb_xml:
   #   command: sb_render_post_xml(sbid_02_observations,
