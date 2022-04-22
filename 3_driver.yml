@@ -32,8 +32,8 @@ targets:
   #out_data/weather_drivers.zip:
    # command: zip_this(out_file = target_name, in_file = weather_drivers)
     
-  # out_data/distance_matrix_drb.csv:
-  #   command: get_distance_matrix(out_file = target_name, in_file = '../delaware-model-prep/9_collaborator_data/umn/distance_matrix.rds')
+  out_data/distance_matrix_drb.csv:
+     command: get_distance_matrix(out_file = target_name, in_file = 'in_data/03_driver/distance_matrix.rds')
   # 
   # ##### Transfer of files from delaware-model-prep #####
   # # should we move these files to the spatial data section?
