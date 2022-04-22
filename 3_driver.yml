@@ -66,22 +66,22 @@ targets:
     command: file.copy(from = 'in_data/03_driver/drb_climate_2022_04_06_segments.csv', to = target_name)
     
   out_data/gridmet_drb_agg.csv.zip:
-    command: zip_this(out_file = target_name, in_file = 'out_data/gridmet_drb_agg.csv')
+    command: zip_this(out_file = target_name, .object = 'out_data/gridmet_drb_agg.csv')
     
       out_data/gridmet_drb_agg.nc:
     command: file.copy(from = 'in_data/03_driver/drb_climate_2022_04_06.nc', to = target_name)
     
   out_data/gridmet_drb_agg.nc.zip:
-    command: zip_this(out_file = target_name, in_file = 'out_data/drb_climate_2022_04_06.nc')
+    command: zip_this(out_file = target_name, .object = 'out_data/drb_climate_2022_04_06.nc')
     
   out_data/reanalysis_gefs_fy22.csv:
     command: file.copy(from = 'in_data/03_driver/reanalysis_gefs_fy22.csv', to = target_name)
 
   out_data/reanalysis_gefs_fy22.csv.zip:
-    command: zip_this(out_file = target_name, in_file = 'out_data/reanalysis_gefs_fy22.csv')
+    command: zip_this(out_file = target_name, .object = 'out_data/reanalysis_gefs_fy22.csv')
   
   out_data/uncal_sntemp_input_output.nc:
     command: file.copy(from = 'in_data/03_driver/uncal_sntemp_input_output.nc', to = target_name)
 
   out_data/uncal_sntemp_input_output.nc.zip:
-    command: zip_this(out_file = target_name, in_file = 'out_data/uncal_sntemp_input_output.nc')
+    command: zip_this(out_file = target_name, .object = 'out_data/uncal_sntemp_input_output.nc')
