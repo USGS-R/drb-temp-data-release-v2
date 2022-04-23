@@ -6,10 +6,11 @@
 # navigates you into another repo and the part that should be used to call
 # gd_get within that repo.
 
-fetch_filter_res_polygons <- function(out_rds, in_dat, in_repo, site_ids) {
+fetch_filter_res_polygons <- function(out_rds, in_dat,, site_ids, in_repo = NULL) {
   # pull the data file down to that other repo
+  if(!is.null(in_repo)){
   gd_get_elsewhere(gsub(in_repo, '', in_ind, fixed=TRUE), in_repo)
-
+  }
   # read and filter to just the specified sites
   as_data_file(in_ind) %>%
     readRDS() %>%

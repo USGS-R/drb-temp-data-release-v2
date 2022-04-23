@@ -1,4 +1,3 @@
-
 packages:
   - dplyr
   - meddle
@@ -28,11 +27,11 @@ targets:
      # stream_to_hru = 'XX')
 
   modeled_network_sf:
-    command: retrieve_network(network_sf_fl = '../delaware-model-prep/1_network/out/network.rds')
+    command: retrieve_network(network_sf_fl = 'in_data/01_spatial.network.rds')
     
   network_vertices_sf:
-    command: retrieve_vertices(network_sf_fl = '../delaware-model-prep/1_network/out/network.rds')
-    
+    command: retrieve_vertices(network_sf_fl = 'in_data/01_spatial.network.rds')
+     
   # should include shapefile of HRUs
   #hrus_sf:
     #command: retrieve_hrus(hrus_sf_fl = 'XX')
@@ -54,14 +53,14 @@ targets:
       sf_object = modeled_network_sf,
       layer_name = I('study_stream_reaches'))
 
-  # let's change this to be all reservoir polygons in the DRB 
-  # from the global reservoir data base
-  #reservoir_polygons:
-   # command: fetch_filter_res_polygons(
-    #  out_rds = target_name,
-     # in_ind = "../lake-temperature-model-prep/1_crosswalk_fetch/out/canonical_lakes_sf.rds.ind",
-      #in_repo = I('../lake-temperature-model-prep/'),
-      #site_ids = reservoir_modeling_site_ids)
+#  let's change this to be all reservoir polygons in the DRB
+#  from the global reservoir data base
+  reservoir_polygons:
+  command: fetch_filter_res_polygons(
+    out_rds = target_name,
+    in_ind = "in_data/03_driver/canonical_lakes_sf.rds.ind",
+    in_repo = NULL,
+    site_ids = reservoir_modeling_site_ids)
       
   #reservoir_metadata:
     #command: extract_feature(reservoir_polygons)
@@ -71,7 +70,7 @@ targets:
     #  sf_object = reservoir_polygons, layer_name = I('study_reservoirs'))
       
   monitoring_sites:
-    command: readRDS(file = '../delaware-model-prep/2_observations/out/drb_filtered_sites.rds')
+    command: readRDS(file = 'in_data/03_driver/drb_filtered_sites.rds')
     
   out_data/study_monitoring_sites.zip:
     command: reduce_and_zip(zip_filename = target_name, 
