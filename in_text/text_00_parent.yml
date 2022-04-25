@@ -3,7 +3,9 @@ title: >-
 
 
 abstract: >-
-  <p> This data release contains spatial, observational, and driver data used as inputs for multiple XX modeling efforts in the Delaware River Basin (DRB).  
+  <p> This data release contains spatial, observational, and driver data used as inputs for multiple modeling efforts in the Delaware River Basin (DRB).  
+  This data release primarily supports the 7-day ahead maximum water temperature forecasting modeling that produce rela-time predictions in the DRB for 2022 (). 
+  
   The timeframe of the datasets range between XX and XX. 
   **Additional lines of text**
 
