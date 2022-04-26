@@ -40,7 +40,7 @@ targets:
   #   command: render(filename = target_name,
   #     "in_text/text_SHARED.yml",
   #     "in_text/text_00_parent.yml")
-#       river_metadata2)
+#       river_metadata_verts)
   # 
   00_parent_sb_xml:
     command: sb_render_post_xml(sbid_00_parent,
@@ -48,20 +48,20 @@ targets:
       "in_text/text_SHARED.yml",
       "in_text/text_00_parent.yml")
       # ,
-      # river_metadata2)
+      # river_metadata_verts)
   # 
   # 01_spatial_sb_xml:
   #   command: sb_render_post_xml(sbid_01_spatial,
   #     xml_file = I('01_spatial.xml'),
   #     "in_text/text_SHARED.yml",
   #     "in_text/text_01_spatial.yml",
-  #     river_metadata2)
+  #     river_metadata_verts)
   #     
   # out_xml/01_spatial_fgdc_metadata.xml:
   #   command: render(filename = target_name,
   #     "in_text/text_SHARED.yml",
   #     "in_text/text_01_spatial.yml",
-  #     river_metadata2)
+  #     river_metadata_verts)
   # 
   # 01_spatial_sb_shp:
   #   command: sb_replace_files(sbid_01_spatial,
@@ -84,13 +84,13 @@ targets:
   #     xml_file = I('02_observations.xml'),
   #     "in_text/text_SHARED.yml",
   #     "in_text/text_02_observations.yml",
-  #     river_metadata2)
+  #     river_metadata_verts)
   #     
   # out_xml/02_observations_fgdc_metadata.xml:
   #   command: render(filename = target_name,
   #     "in_text/text_SHARED.yml",
   #     "in_text/text_02_observations.yml",
-  #     river_metadata2)
+  #     river_metadata_verts)
   
   log/03_driver_sb_data.csv:
     command: sb_replace_files(
@@ -108,13 +108,13 @@ targets:
       xml_file = I('03_driver.xml'),
       "in_text/text_SHARED.yml",
       "in_text/text_03_driver.yml")
-  #      river_metadata2
+  #      river_metadata_verts
   # 
   # out_xml/03_driver_fgdc_metadata.xml:
   #   command: render(filename = target_name,
   #     "in_text/text_SHARED.yml",
   #     "in_text/text_03_driver.yml")
-  #     #river_metadata2
+  #     #river_metadata_verts
   #     )
   # 
 
@@ -122,7 +122,7 @@ targets:
   #     xml_file = I('04_inputs.xml'),
   #     "in_text/text_SHARED.yml",
   #     "in_text/text_04_inputs.yml",
-  #     river_metadata2)
+  #     river_metadata_verts)
 
 
 # 4 inputs will include
@@ -142,7 +142,7 @@ targets:
   #   command: render(filename = target_name,
   #     "in_text/text_SHARED.yml",
   #     "in_text/text_04_inputs.yml",
-  #     river_metadata2)
+  #     river_metadata_verts)
 
 # 04_inputs_sb_meteo:
   #   command: sb_replace_files(sbid_04_inputs,

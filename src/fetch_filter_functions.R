@@ -9,10 +9,17 @@
 fetch_filter_res_polygons <- function(out_rds, in_dat, site_ids, in_repo = NULL) {
   # pull the data file down to that other repo
   if(!is.null(in_repo)){
-  gd_get_elsewhere(gsub(in_repo, '', in_ind, fixed=TRUE), in_repo)
+  gd_get_elsewhere(gsub(in_repo, '', in_dat, fixed=TRUE), in_repo)
   }
+  
+  if(endsWith(in_dat, 'rds.ind')){
+    data <- as_data_file(in_dat) }
+  if(endsWith(in_dat, '.rds')){
+    data <- in_dat} 
+  else{stop('in_dat should be rds file of indicator rds file (rds.ind)')}
+  
   # read and filter to just the specified sites
-  as_data_file(in_ind) %>%
+  data %>%
     readRDS() %>%
     filter(site_id %in% !!site_ids) %>%
     st_zm(drop = TRUE, what = "ZM") # the canonical lakes file has 3D multipolygons but the Z range is 0 to 0, so let's drop it down to 2D
@@ -112,4 +119,5 @@ copy_filter_feather <- function(out_csv, in_feather, site_ids) {
   arrow::read_feather(in_feather) %>%
     filter(res_id %in% site_ids) %>%
     readr::write_csv(out_csv)
+
 }

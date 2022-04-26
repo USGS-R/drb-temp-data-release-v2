@@ -13,9 +13,9 @@ sources:
 targets:
   1_spatial:
     depends:
-      - river_metadata
+      - river_metadata_segs
       - out_data/study_stream_reaches.zip
-      - reservoir_metadata
+      - reservoir_metadata_verts
       - out_data/study_reservoirs.zip
       - out_data/study_monitoring_sites.zip
     
@@ -37,16 +37,15 @@ targets:
   #hrus_sf:
     #command: retrieve_hrus(hrus_sf_fl = 'XX')
   
-  # include map of network, maybe with HRUs?
   #out_data/modeling_domain_map.png:
    # command: plot_domain_map(target_name,
     #  network_sf = modeled_network_sf,
       #plot_crs = I("+init=epsg:2811"))
     
-  river_metadata:
+  river_metadata_segs:
     command: extract_feature(network_vertices_sf)
     
-  river_metadata2:
+  river_metadata_verts:
     command: extract_feature(modeled_network_sf)
     
   out_data/study_stream_reaches.zip:
