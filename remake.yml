@@ -26,28 +26,29 @@ sources:
 targets:
   all:
     depends:
-      #- 00_parent_sb_xml
+      - 00_parent_sb_xml
       #- 01_spatial_sb_xml
       #- 01_spatial_sb_shp
-      - log/02_observations_sb_data.csv
+   #   - log/02_observations_sb_data.csv
       #- 02_observations_sb_xml
-      - 03_driver_sb_xml
-      - log/03_driver_sb_data.csv
+   #   - 03_driver_sb_xml
+   #   - log/03_driver_sb_data.csv
       # - 03_driver_sb_meteo
 
 # in case you want to mess w/ the xml alone:
   # out_xml/00_parent.xml:
   #   command: render(filename = target_name,
   #     "in_text/text_SHARED.yml",
-  #     "in_text/text_00_parent.yml",
-  #     river_metadata2)
+  #     "in_text/text_00_parent.yml")
+#       river_metadata2)
   # 
-  # 00_parent_sb_xml:
-  #   command: sb_render_post_xml(sbid_00_parent,
-  #     xml_file = I('00_parent.xml'),
-  #     "in_text/text_SHARED.yml",
-  #     "in_text/text_00_parent.yml",
-  #     river_metadata2)
+  00_parent_sb_xml:
+    command: sb_render_post_xml(sbid_00_parent,
+      xml_file = I('00_parent.xml'),
+      "in_text/text_SHARED.yml",
+      "in_text/text_00_parent.yml")
+      # ,
+      # river_metadata2)
   # 
   # 01_spatial_sb_xml:
   #   command: sb_render_post_xml(sbid_01_spatial,
