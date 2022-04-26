@@ -37,7 +37,7 @@ get_distance_matrix <- function(out_file, in_file) {
     mutate(from = from) %>%
     select(from, everything())
 
-  readr::write_csv(out, path = out_file)
+  readr::write_csv(out, file = out_file)
 }
 
 get_sntemp_output <- function(out_file, in_file){

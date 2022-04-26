@@ -4,10 +4,10 @@ title: >-
 
 abstract: >-
   <p> This data release contains spatial, observational, and driver data used as inputs for multiple modeling efforts in the Delaware River Basin (DRB).  
-  This data release primarily supports the 7-day ahead maximum water temperature forecasting modeling that produce rela-time predictions in the DRB for 2022 (). 
+  The data provided in this release primarily supports the 7-day ahead maximum water temperature forecasting model that produces real-time predictions in the DRB for 2022 (<li><a href="https://www.sciencebase.gov/catalog/item/6238fcead34e915b67cc4856"> Data to support network-wide 7-day ahead forecasting of water temperature in teh Delware River Basin  </a>).
+  The data is stored in 3 child folders: 1_spatial folder, 2_observations and 3_driver data folder. 
   
-  The timeframe of the datasets range between XX and XX. 
-  **Additional lines of text**
+  XX
 
   <ol>
   <li><a href="https://www.sciencebase.gov/catalog/item/623e54c4d34e915b67d83580"> 1_spatial </a> - Spatial data used for modeling efforts in the Delaware River Basin</li>
