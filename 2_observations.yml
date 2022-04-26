@@ -28,11 +28,14 @@ targets:
   
   # make sure we publish the "raw" version and the "aggregated" version of 
   # the temperature data. Raw should be matched but not aggregated to one value per reach/day
-  #out_data/temperature_observations_drb.zip:
-   # command: zip_obs(out_file = target_name, in_file = '../delaware-model-prep/9_collaborator_data/umn/obs_temp_full.csv')
+  out_data/unaggregated_temperature_observations_drb.zip:
+    command: zip_obs(out_file = target_name, in_file = 'in_data/02_observations/obs_temp_drb_raw.rds')
+  
+  out_data/aggregated_temperature_observations_drb.zip:
+    command: zip_obs(out_file = target_name, in_file = 'in_data/02_observations/obs_temp_drb.rds')
 
-  #out_data/flow_observations_drb.zip:
-   # command: zip_obs(out_file = target_name, in_file = '../delaware-model-prep/9_collaborator_data/umn/obs_flow_full.csv')
+  out_data/flow_observations_drb.zip:
+    command: zip_obs(out_file = target_name, in_file = 'in_data/02_observations/obs_flow_drb.rds')
 
   # reservoir observations
   ##### Transfer and filtering of files of file from lake-temperature-model-prep #####

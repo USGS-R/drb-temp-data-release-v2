@@ -60,7 +60,7 @@ targets:
   out_data/gridmet_drb_agg.csv.zip:
     command: zip_this(out_file = target_name, .object = 'out_data/gridmet_drb_agg.csv')
     
-      out_data/gridmet_drb_agg.nc:
+  out_data/gridmet_drb_agg.nc:
     command: file.copy(from = 'in_data/03_driver/drb_climate_2022_04_06.nc', to = target_name)
     
   out_data/gridmet_drb_agg.nc.zip:
