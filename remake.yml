@@ -19,7 +19,7 @@ packages:
   - tidyverse
 
 sources:
-  #- src/spatial_utils.R
+  - src/spatial_utils.R
   - src/sb_utils.R
   - src/sb_functions.R
 

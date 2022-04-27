@@ -36,13 +36,7 @@ targets:
   # should include shapefile of HRUs
   #hrus_sf:
     #command: retrieve_hrus(hrus_sf_fl = 'XX')
-  
-  # include map of network, maybe with HRUs?
-  #out_data/modeling_domain_map.png:
-   # command: plot_domain_map(target_name,
-    #  network_sf = modeled_network_sf,
-      #plot_crs = I("+init=epsg:2811"))
-    
+
   river_metadata:
     command: extract_feature(network_vertices_sf)
     

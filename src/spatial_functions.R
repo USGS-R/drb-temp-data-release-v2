@@ -4,7 +4,8 @@ retrieve_network <- function(network_sf_fl) {
     select(-start_pt, -end_pt, -subseg_updown) %>%
     mutate(subseg_length = round(subseg_length, 2)) %>%
     mutate(from_segs = ifelse(from_segs == '', NA, from_segs)) %>%
-    rename(subsegid = subseg_id, subsegseg = subseg_seg, subseglen = subseg_length, fromsegs = from_segs, toseg = to_seg, tosubseg = to_subseg, segidnat = seg_id_nat)
+    rename(subsegid = subseg_id, subsegseg = subseg_seg, subseglen = subseg_length,
+           fromsegs = from_segs, toseg = to_seg, tosubseg = to_subseg, segidnat = seg_id_nat)
   out <- sf::st_transform(out, crs = 4326)
   return(out)
 }
