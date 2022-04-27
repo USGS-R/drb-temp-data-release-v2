@@ -22,6 +22,7 @@ sources:
   #- src/spatial_utils.R
   - src/sb_utils.R
   - src/sb_functions.R
+  - src/spatial_functions.R
 
 targets:
   all:
@@ -49,7 +50,13 @@ targets:
       "in_text/text_00_parent.yml")
       # ,
       # river_metadata_verts)
-  # 
+
+  log/01_spatial_sb_shp:
+     command: sb_replace_files(sbid_01_spatial,
+       "out_data/study_stream_reaches.zip",
+       "out_data/study_reservoirs.zip",
+       "out_data/study_monitoring_sites.zip")
+
   # 01_spatial_sb_xml:
   #   command: sb_render_post_xml(sbid_01_spatial,
   #     xml_file = I('01_spatial.xml'),
@@ -62,12 +69,6 @@ targets:
   #     "in_text/text_SHARED.yml",
   #     "in_text/text_01_spatial.yml",
   #     river_metadata_verts)
-  # 
-  log/01_spatial_sb_shp:
-     command: sb_replace_files(sbid_01_spatial,
-       "out_data/study_stream_reaches.zip",
-       "out_data/study_reservoirs.zip",
-       "out_data/study_monitoring_sites.zip")
 
   log/02_observations_sb_data.csv:
     command: sb_replace_files(

@@ -33,7 +33,7 @@ targets:
     command: zip_obs(out_file = target_name, in_file = 'in_data/02_observations/obs_flow_drb.rds')
     
   # reservoir observations
-  out_data/reservoir_modeling_site_ids:
+  reservoir_modeling_site_ids:
     command: c(I(c(
       Pepacton = 'nhdhr_151957878',
       Cannonsville = 'nhdhr_120022743')))
