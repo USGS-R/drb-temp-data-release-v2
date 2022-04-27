@@ -53,16 +53,16 @@ targets:
   reservoir_polygons:
     command: fetch_filter_res_polygons(
       out_rds = target_name,
-      in_dat = "in_data/03_driver/canonical_lakes_sf.rds.",
+      in_dat = "in_data/01_spatial/canonical_lakes_sf.rds.",
       in_repo = NULL,
       site_ids = reservoir_modeling_site_ids)
       
   #reservoir_metadata:
     #command: extract_feature(reservoir_polygons)
     
-  #out_data/study_reservoirs.zip:
-   # command: sf_to_zip(zip_filename = target_name, 
-    #  sf_object = reservoir_polygons, layer_name = I('study_reservoirs'))
+  out_data/study_reservoirs.zip:
+    command: sf_to_zip(zip_filename = target_name,
+    sf_object = reservoir_polygons, layer_name = I('study_reservoirs'))
       
   monitoring_sites:
     command: readRDS(file = 'in_data/03_driver/drb_filtered_sites.rds')
