@@ -7,12 +7,9 @@
 # gd_get within that repo.
 
 fetch_filter_res_polygons <- function(out_rds, in_dat, site_ids, in_repo = NULL) {
-  # pull the data file down to that other repo
-  if(!is.null(in_repo)){
-  gd_get_elsewhere(gsub(in_repo, '', in_ind, fixed=TRUE), in_repo)
-  }
+
   # read and filter to just the specified sites
-  as_data_file(in_ind) %>%
+  as_data_file(in_dat) %>%
     readRDS() %>%
     filter(site_id %in% !!site_ids) %>%
     st_zm(drop = TRUE, what = "ZM") # the canonical lakes file has 3D multipolygons but the Z range is 0 to 0, so let's drop it down to 2D
