@@ -21,16 +21,17 @@ targets:
     
   # not sure what this metadata should be, if anything
   # one option is to include a reach to HRU crosswalk
+  
   #out_data/river_reach_metadata.csv:
    # command: create_metadata_file(target_name,
      # streams_sf = modeled_streams_sf,
      # stream_to_hru = 'XX')
 
   modeled_network_sf:
-    command: retrieve_network(network_sf_fl = 'in_data/01_spatial.network.rds')
+    command: retrieve_network(network_sf_fl = 'in_data/01_spatial/network.rds')
     
   network_vertices_sf:
-    command: retrieve_vertices(network_sf_fl = 'in_data/01_spatial.network.rds')
+    command: retrieve_vertices(network_sf_fl = 'in_data/01_spatial/network.rds')
      
   # should include shapefile of HRUs
   #hrus_sf:
