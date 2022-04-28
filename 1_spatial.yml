@@ -55,6 +55,16 @@ targets:
 
   #  let's change this to be all reservoir polygons in the DRB
   #  from the global reservoir data base
+  
+  ### REMOVE this target as it is in observations - Adding to test build
+  # reservoir observations
+  reservoir_modeling_site_ids:
+    command: c(I(c(
+      Pepacton = 'nhdhr_151957878',
+      Cannonsville = 'nhdhr_120022743',
+      Neversink = 'nhdhr_149269381')))
+      
+  ###
   reservoir_polygons:
     command: fetch_filter_res_polygons(
       out_rds = target_name,
@@ -66,11 +76,12 @@ targets:
     command: extract_feature(reservoir_polygons)
     
   out_data/study_reservoirs.zip:
-    command: sf_to_zip(zip_filename = target_name,
-    sf_object = reservoir_polygons, layer_name = I('study_reservoirs'))
+    command: sf_to_zip2(zip_filename = target_name,
+    sf_object = reservoir_polygons,
+    layer_name = I('study_reservoirs'))
       
   monitoring_sites:
-    command: readRDS(file = 'in_data/03_driver/drb_filtered_sites_qa.rds')
+    command: readRDS(file = 'in_data/03_driver/drb_filtered_sites.rds')
     
   out_data/study_monitoring_sites.zip:
     command: reduce_and_zip(zip_filename = target_name, 

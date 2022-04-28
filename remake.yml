@@ -29,11 +29,11 @@ targets:
     depends:
       - 00_parent_sb_xml
       #- 01_spatial_sb_xml
-      # - log/01_spatial_sb_shp
-      - log/02_observations_sb_data.csv
+      - log/01_spatial_sb_shp
+      #- log/02_observations_sb_data.csv
       #- 02_observations_sb_xml
-   #   - 03_driver_sb_xml
-      - log/03_driver_sb_data.csv
+     #- 03_driver_sb_xml
+      #- log/03_driver_sb_data.csv
       # - 03_driver_sb_meteo
 
 # in case you want to mess w/ the xml alone:
@@ -51,11 +51,11 @@ targets:
       # ,
       # river_metadata_verts)
 
-   log/01_spatial_sb_shp:
-      command: sb_replace_files(sbid_01_spatial,
-        "out_data/study_stream_reaches.zip",
-        "out_data/study_reservoirs.zip",
-        "out_data/study_monitoring_sites.zip")
+  log/01_spatial_sb_shp:
+    command: sb_replace_files(sbid_01_spatial,
+      "out_data/study_stream_reaches.zip",
+      "out_data/study_reservoirs.zip",
+      "out_data/study_monitoring_sites.zip")
 
   # 01_spatial_sb_xml:
   #   command: sb_render_post_xml(sbid_01_spatial,

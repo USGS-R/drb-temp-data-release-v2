@@ -45,7 +45,7 @@ sf_to_zip2 <- function(zip_filename, sf_object, layer_name){
   
   files_to_zip <- data.frame(filepath = dir(dsn, full.names = TRUE), stringsAsFactors = FALSE) %>%
     mutate(filename = basename(filepath)) %>%
-    filter(str_detect(string = filename, pattern = layer_name)) %>%
+    filter(grepl(pattern = layer_name, x = filename)) %>%
     pull(filename)
   
   setwd(dsn)
