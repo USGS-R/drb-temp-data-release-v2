@@ -22,17 +22,18 @@ sources:
   #- src/spatial_utils.R
   - src/sb_utils.R
   - src/sb_functions.R
+  - src/spatial_functions.R
 
 targets:
   all:
     depends:
       - 00_parent_sb_xml
       #- 01_spatial_sb_xml
-      #- 01_spatial_sb_shp
-   #   - log/02_observations_sb_data.csv
+      - log/01_spatial_sb_shp
+      - log/02_observations_sb_data.csv
       #- 02_observations_sb_xml
    #   - 03_driver_sb_xml
-   #   - log/03_driver_sb_data.csv
+      - log/03_driver_sb_data.csv
       # - 03_driver_sb_meteo
 
 # in case you want to mess w/ the xml alone:
@@ -49,7 +50,7 @@ targets:
       "in_text/text_00_parent.yml")
       # ,
       # river_metadata_verts)
-  # 
+
   # 01_spatial_sb_xml:
   #   command: sb_render_post_xml(sbid_01_spatial,
   #     xml_file = I('01_spatial.xml'),

@@ -53,14 +53,14 @@ targets:
       sf_object = modeled_network_sf,
       layer_name = I('study_stream_reaches'))
 
-#  let's change this to be all reservoir polygons in the DRB
-#  from the global reservoir data base
+  #  let's change this to be all reservoir polygons in the DRB
+  #  from the global reservoir data base
   reservoir_polygons:
-  command: fetch_filter_res_polygons(
-    out_rds = target_name,
-    in_dat = "in_data/01_spatial/canonical_lakes_sf.rds",
-    in_repo = NULL,
-    site_ids = reservoir_modeling_site_ids)
+    command: fetch_filter_res_polygons(
+      out_rds = target_name,
+      in_dat = "in_data/01_spatial/canonical_lakes_sf.rds",
+      in_repo = NULL,
+      site_ids = reservoir_modeling_site_ids)
       
   reservoir_metadata:
     command: extract_feature(reservoir_polygons)
