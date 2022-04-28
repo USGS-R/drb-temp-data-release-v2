@@ -75,6 +75,8 @@ targets:
       filename = target_name,
       sb_id = sbid_02_observations,
       sources = 'src/sb_utils.R',
+      'out_data/unaggregated_temperature_observations_drb.zip',
+      'out_data/aggregated_temperature_observations_drb.zip',
       "out_data/reservoir_temp_obs.csv",
       "out_data/reservoir_level_obs.csv",
       "out_data/reservoir_releases_by_type.csv",
