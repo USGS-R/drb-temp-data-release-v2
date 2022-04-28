@@ -4,7 +4,7 @@ packages:
   - rgdal
   - sf
   - zip
-  
+
 sources:
   - src/spatial_functions.R
   - src/fetch_filter_functions.R
