@@ -13,9 +13,9 @@ sources:
 targets:
   1_spatial:
     depends:
-      - river_metadata
+      - river_metadata_segs
       - out_data/study_stream_reaches.zip
-      - reservoir_metadata
+      - reservoir_metadata_verts
       - out_data/study_reservoirs.zip
       - out_data/study_monitoring_sites.zip
     
@@ -36,11 +36,16 @@ targets:
   # should include shapefile of HRUs
   #hrus_sf:
     #command: retrieve_hrus(hrus_sf_fl = 'XX')
-
-  river_metadata:
+  
+  #out_data/modeling_domain_map.png:
+   # command: plot_domain_map(target_name,
+    #  network_sf = modeled_network_sf,
+      #plot_crs = I("+init=epsg:2811"))
+    
+  river_metadata_segs:
     command: extract_feature(network_vertices_sf)
     
-  river_metadata2:
+  river_metadata_verts:
     command: extract_feature(modeled_network_sf)
     
   out_data/study_stream_reaches.zip:
@@ -53,19 +58,19 @@ targets:
   reservoir_polygons:
     command: fetch_filter_res_polygons(
       out_rds = target_name,
-      in_dat = "in_data/01_spatial/canonical_lakes_sf.rds.",
+      in_dat = "in_data/01_spatial/canonical_lakes_sf.rds",
       in_repo = NULL,
       site_ids = reservoir_modeling_site_ids)
       
-  #reservoir_metadata:
-    #command: extract_feature(reservoir_polygons)
+  reservoir_metadata:
+    command: extract_feature(reservoir_polygons)
     
   out_data/study_reservoirs.zip:
     command: sf_to_zip(zip_filename = target_name,
     sf_object = reservoir_polygons, layer_name = I('study_reservoirs'))
       
   monitoring_sites:
-    command: readRDS(file = 'in_data/03_driver/drb_filtered_sites.rds')
+    command: readRDS(file = 'in_data/03_driver/drb_filtered_sites_qa.rds')
     
   out_data/study_monitoring_sites.zip:
     command: reduce_and_zip(zip_filename = target_name, 
