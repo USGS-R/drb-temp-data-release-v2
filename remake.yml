@@ -41,8 +41,8 @@ targets:
   #   command: render(filename = target_name,
   #     "in_text/text_SHARED.yml",
   #     "in_text/text_00_parent.yml")
-#       river_metadata_verts)
-  # 
+  #       river_metadata_verts)
+   
   00_parent_sb_xml:
     command: sb_render_post_xml(sbid_00_parent,
       xml_file = I('00_parent.xml'),
@@ -122,9 +122,8 @@ targets:
   #     "in_text/text_03_driver.yml")
   #     #river_metadata_verts
   #     )
-  # 
-
-#   command: sb_render_post_xml(sbid_04_inputs,
+   
+  #   command: sb_render_post_xml(sbid_04_inputs,
   #     xml_file = I('04_inputs.xml'),
   #     "in_text/text_SHARED.yml",
   #     "in_text/text_04_inputs.yml",
