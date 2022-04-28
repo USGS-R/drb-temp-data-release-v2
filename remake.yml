@@ -21,7 +21,7 @@ packages:
 sources:
   #- src/spatial_utils.R
   - src/sb_utils.R
-  - src/sb_functions.R
+#  - src/sb_functions.R
   - src/spatial_functions.R
 
 targets:
@@ -55,8 +55,8 @@ targets:
   log/01_spatial_sb_data.csv:
     command: sb_replace_files(
       filename = target_name,
-      sources = 'src/sb_utils.R',
       sb_id = sbid_01_spatial,
+      sources = 'src/sb_utils.R',
       "out_data/study_stream_reaches.zip",
       "out_data/study_reservoirs.zip",
       "out_data/study_monitoring_sites.zip")
