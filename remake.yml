@@ -22,6 +22,7 @@ sources:
   #- src/spatial_utils.R
   - src/sb_utils.R
   - src/sb_functions.R
+  #- src.test.R
 
 targets:
   all:
