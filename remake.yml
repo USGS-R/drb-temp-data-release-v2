@@ -29,7 +29,7 @@ targets:
     depends:
       - 00_parent_sb_xml
       # - 01_spatial_sb_xml
-      - 01_spatial_sb_data
+      - log/01_spatial_sb_data.csv
       # - log/02_observations_sb_data.csv
       # - 02_observations_sb_xml
       # - 03_driver_sb_xml
@@ -52,14 +52,14 @@ targets:
       # river_metadata_verts)
 
   ## this builds only if I don't put in log file
-  01_spatial_sb_data:
-    command: sb_replace_files(sb_id = sbid_01_spatial,
+  log/01_spatial_sb_data.csv:
+    command: sb_replace_files(
+      filename = target_name,
+      sources = 'src/sb_utils.R',
+      sb_id = sbid_01_spatial,
       "out_data/study_stream_reaches.zip",
       "out_data/study_reservoirs.zip",
       "out_data/study_monitoring_sites.zip")
-         # filename = target_name,
-         # sources = 'src/sb_utils.R',
-
 
   # 01_spatial_sb_xml:
   #   command: sb_render_post_xml(sbid_01_spatial,
