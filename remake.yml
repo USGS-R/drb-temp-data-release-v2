@@ -1,5 +1,5 @@
 include:
-#  - 1_spatial.yml
+  - 1_spatial.yml
   - 2_observations.yml
   - 3_driver.yml
   
@@ -29,7 +29,7 @@ targets:
     depends:
       - 00_parent_sb_xml
       #- 01_spatial_sb_xml
-      - log/01_spatial_sb_shp
+      - log/01_spatial_sb_shp.csv
       #- log/02_observations_sb_data.csv
       #- 02_observations_sb_xml
      #- 03_driver_sb_xml
@@ -51,8 +51,10 @@ targets:
       # ,
       # river_metadata_verts)
 
-  log/01_spatial_sb_shp:
-    command: sb_replace_files(sbid_01_spatial,
+  log/01_spatial_sb_shp.csv:
+    command: sb_replace_files(
+      filename = target_name,
+      sb_id = sbid_01_spatial,
       "out_data/study_stream_reaches.zip",
       "out_data/study_reservoirs.zip",
       "out_data/study_monitoring_sites.zip")

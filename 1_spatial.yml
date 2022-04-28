@@ -15,7 +15,7 @@ targets:
     depends:
       - river_metadata_segs
       - out_data/study_stream_reaches.zip
-      - reservoir_metadata_verts
+      #- reservoir_metadata_verts
       - out_data/study_reservoirs.zip
       - out_data/study_monitoring_sites.zip
     
@@ -23,7 +23,6 @@ targets:
   # one option is to include a reach to HRU crosswalk
   
   #out_data/river_reach_metadata.csv:
-   # command: create_metadata_file(target_name,
      # streams_sf = modeled_streams_sf,
      # stream_to_hru = 'XX')
 
@@ -55,16 +54,7 @@ targets:
 
   #  let's change this to be all reservoir polygons in the DRB
   #  from the global reservoir data base
-  
-  ### REMOVE this target as it is in observations - Adding to test build
-  # reservoir observations
-  reservoir_modeling_site_ids:
-    command: c(I(c(
-      Pepacton = 'nhdhr_151957878',
-      Cannonsville = 'nhdhr_120022743',
-      Neversink = 'nhdhr_149269381')))
       
-  ###
   reservoir_polygons:
     command: fetch_filter_res_polygons(
       out_rds = target_name,
@@ -77,17 +67,17 @@ targets:
     
   out_data/study_reservoirs.zip:
     command: sf_to_zip2(zip_filename = target_name,
-    sf_object = reservoir_polygons,
-    layer_name = I('study_reservoirs'))
+      sf_object = reservoir_polygons,
+      layer_name = I('study_reservoirs'))
       
   monitoring_sites:
-    command: readRDS(file = 'in_data/03_driver/drb_filtered_sites.rds')
+    command: readRDS(file = 'in_data/01_spatial/drb_filtered_sites.rds')
     
   out_data/study_monitoring_sites.zip:
     command: reduce_and_zip(zip_filename = target_name, 
       in_dat = monitoring_sites,
       layer_name = I('study_monitoring_sites'))
       
-  # let's also include reach metadata in this spatial section
-  # which includes distance to nearest reservoir, to and from segments, etc
+# let's also include reach metadata in this spatial section
+# which includes distance to nearest reservoir, to and from segments, etc
     
