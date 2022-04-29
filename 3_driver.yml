@@ -15,7 +15,7 @@ sources:
 targets:
   3_driver:
     depends:
-       - out_data/distance_matrix.csv
+       - out_data/distance_matrix_drb.csv
        - out_data/reach_attributes_drb.csv
        - out_data/reservoir_features_drb.csv
       # - out_data/sntemp_inputs_outputs.zip
@@ -60,7 +60,7 @@ targets:
     command: file.copy(from = 'in_data/03_driver/drb_climate_2022_04_06.nc', to = target_name)
     
   out_data/gridmet_drb_agg.nc.zip:
-    command: zip_this(out_file = target_name, .object = 'out_data/drb_climate_2022_04_06.nc')
+    command: zip_this(out_file = target_name, .object = 'out_data/gridmet_drb_agg.nc')
     
   out_data/reanalysis_gefs_fy22.csv:
     command: file.copy(from = 'in_data/03_driver/reanalysis_gefs_fy22.csv', to = target_name)

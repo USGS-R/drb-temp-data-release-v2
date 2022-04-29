@@ -105,6 +105,7 @@ targets:
       filename = target_name,
       sb_id = sbid_03_driver,
       sources = 'src/sb_utils.R',
+      'out_data/distance_matrix_drb.csv',
       'out_data/gridmet_drb_agg.csv.zip',
       'out_data/gridmet_drb_agg.nc.zip',
       'out_data/out_data/reanalysis_gefs_fy22.csv.zip',
