@@ -4,7 +4,7 @@ packages:
   - rgdal
   - sf
   - zip
-  
+
 sources:
   - src/spatial_functions.R
   - src/fetch_filter_functions.R
@@ -13,9 +13,10 @@ sources:
 targets:
   1_spatial:
     depends:
-      - river_metadata_segs
       - out_data/study_stream_reaches.zip
-      - reservoir_metadata_verts
+      #- river_metadata_verts
+      #- river_metadata_segs
+      #- reservoir_metadata
       - out_data/study_reservoirs.zip
       - out_data/study_monitoring_sites.zip
     
@@ -23,7 +24,6 @@ targets:
   # one option is to include a reach to HRU crosswalk
   
   #out_data/river_reach_metadata.csv:
-   # command: create_metadata_file(target_name,
      # streams_sf = modeled_streams_sf,
      # stream_to_hru = 'XX')
 
@@ -43,10 +43,10 @@ targets:
       #plot_crs = I("+init=epsg:2811"))
     
   river_metadata_segs:
-    command: extract_feature(network_vertices_sf)
+    command: extract_feature(modeled_network_sf)
     
   river_metadata_verts:
-    command: extract_feature(modeled_network_sf)
+    command: extract_feature(network_vertices_sf)
     
   out_data/study_stream_reaches.zip:
     command: sf_to_zip(target_name,
@@ -55,6 +55,7 @@ targets:
 
   #  let's change this to be all reservoir polygons in the DRB
   #  from the global reservoir data base
+      
   reservoir_polygons:
     command: fetch_filter_res_polygons(
       out_rds = target_name,
@@ -66,8 +67,9 @@ targets:
     command: extract_feature(reservoir_polygons)
     
   out_data/study_reservoirs.zip:
-    command: sf_to_zip(zip_filename = target_name,
-    sf_object = reservoir_polygons, layer_name = I('study_reservoirs'))
+    command: sf_to_zip2(zip_filename = target_name,
+      sf_object = reservoir_polygons,
+      layer_name = I('study_reservoirs'))
       
   monitoring_sites:
     command: readRDS(file = 'in_data/01_spatial/drb_filtered_sites_qa.rds')
@@ -77,6 +79,6 @@ targets:
       in_dat = monitoring_sites,
       layer_name = I('study_monitoring_sites'))
       
-  # let's also include reach metadata in this spatial section
-  # which includes distance to nearest reservoir, to and from segments, etc
+# let's also include reach metadata in this spatial section
+# which includes distance to nearest reservoir, to and from segments, etc
     

@@ -1,4 +1,4 @@
-sb_replace_files <- function(sb_id, ..., file_hash){
+sb_replace_file_meta <- function(sb_id, ..., file_hash){
   
   if (!sbtools::is_logged_in()){
 
@@ -29,6 +29,6 @@ sb_render_post_xml <- function(sb_id, ..., xml_file = NULL){
   
   render(filename = xml_file, ...)
   
-  sb_replace_files(sb_id = sb_id, xml_file)
+  sb_replace_file_meta(sb_id = sb_id, xml_file)
   
 }

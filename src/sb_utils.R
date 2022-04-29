@@ -152,7 +152,7 @@ verify_uploads <- function(file_tbl, tgt_names, remake_file){
   }
 }
 
-#' a simple function to authenticate R for sciencebase using the "cidamanager" user if
+#' a simple function to authenticate R for Science Base using the "cidamanager" user if
 #' you aren't already logged in. 
 #' 
 #' @details can avoid `dssecrets` usage sbtools::authenticate_sb('[my_sb_user]'), 
@@ -163,3 +163,17 @@ sb_secret_login <- function(){
     sbtools::authenticate_sb(username = sb_secret$username, password = sb_secret$password)
   }
 }
+
+sb_render_post_xml <- function(sb_id, ..., xml_file = NULL){
+  
+  if (is.null(xml_file)){
+    xml_file <- file.path(tempdir(), paste0(sb_id,'.xml'))
+  }
+  
+  render(filename = xml_file, ...)
+  
+  sb_replace_files(sb_id = sb_id, xml_file)
+  
+}
+
+

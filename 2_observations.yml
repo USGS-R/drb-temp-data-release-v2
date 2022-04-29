@@ -35,7 +35,8 @@ targets:
   reservoir_modeling_site_ids:
     command: c(I(c(
       Pepacton = 'nhdhr_151957878',
-      Cannonsville = 'nhdhr_120022743')))
+      Cannonsville = 'nhdhr_120022743',
+      Neversink = 'nhdhr_149269381')))
       
   out_data/reservoir_temp_obs.csv:
     command: fetch_filter_tibble(

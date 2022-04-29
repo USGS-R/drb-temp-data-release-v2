@@ -3,13 +3,9 @@ title: >-
 
 abstract: >-
   <p> This data release contains spatial, observational, and driver data used as inputs for multiple modeling efforts in the Delaware River Basin (DRB).  
-  The data  in this release primarily supports the 7-day ahead maximum water temperature forecasting models that output real-time predictions in the DRB for 2022 (<li><a href="https://www.sciencebase.gov/catalog/item/6238fcead34e915b67cc4856"> Data to support network-wide 7-day ahead forecasting of water temperature in teh Delware River Basin  </a>).
+  The data  in this release primarily supports the 7-day ahead maximum water temperature forecasting models that output real-time predictions in the DRB for 2022(<li><a href="https://www.sciencebase.gov/catalog/item/6238fcead34e915b67cc4856"> Data to support network-wide 7-day ahead forecasting of water temperature in teh Delware River Basin</a>).
   The model is driven by weather forecasts and observed reservoir releases and produces maximum water temperature forecasts for the issue day (day 0) and 7 days into the future (days 1-7) at five sites. This data release captures the entire forecasting period that is reported in Zwart et al. 2022 and is an extension of XX.
-  The data is stored in 3 child folders: 1_spatial folder, 2_observations and 3_driver data folder. 
-  
-  XX
-
-  <ol>
+  The data is stored in 3 child folders: 1_spatial folder, 2_observations and 3_driver data folder.</p>
   <li><a href="https://www.sciencebase.gov/catalog/item/623e54c4d34e915b67d83580"> 1_spatial </a> - Spatial data used for modeling efforts in the Delaware River Basin</li> -
   One shapefile of polylines for the 456 river segments in this study, a reservoir polygon metadata file, and one shapefile of reservoir polygons for the Pepacton, Cannonsville, and Neversink reservoirs.
   <li><a href="https://www.sciencebase.gov/catalog/item/623e550ad34e915b67d8366e"> 2_observations </a> - Observations data ((e.g. temperatures measurements, flow observations) used for modeling efforts for designated time frame in the Delaware River Basin</li> - 
