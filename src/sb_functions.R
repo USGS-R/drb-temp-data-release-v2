@@ -18,7 +18,6 @@ sb_replace_file_meta <- function(sb_id, ..., file_hash){
   if (length(files) > 0){
     item_replace_files(sb_id, files = files)
   }
-  
 }
 
 sb_render_post_xml <- function(sb_id, ..., xml_file = NULL){
