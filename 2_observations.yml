@@ -60,7 +60,7 @@ targets:
     command: fetch_filter_historical(
       out_rds = target_name,
       in_dat = 'in_data/02_observations/interpolated_daily_reservoir_water_budget_components.csv',
-      xwalk = I(c('Cannonsville' = 'nhdhr_120022743', 'Pepacton' = 'nhdhr_151957878')))
+      xwalk = I(c('Cannonsville' = 'nhdhr_120022743', 'Pepacton' = 'nhdhr_151957878', 'Neversink' = 'nhdhr_149269381')))
       
   out_data/reservoir_level_obs.csv:
     command: combine_level_sources(
