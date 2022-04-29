@@ -18,7 +18,6 @@ targets:
       - out_data/reservoir_level_obs.csv
       - out_data/reservoir_temp_obs.csv
       - out_data/reservoir_releases_by_type_drb.csv
-      
   # daily flow and temperature data
   ## make sure we publish the "raw" version (unaggregated) and the "aggregated" version of 
   ## the temperature data. Raw should be matched but not aggregated to one value per reach/day
