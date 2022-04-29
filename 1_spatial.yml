@@ -13,7 +13,7 @@ sources:
 targets:
   1_spatial:
     depends:
-     # - out_data/study_stream_reaches.zip
+      - out_data/study_stream_reaches.zip
       - river_metadata_verts
       - river_metadata_segs
       - reservoir_metadata

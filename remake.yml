@@ -67,14 +67,13 @@ targets:
       xml_file = I('01_spatial_sb.xml'),
       "in_text/text_SHARED.yml",
       "in_text/text_01_spatial.yml",
-      river_metadata_verts)
+      river_metadata_segs)
 #        
   out_xml/01_spatial_fgdc_metadata.xml:
     command: render(filename = target_name,
       "in_text/text_SHARED.yml",
       "in_text/text_01_spatial.yml",
       river_metadata_verts)
-  # 
 
   log/02_observations_sb_data.csv:
     command: sb_replace_files(
