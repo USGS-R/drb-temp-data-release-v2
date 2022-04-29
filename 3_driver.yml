@@ -38,7 +38,7 @@ targets:
   out_data/reach_attributes_drb.csv:
     command: extract_reach_attributes(
       res_file = 'in_data/01_spatial/segments_relative_to_reservoirs.rds',
-      attr_file = 'in_data/01_spatial/1_network/out/network.rds',
+      attr_file = 'in_data/01_spatial/network.rds',
       out_file = target_name)
        
   out_data/reservoir_features_drb.csv:
