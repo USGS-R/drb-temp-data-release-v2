@@ -21,13 +21,14 @@ packages:
 sources:
   #- src/spatial_utils.R
   - src/sb_utils.R
+  - src/sb_functions.R
   - src/spatial_functions.R
 
 targets:
   all:
     depends:
       - 00_parent_sb_xml
-      # - 01_spatial_sb_xml
+      - 01_spatial_sb_xml
       - log/01_spatial_sb_data.csv
       # - log/02_observations_sb_data.csv
       # - 02_observations_sb_xml
@@ -59,19 +60,20 @@ targets:
       "out_data/study_stream_reaches.zip",
       "out_data/study_reservoirs.zip",
       "out_data/study_monitoring_sites.zip")
-
-  # 01_spatial_sb_xml:
-  #   command: sb_render_post_xml(sbid_01_spatial,
-  #     xml_file = I('01_spatial.xml'),
-  #     "in_text/text_SHARED.yml",
-  #     "in_text/text_01_spatial.yml",
-  #     river_metadata_verts)
-  #     
-  # out_xml/01_spatial_fgdc_metadata.xml:
-  #   command: render(filename = target_name,
-  #     "in_text/text_SHARED.yml",
-  #     "in_text/text_01_spatial.yml",
-  #     river_metadata_verts)
+# 
+  01_spatial_sb_xml:
+    command: sb_render_post_xml(
+      sbid_01_spatial,
+      xml_file = I('01_spatial_sb.xml'),
+      "in_text/text_SHARED.yml",
+      "in_text/text_01_spatial.yml",
+      river_metadata_verts)
+#        
+  out_xml/01_spatial_fgdc_metadata.xml:
+    command: render(filename = target_name,
+      "in_text/text_SHARED.yml",
+      "in_text/text_01_spatial.yml",
+      river_metadata_verts)
   # 
 
   log/02_observations_sb_data.csv:
