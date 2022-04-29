@@ -66,7 +66,7 @@ targets:
     command: file.copy(from = 'in_data/03_driver/reanalysis_gefs_fy22.csv', to = target_name)
 
   out_data/reanalysis_gefs_fy22.csv.zip:
-    command: zip_this(out_file = target_name, .object = 'out_data/reanalysis_gefs_fy22.csv')
+    command: zip_obs(out_file = target_name, in_file = 'out_data/reanalysis_gefs_fy22.csv')
   
   out_data/uncal_sntemp_input_output.nc:
     command: file.copy(from = 'in_data/03_driver/uncal_sntemp_input_output.nc', to = target_name)

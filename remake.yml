@@ -84,7 +84,7 @@ targets:
       'out_data/aggregated_temperature_observations_drb.zip',
       "out_data/reservoir_temp_obs.csv",
       "out_data/reservoir_level_obs.csv",
-      "out_data/reservoir_releases_by_type.csv",
+      "out_data/reservoir_releases_by_type_drb.csv",
       'in_data/02_observations/reservoir_diversions.csv')
 
   # 02_observations_sb_xml:
