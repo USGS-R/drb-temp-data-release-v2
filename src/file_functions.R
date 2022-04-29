@@ -1,7 +1,7 @@
 zip_this <- function(out_file, .object){
   if ('data.frame' %in% class(.object)){
     filepath <- basename(out_file) %>% tools::file_path_sans_ext() %>% paste0('.csv') %>% file.path(tempdir(), .)
-    write_csv(.object, path = filepath)
+    write_csv(.object, file = filepath)
     zip_this(out_file = out_file, .object = filepath)
   } else if (class(.object) == 'character' & all(file.exists(.object))){
     # works for single or multiple files
