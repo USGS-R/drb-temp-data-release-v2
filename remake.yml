@@ -101,17 +101,17 @@ targets:
   #     "in_text/text_02_observations.yml",
   #     river_metadata_verts)
   
-  # log/03_driver_sb_data.csv:
-  #   command: sb_replace_files(
-  #     filename = target_name,
-  #     sb_id = sbid_03_driver,
-  #     sources = 'src/sb_utils.R',
-  #     'out_data/gridmet_drb_agg.csv.zip',
-  #     'out_data/gridmet_drb_agg.nc.zip',
-  #     'out_data/out_data/reanalysis_gefs_fy22.csv.zip',
-  #     'out_data/uncal_sntemp_input_output.nc.zip'
-  #     )
-  # 
+  log/03_driver_sb_data.csv:
+    command: sb_replace_files(
+      filename = target_name,
+      sb_id = sbid_03_driver,
+      sources = 'src/sb_utils.R',
+      'out_data/gridmet_drb_agg.csv.zip',
+      'out_data/gridmet_drb_agg.nc.zip',
+      'out_data/out_data/reanalysis_gefs_fy22.csv.zip',
+      'out_data/uncal_sntemp_input_output.nc.zip'
+      )
+   
   # 03_driver_sb_xml:
   #   command: sb_render_post_xml(sbid_03_driver,
   #     xml_file = I('03_driver.xml'),
