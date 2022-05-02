@@ -3,7 +3,8 @@ title: >-
 
 abstract: >-
   This data release provides 3 spatial data files and associated metadata information. 
-  This data release includes one shapefile of polylines for the 456 reaches studied in the river network and associated metadata information. Additionally, the point shapefile entails the of point locations of monitoired sites on the reaches. 
+  This data release includes one shapefile of polylines for the 456 reaches studied in the river network and associated metadata information.
+  Additionally, the point shapefile contains point locations of monitoring sites along the reaches with attributes for geographic point coordinates, USGS data collection source (e.g. nwis, wqp, ecosheds) and bird/fish distance to outlet 
   The reservoir polygon shapefile includes the Pepacton, Cannonsville, and Neversink reservoirs.  
   
 cross-cites:
