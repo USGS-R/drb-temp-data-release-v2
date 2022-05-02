@@ -113,228 +113,232 @@ entities:
       data-min: -138821.4
       data-max: 120381.61
       data-units: meters
+      
+  -
+  #   data-name: reservoir_features_{subset}.csv
+  #   data-description: >-
+  #     Features of the 17 dam and reservoir systems in the Delaware River Basin.
+  #     Data come from the GRaND database, and either represent the 17 dam and reservoir systems
+  #     across the basin (reservoir_features.csv), or the 2 dam and reservoir systems
+  #     (Pepacton and Cannonsville) above Lordville, New York (reservoir_features_lordville.csv).
+  #   attributes:
+  #   -
+  #     attr-label: GRAND_ID
+  #     attr-def: >-
+  #       Unique reservoir identifier.
+  #     attr-defs: https://doi.org/10.1890/100125
+  #     data-min: NA
+  #     data-max: NA
+  #     data-units: NA
+  #   -
+  #     attr-label: AREA_SKM
+  #     attr-def: >-
+  #       Reservoir surface area.
+  #     attr-defs: https://doi.org/10.1890/100125
+  #     data-min: 0.100
+  #     data-max: 21
+  #     data-units: square kilometers
+  #   -
+  #     attr-label: RES_NAME
+  #     attr-def: >-
+  #       Reservoir name.
+  #     attr-defs: https://doi.org/10.1890/100125
+  #     data-min: NA
+  #     data-max: NA
+  #     data-units: NA
+  #   -
+  #     attr-label: DAM_NAME
+  #     attr-def: >-
+  #       Dam name.
+  #     attr-defs: https://doi.org/10.1890/100125
+  #     data-min: NA
+  #     data-max: NA
+  #     data-units: NA
+  #   -
+  #     attr-label: ALT_NAME
+  #     attr-def: >-
+  #       Alternative reservoir name.
+  #     attr-defs: https://doi.org/10.1890/100125
+  #     data-min: NA
+  #     data-max: NA
+  #     data-units: NA
+  #   -
+  #     attr-label: RIVER
+  #     attr-def: >-
+  #       The river name on which the reservoir and dam is situated.
+  #     attr-defs: https://doi.org/10.1890/100125
+  #     data-min: NA
+  #     data-max: NA
+  #     data-units: NA
+  #   -
+  #     attr-label: ALT_RIVER
+  #     attr-def: >-
+  #       The alternative river name on which the reservoir and dam is situated.
+  #     attr-defs: https://doi.org/10.1890/100125
+  #     data-min: NA
+  #     data-max: NA
+  #     data-units: NA
+  #   -
+  #     attr-label: YEAR
+  #     attr-def: >-
+  #       Year the dam was built.
+  #     attr-defs: https://doi.org/10.1890/100125
+  #     data-min: 1869
+  #     data-max: 1998
+  #     data-units: NA
+  #   -
+  #     attr-label: DAM_HGT_M
+  #     attr-def: >-
+  #       Height of the dam.
+  #     attr-defs: https://doi.org/10.1890/100125
+  #     data-min: 5
+  #     data-max: 62
+  #     data-units: meters
+  #   -
+  #     attr-label: DAM_LEN_M
+  #     attr-def: >-
+  #       The length of the dam (perpendicular to the river).
+  #     attr-defs: https://doi.org/10.1890/100125
+  #     data-min: 83
+  #     data-max: 1390
+  #     data-units: meters
+  # 
+  #   -
+  #     attr-label: DEPTH_M
+  #     attr-def: >-
+  #       Average depth of the reservoir.
+  #     attr-defs: https://doi.org/10.1890/100125
+  #     data-min: 6.5
+  #     data-max: 156
+  #     data-units: meters
+  #   -
+  #     attr-label: ELEV_MASL
+  #     attr-def: >-
+  #       Elevation of reservoir surface in meters above sea level.
+  #     attr-defs: https://doi.org/10.1890/100125
+  #     data-min: 4
+  #     data-max: 419
+  #     data-units: meters
+  #   -
+  #     attr-label: CATCH_SKM
+  #     attr-def: >-
+  #       Area of upstream catchment draining into the reservoir.
+  #     attr-defs: https://doi.org/10.1890/100125
+  #     data-min: 44
+  #     data-max: 1177
+  #     data-units: square kilometers
+  #     
+  # -
+  #   data-name: >-
+  #     reach_attributes_{subset}.csv
+  #   data-description: >-
+  #     Metadata about reaches in the Delaware River Basin, including fields for
+  #     upstream/downstream segments, segment length, and position relative to reservoirs.
+  #     There are two files; files either describe all 456 reaches in the Delaware River Basin modeling network, or
+  #     a subset of 56 reaches above Lordville, New York.
+  #   
+  #   attributes:
+  #   -
+  #     attr-label: seg_id_nat
+  #     attr-def: >-
+  #       Stream reach identification number for this dataset.
+  #     This is the ID named seg_id_nat from the Geospatial Fabric for National Hydrologic Modeling.
+  #     attr-defs: >-
+  #       https://www.sciencebase.gov/catalog/item/535eda80e4b08e65d60fc834
+  #     data-min: NA
+  #     data-max: NA
+  #     data-units: NA
+  #   -
+  #     attr-label: frac_overlap
+  #     attr-def: >-
+  #       The fraction of stream segment length that overlaps with a reservoir. NA indicates no overlap with reservoir.
+  #     attr-defs: >-
+  #       This data release
+  #     data-min: 0.01870757
+  #     data-max: 1.0
+  #     data-units: NA
+  #   -
+  #     attr-label: reach_class
+  #     attr-def: >-
+  #       Classification of river reaches relative to reservoirs.
+  #     
+  #     reach = the river reach is > 2 segments away from a reservoir;
+  #     
+  #     upstream of reservoir (2) = reach is two segments above a reservoir;
+  #     
+  #     upstream of reservoir (1) = reach is one segment above a reservoir;
+  #     
+  #     downstream of reservoir (2) = reach is two segments below a reservoir;
+  #     
+  #     downstream of reservoir (1) = reach is one segment below a reservoir;
+  #     
+  #     reservoir_inlet_reach = the reach starting point is above a reservoir and the endpoint is within a reservoir;
+  #     
+  #     reservoir_outlet_reach = the reach starting point is within a reservoir and the endpoint is downstream of a reservoir;
+  #     
+  #     within_reservoir = the reach is fully contained within a reservoir (both start and end points are within a reservoir);
+  #     
+  #     contains_reservoir = a reservoir is fully contained within the reach
+  #     attr-defs: >-
+  #       This data release
+  #     data-min: NA
+  #     data-max: NA
+  #     data-units: NA
+  #   -
+  #     attr-label: nearest_GRAND_ID
+  #     attr-def: >-
+  #       The unique identifier (GRAND ID) if the nearest reservoir. Only reaches within two reaches of a reservoir are associated with a reservoir, such that reaches with reach_class = reach have an NA in this field.
+  #     attr-defs: https://doi.org/10.1890/100125
+  #     data-min: NA
+  #     data-max: NA
+  #     data-units: NA
+  #   -
+  #     attr-label: subseg_id
+  #     attr-def:  >-
+  #       An alternative unique reach identifier which was created in order to split segments such that
+  #     segment start and endpoints were connected by one reach with no intersecting reaches. The ID was created
+  #     using the seg_id from the Geospatial Fabric and an index from one to the number of splits (e.g., {subseg_id}_{index}).
+  #     attr-defs: This data release
+  #     data-min: NA
+  #     data-max: NA
+  #     data-units: NA
+  #   -
+  #     attr-label: subseg_seg
+  #     attr-def: >-
+  #       An alternative reach identifier, which corresponds to seg_id in the Geospatial Fabric.
+  #     attr-defs: https://www.sciencebase.gov/catalog/item/535eda80e4b08e65d60fc834
+  #     data-min: NA
+  #     data-max: NA
+  #     data-units: NA
+  #   -
+  #     attr-label: subseg_length
+  #     attr-def: >-
+  #       Length of stream reach.
+  #     attr-defs: https://www.sciencebase.gov/catalog/item/535eda80e4b08e65d60fc834
+  #     data-min: 47.24
+  #     data-max: 36592.38
+  #     data-units: meters
+  #   -
+  #     attr-label: from_segs
+  #     attr-def: >-
+  #       Reach identifier (subseg_seg) of the upstream segment. NA indicates a headwater stream with no upstream segments.
+  #     Multiple upstream segments are seperated with a semicolon.
+  #     attr-defs: https://www.sciencebase.gov/catalog/item/535eda80e4b08e65d60fc834
+  #     data-min: NA
+  #     data-max: NA
+  #     data-units: NA
+  #   -
+  #     attr-label: to_seg
+  #     attr-def: >-
+  #       Reach identifier (subseg_seg) of the downstream segment. NA indicates a terminal stream.
+  #     attr-defs: https://www.sciencebase.gov/catalog/item/535eda80e4b08e65d60fc834
+  #     data-min: NA
+  #     data-max: NA
+  #     data-units: NA
+  #         
   -
     data-name: >-
-      reach_attributes_{subset}.csv
-    data-description: >-
-      Metadata about reaches in the Delaware River Basin, including fields for
-      upstream/downstream segments, segment length, and position relative to reservoirs.
-      There are two files; files either describe all 456 reaches in the Delaware River Basin modeling network, or
-      a subset of 56 reaches above Lordville, New York.
-    attributes:
-    -
-      attr-label: seg_id_nat
-      attr-def: >-
-        Stream reach identification number for this dataset.
-        This is the ID named seg_id_nat from the Geospatial Fabric for National Hydrologic Modeling.
-      attr-defs: >-
-        https://www.sciencebase.gov/catalog/item/535eda80e4b08e65d60fc834
-      data-min: NA
-      data-max: NA
-      data-units: NA
-    -
-      attr-label: frac_overlap
-      attr-def: >-
-        The fraction of stream segment length that overlaps with a reservoir. NA indicates no overlap with reservoir.
-      attr-defs: >-
-        This data release
-      data-min: 0.01870757
-      data-max: 1.0
-      data-units: NA
-    -
-      attr-label: reach_class
-      attr-def: >-
-        Classification of river reaches relative to reservoirs.
-
-        reach = the river reach is > 2 segments away from a reservoir;
-
-        upstream of reservoir (2) = reach is two segments above a reservoir;
-
-        upstream of reservoir (1) = reach is one segment above a reservoir;
-
-        downstream of reservoir (2) = reach is two segments below a reservoir;
-
-        downstream of reservoir (1) = reach is one segment below a reservoir;
-
-        reservoir_inlet_reach = the reach starting point is above a reservoir and the endpoint is within a reservoir;
-
-        reservoir_outlet_reach = the reach starting point is within a reservoir and the endpoint is downstream of a reservoir;
-
-        within_reservoir = the reach is fully contained within a reservoir (both start and end points are within a reservoir);
-
-        contains_reservoir = a reservoir is fully contained within the reach
-      attr-defs: >-
-        This data release
-      data-min: NA
-      data-max: NA
-      data-units: NA
-    -
-      attr-label: nearest_GRAND_ID
-      attr-def: >-
-        The unique identifier (GRAND ID) if the nearest reservoir. Only reaches within two reaches of a reservoir are associated with a reservoir, such that reaches with reach_class = reach have an NA in this field.
-      attr-defs: https://doi.org/10.1890/100125
-      data-min: NA
-      data-max: NA
-      data-units: NA
-    -
-      attr-label: subseg_id
-      attr-def:  >-
-        An alternative unique reach identifier which was created in order to split segments such that
-        segment start and endpoints were connected by one reach with no intersecting reaches. The ID was created
-        using the seg_id from the Geospatial Fabric and an index from one to the number of splits (e.g., {subseg_id}_{index}).
-      attr-defs: This data release
-      data-min: NA
-      data-max: NA
-      data-units: NA
-    -
-      attr-label: subseg_seg
-      attr-def: >-
-        An alternative reach identifier, which corresponds to seg_id in the Geospatial Fabric.
-      attr-defs: https://www.sciencebase.gov/catalog/item/535eda80e4b08e65d60fc834
-      data-min: NA
-      data-max: NA
-      data-units: NA
-    -
-      attr-label: subseg_length
-      attr-def: >-
-        Length of stream reach.
-      attr-defs: https://www.sciencebase.gov/catalog/item/535eda80e4b08e65d60fc834
-      data-min: 47.24
-      data-max: 36592.38
-      data-units: meters
-    -
-      attr-label: from_segs
-      attr-def: >-
-        Reach identifier (subseg_seg) of the upstream segment. NA indicates a headwater stream with no upstream segments.
-        Multiple upstream segments are seperated with a semicolon.
-      attr-defs: https://www.sciencebase.gov/catalog/item/535eda80e4b08e65d60fc834
-      data-min: NA
-      data-max: NA
-      data-units: NA
-    -
-      attr-label: to_seg
-      attr-def: >-
-        Reach identifier (subseg_seg) of the downstream segment. NA indicates a terminal stream.
-      attr-defs: https://www.sciencebase.gov/catalog/item/535eda80e4b08e65d60fc834
-      data-min: NA
-      data-max: NA
-      data-units: NA
-  -
-    data-name: reservoir_features_{subset}.csv
-    data-description: >-
-      Features of the 17 dam and reservoir systems in the Delaware River Basin.
-      Data come from the GRaND database, and either represent the 17 dam and reservoir systems
-      across the basin (reservoir_features.csv), or the 2 dam and reservoir systems
-      (Pepacton and Cannonsville) above Lordville, New York (reservoir_features_lordville.csv).
-    attributes:
-    -
-      attr-label: GRAND_ID
-      attr-def: >-
-        Unique reservoir identifier.
-      attr-defs: https://doi.org/10.1890/100125
-      data-min: NA
-      data-max: NA
-      data-units: NA
-    -
-      attr-label: AREA_SKM
-      attr-def: >-
-        Reservoir surface area.
-      attr-defs: https://doi.org/10.1890/100125
-      data-min: 0.100
-      data-max: 21
-      data-units: square kilometers
-    -
-      attr-label: RES_NAME
-      attr-def: >-
-        Reservoir name.
-      attr-defs: https://doi.org/10.1890/100125
-      data-min: NA
-      data-max: NA
-      data-units: NA
-    -
-      attr-label: DAM_NAME
-      attr-def: >-
-        Dam name.
-      attr-defs: https://doi.org/10.1890/100125
-      data-min: NA
-      data-max: NA
-      data-units: NA
-    -
-      attr-label: ALT_NAME
-      attr-def: >-
-        Alternative reservoir name.
-      attr-defs: https://doi.org/10.1890/100125
-      data-min: NA
-      data-max: NA
-      data-units: NA
-    -
-      attr-label: RIVER
-      attr-def: >-
-        The river name on which the reservoir and dam is situated.
-      attr-defs: https://doi.org/10.1890/100125
-      data-min: NA
-      data-max: NA
-      data-units: NA
-    -
-      attr-label: ALT_RIVER
-      attr-def: >-
-        The alternative river name on which the reservoir and dam is situated.
-      attr-defs: https://doi.org/10.1890/100125
-      data-min: NA
-      data-max: NA
-      data-units: NA
-    -
-      attr-label: YEAR
-      attr-def: >-
-        Year the dam was built.
-      attr-defs: https://doi.org/10.1890/100125
-      data-min: 1869
-      data-max: 1998
-      data-units: NA
-    -
-      attr-label: DAM_HGT_M
-      attr-def: >-
-        Height of the dam.
-      attr-defs: https://doi.org/10.1890/100125
-      data-min: 5
-      data-max: 62
-      data-units: meters
-    -
-      attr-label: DAM_LEN_M
-      attr-def: >-
-        The length of the dam (perpendicular to the river).
-      attr-defs: https://doi.org/10.1890/100125
-      data-min: 83
-      data-max: 1390
-      data-units: meters
-
-    -
-      attr-label: DEPTH_M
-      attr-def: >-
-        Average depth of the reservoir.
-      attr-defs: https://doi.org/10.1890/100125
-      data-min: 6.5
-      data-max: 156
-      data-units: meters
-    -
-      attr-label: ELEV_MASL
-      attr-def: >-
-        Elevation of reservoir surface in meters above sea level.
-      attr-defs: https://doi.org/10.1890/100125
-      data-min: 4
-      data-max: 419
-      data-units: meters
-    -
-      attr-label: CATCH_SKM
-      attr-def: >-
-        Area of upstream catchment draining into the reservoir.
-      attr-defs: https://doi.org/10.1890/100125
-      data-min: 44
-      data-max: 1177
-      data-units: square kilometers
-  -
-    data-name: >-
-      sntemp_inputs_outputs_{subset}.zip
+      uncal_sntemp_inputs_outputs.nc.zip
     data-description: >-
       PRMS-SNTemp inputs and outputs, including weather driver data, intermediate varibles, and
       model predictions. There are two files; files either contain inputs/outputs from all 456 stream reaches in the
@@ -367,22 +371,22 @@ entities:
       data-min: NA
       data-max: NA
       data-units: NA
-    -
-      attr-label: model_idx
-      attr-def: >-
-        Unique river segment identifier from the model cutout.
-      attr-defs: https://www.sciencebase.gov/catalog/item/535eda80e4b08e65d60fc834
-      data-min: NA
-      data-max: NA
-      data-units: NA
+    # -
+    #   attr-label: model_idx
+    #   attr-def: >-
+    #     Unique river segment identifier from the model cutout.
+    #   attr-defs: https://www.sciencebase.gov/catalog/item/535eda80e4b08e65d60fc834
+    #   data-min: NA
+    #   data-max: NA
+    #   data-units: NA
 
     -
       attr-label: date
       attr-def: >-
         Date of the observation or prediction.
       attr-defs: This data release
-      data-min: 1980-01-01
-      data-max: 2020-07-31
+      data-min: 1979-01-01
+      data-max: 2022-04-04
       data-units: NA
     -
       attr-label: seg_ccov
