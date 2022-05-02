@@ -84,12 +84,12 @@ cross-cites:
 entities:
   -
     data-name: >-
-      distance_matrix_{subset}.csv
+      distance_matrix_drb.csv
     data-description: >-
       A matrix documenting the upstream (negative numbers) or downstream (positive numbers)
-      distances between river reaches. There are two files; files are either for all 456 reaches in the Delaware
-      River Basin modeling network (distance_matrix.csv),
-      or for a subset of 56 reaches above Lordville, New York (distance_matrix_lordville.csv).
+      distances between river reaches. There is one file for all 456 reaches in the Delaware
+      River Basin modeling network (distance_matrix_drb.csv).
+      
     attributes:
     -
       attr-label: from
