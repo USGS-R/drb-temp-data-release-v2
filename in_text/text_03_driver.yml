@@ -393,7 +393,7 @@ entities:
       attr-label: PRMS_segid
       attr-def: >-
         PRMS segment identifier (NHM catchment polygons)
-      attr-defs: XX (link to documentation on PRMS identifiers)
+      attr-defs: XX [TBD - link to documentation on PRMS identifiers]
       data-min: NA
       data-max: NA
       data-units: 

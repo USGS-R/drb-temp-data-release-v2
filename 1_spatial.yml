@@ -19,58 +19,46 @@ targets:
       - reservoir_metadata
       - out_data/study_reservoirs.zip
       - out_data/study_monitoring_sites.zip
-    
-  # not sure what this metadata should be, if anything
-  # one option is to include a reach to HRU crosswalk
   
-  #out_data/river_reach_metadata.csv:
-     # streams_sf = modeled_streams_sf,
-     # stream_to_hru = 'XX')
-
+  # River network segments and vertices0 
   modeled_network_sf:
     command: retrieve_network(network_sf_fl = 'in_data/01_spatial/network.rds')
     
   network_vertices_sf:
     command: retrieve_vertices(network_sf_fl = 'in_data/01_spatial/network.rds')
-     
-  # should include shapefile of HRUs
-  #hrus_sf:
-    #command: retrieve_hrus(hrus_sf_fl = 'XX')
   
-  #out_data/modeling_domain_map.png:
-   # command: plot_domain_map(target_name,
-    #  network_sf = modeled_network_sf,
-      #plot_crs = I("+init=epsg:2811"))
-    
+  # River metadata   
   river_metadata_segs:
     command: extract_feature(modeled_network_sf)
     
   river_metadata_verts:
     command: extract_feature(network_vertices_sf)
-    
+  
+  # Output river network shp
   out_data/study_stream_reaches.zip:
     command: sf_to_zip(target_name,
       sf_object = modeled_network_sf,
       layer_name = I('study_stream_reaches'))
 
-  #  let's change this to be all reservoir polygons in the DRB
-  #  from the global reservoir data base
-      
+  # Reservoir polygons
   reservoir_polygons:
     command: fetch_filter_res_polygons(
       out_rds = target_name,
       in_dat = "in_data/01_spatial/canonical_lakes_sf.rds",
       in_repo = NULL,
       site_ids = reservoir_modeling_site_ids)
-      
+  
+  # Reservoir polygons metadata    
   reservoir_metadata:
     command: extract_feature(reservoir_polygons)
     
+  # output reservoir shp
   out_data/study_reservoirs.zip:
     command: sf_to_zip2(zip_filename = target_name,
       sf_object = reservoir_polygons,
       layer_name = I('study_reservoirs'))
-      
+    
+  ## Monitoring Sites
   monitoring_sites:
     command: readRDS(file = 'in_data/01_spatial/drb_filtered_sites_qa.rds')
     
@@ -78,7 +66,3 @@ targets:
     command: reduce_and_zip(zip_filename = target_name, 
       in_dat = monitoring_sites,
       layer_name = I('study_monitoring_sites'))
-      
-# let's also include reach metadata in this spatial section
-# which includes distance to nearest reservoir, to and from segments, etc
-    
