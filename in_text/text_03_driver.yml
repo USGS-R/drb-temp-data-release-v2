@@ -335,10 +335,10 @@ entities:
       uncal_sntemp_inputs_outputs.nc.zip
     data-description: >-
       PRMS-SNTemp inputs and outputs, including weather driver data, intermediate varibles, and
-      model predictions.  contain inputs/outputs from all 456 stream reaches in the
-      Delaware River Basin modeling network, or for the 56 segments above Lordville, New York.
+      model predictions. The file contain inputs/outputs from all 456 stream reaches in the
+      Delaware River Basin modeling network.
 
-      Code used to generate these inputs and outputs can be found in the repository "run-prms-sntemp" in Zwart and others 2021 (https://doi.org/10.5281/zenodo.5164910).
+      Code used to generate these inputs and outputs can be found in the repository "run-prms-sntemp" in Zwart and others 2021 (https://doi.org/10.5281/zenodo.5164910 (to update with latest DOI)).
 
       There are two error codes in PRMS-SNTemp v5.1.0_rc that can be present in the
       seg_tave_water and seg_tave_upstream attributes indicating no streamflow for the current
