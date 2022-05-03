@@ -1,9 +1,9 @@
 title: >-
-  Data release to support multiple modeling efforts in the Delaware River Basin: Driver Data
-  
+  Data to support water quality modeling efforts in the Delaware River Basin: 3) Model driver Data
+
 abstract: >-
   This child item includes model drivers such as gridded weather data pulled from NOAA GEFS and gridMET, and the stream network distance matrix for the Delaware River Basin.
-  
+
 cross-cites:
   -
     authors: ['Steven L. Markstrom']
@@ -82,7 +82,7 @@ entities:
       A matrix documenting the upstream (negative numbers) or downstream (positive numbers)
       distances between river reaches. There is one file for all 456 reaches in the Delaware
       River Basin modeling network (distance_matrix_drb.csv).
-      
+
     attributes:
     -
       attr-label: from
@@ -106,7 +106,7 @@ entities:
       data-min: -138821.4
       data-max: 120381.61
       data-units: meters
-      
+
   -
   #   data-name: reservoir_features_{subset}.csv
   #   data-description: >-
@@ -195,7 +195,7 @@ entities:
   #     data-min: 83
   #     data-max: 1390
   #     data-units: meters
-  # 
+  #
   #   -
   #     attr-label: DEPTH_M
   #     attr-def: >-
@@ -220,7 +220,7 @@ entities:
   #     data-min: 44
   #     data-max: 1177
   #     data-units: square kilometers
-  #     
+  #
   # -
   #   data-name: >-
   #     reach_attributes_{subset}.csv
@@ -229,7 +229,7 @@ entities:
   #     upstream/downstream segments, segment length, and position relative to reservoirs.
   #     There are two files; files either describe all 456 reaches in the Delaware River Basin modeling network, or
   #     a subset of 56 reaches above Lordville, New York.
-  #   
+  #
   #   attributes:
   #   -
   #     attr-label: seg_id_nat
@@ -254,23 +254,23 @@ entities:
   #     attr-label: reach_class
   #     attr-def: >-
   #       Classification of river reaches relative to reservoirs.
-  #     
+  #
   #     reach = the river reach is > 2 segments away from a reservoir;
-  #     
+  #
   #     upstream of reservoir (2) = reach is two segments above a reservoir;
-  #     
+  #
   #     upstream of reservoir (1) = reach is one segment above a reservoir;
-  #     
+  #
   #     downstream of reservoir (2) = reach is two segments below a reservoir;
-  #     
+  #
   #     downstream of reservoir (1) = reach is one segment below a reservoir;
-  #     
+  #
   #     reservoir_inlet_reach = the reach starting point is above a reservoir and the endpoint is within a reservoir;
-  #     
+  #
   #     reservoir_outlet_reach = the reach starting point is within a reservoir and the endpoint is downstream of a reservoir;
-  #     
+  #
   #     within_reservoir = the reach is fully contained within a reservoir (both start and end points are within a reservoir);
-  #     
+  #
   #     contains_reservoir = a reservoir is fully contained within the reach
   #     attr-defs: >-
   #       This data release
@@ -328,7 +328,7 @@ entities:
   #     data-min: NA
   #     data-max: NA
   #     data-units: NA
-  #         
+  #
   -
     data-name: >-
       uncal_sntemp_inputs_outputs.nc.zip
@@ -337,10 +337,10 @@ entities:
       model predictions. There are two files; files either contain inputs/outputs from all 456 stream reaches in the
       Delaware River Basin modeling network, or for the 56 segments above Lordville, New York.
 
-      
+
       Code used to generate these inputs and outputs can be found in the repository "run-prms-sntemp" in Zwart and others 2021 (https://doi.org/10.5281/zenodo.5164910).
 
-      
+
       There are two error codes in PRMS-SNTemp v5.1.0_rc that can be present in the
       seg_tave_water and seg_tave_upstream attributes indicating no streamflow for the current
       timestep (error code: -98.9) or no streamflow at any timestep (error code: -99.9) of the model run.
@@ -349,7 +349,7 @@ entities:
       contributing hydrologic reach units and/or upstream segments can have streamflow but
       may not have streamflow at the current timestep (-98.9)
 
-      
+
       Very negative groundwater and shallow subsurface water temperatures (e.g. less than -1 C) are
       not error codes, but rather are a product of the way this version of PRMS-SNTemp is coded. However,
       we advise against using these very low groundwater and shallow subsurface temperature values
@@ -761,27 +761,27 @@ entities:
   #     data-min: 0
   #     data-max: NA
   #     data-units: m day−1
-  
+
   -
     data-name: 'reanalysis_gefs_fy22.csv'
     data-description: >-
       NOAA Global Ensemble Forecasting System v12.0 0.25-degree operational model output for the 00 UTC forecast cycle from 2021-04-15 to 2021-07-16.
       These data are aggregated to the daily scale and NOAA GEFS grid cells are matched to the centroid of the target stream segment. The target stream segment
       seg_id_nat (National Geospatial Fabric segment code) is used as the location identifier for these data.
-      
-      This csv XXX 
-      
-      
+
+      This csv XXX
+
+
     attributes:
     -
       attr-label: ensemble
       attr-def: >-
         XX
-      attr-defs: 
+      attr-defs:
       data-min: 0
       data-max: 4
       data-units: NA
-      
+
     -
       attr-label: srad
       attr-def: >-
@@ -843,7 +843,7 @@ entities:
       attr-label: rhmax
       attr-def: >-
          Maximum Relative Humidity
-      attr-defs: 
+      attr-defs:
       data-min: 0.35
       data-max: 1.00
       data-units: proportion (or fraction)
@@ -851,7 +851,7 @@ entities:
       attr-label: rhmin
       attr-def: >-
          Minimum Relative Humidity
-      attr-defs: 
+      attr-defs:
       data-min: 0.15
       data-max: 1.00
       data-units: proportion (or fraction)
@@ -859,26 +859,26 @@ entities:
       attr-label: rhmean
       attr-def: >-
          Mean Relative Humidity
-      attr-defs: 
+      attr-defs:
       data-min: 0.28
       data-max: 1.00
       data-units: proportion (or fraction)
-    
+
     # data-name: noaagefs_meteo_files.zip
     # data-description: >-
     #   NOAA Global Ensemble Forecasting System v12.0 0.25-degree operational model output for the 00 UTC forecast cycle from 2021-04-15 to 2021-07-16.
     #   These data are aggregated to the daily scale and NOAA GEFS grid cells are matched to the centroid of the target stream segment. The target stream segment
     #   seg_id_nat (National Geospatial Fabric segment code) is used as the location identifier for these data.
-    # 
-    #   
+    #
+    #
     #   The zipped folder contains one NetCDF file per forecast issue date evaluated in Zwart and others 2021, such
     #   that the file name is final_noaa_gefs_{extent}_{YYYY-MM-DD}_00_forecast_segments.segments.nc. Archiving of the NOAA GEFS
     #   product was changed from USGS NGWOS priority basins early in the record (extent = NGWOS) to the continental U.S. starting
     #   on 2021-05-26 which is reflected in the name change (extent = CONUS).
-    # 
-    # 
+    #
+    #
     #   Example code for how read the NOAA GEFS .nc files can be found in the "forecast-pgdl-da" repository in Zwart and others 2021 (https://doi.org/10.5281/zenodo.5164910).
-    # 
+    #
     # attributes:
     # -
     #   attr-label: RH
@@ -970,29 +970,29 @@ entities:
     #   data-min: NA
     #   data-max: NA
     #   data-units: integer
-  
+
   -
     data-name: 'gridmet_drb_agg_csv.zip'
     data-description: >-
       Tabular aggregated version of the GridMET data collected for the DRB contains daily 4-km spatial resolution meterological data from 1979 to 2022. This data is maintained and collected by <li><a href="https://www.climatologylab.org/gridmet.html"> Climatology lab </a>
       The meterological data variables used in this study include temperature min (tmin) and max (tmax), short wave radiation (srad), wind speed (vs), precipitation amount (pr), relative humidity min (rmin), relative humidity max (rmax) and specific humidity (sp). Derived from 4 km2 grids.
       The data is aggregated to PRMS segment scale (NHM catchment polygons) through an area-weighted mean, such that each segment evaluated in this study has associated meterological data for everyday since 01-01-1979.
-      
+
     attributes:
     -
       attr-label: tmin
       attr-def: >-
         Daily Minimum Temperature (2m)
-      attr-defs: 
+      attr-defs:
       data-min: NA
       data-max: NA
       data-units: degrees F
-      
+
     -
       attr-label: tmax
       attr-def: >-
          Daily Maximum Temperature (2m)\
-      attr-defs: 
+      attr-defs:
       data-min: NA
       data-max: NA
       data-units: degrees F
@@ -1000,7 +1000,7 @@ entities:
       attr-label: srad
       attr-def: >-
         Daily Mean downward shortwave radiation at surface
-      attr-defs: 
+      attr-defs:
       data-min: NA
       data-max: NA
       data-units: W m-2
@@ -1008,7 +1008,7 @@ entities:
       attr-label: vs
       attr-def: >-
         Daily Mean Wind Speed (10m)
-      attr-defs: 
+      attr-defs:
       data-min: NA
       data-max: NA
       data-units: m/s
@@ -1016,7 +1016,7 @@ entities:
       attr-label: rmin
       attr-def: >-
         Daily Minimum Relative Humidity (2m)
-      attr-defs: 
+      attr-defs:
       data-min: NA
       data-max: NA
       data-units: %
@@ -1024,7 +1024,7 @@ entities:
       attr-label: rmax
       attr-def: >-
         Daily Maximum Relative Humidity (2m)
-      attr-defs: 
+      attr-defs:
       data-min: NA
       data-max: NA
       data-units: %
@@ -1032,7 +1032,7 @@ entities:
       attr-label: pr
       attr-def: >-
         Daily Accumulated Precipitation
-      attr-defs: 
+      attr-defs:
       data-min: NA
       data-max: NA
       data-units: inch
@@ -1040,15 +1040,15 @@ entities:
       attr-label: sph
       attr-def: >-
          Daily mean specific humidity (2m)
-      attr-defs: 
-      data-min: 
-      data-max: 
+      attr-defs:
+      data-min:
+      data-max:
       data-units: kg/kg
-  
+
   -
     data-name: 'gridmet_drb_agg_csv.nc.zip'
     data-description: >-
-      NetCDF format is the same as the tabular format  of the GridMET data described above. This data is aggregated through area weighted mean to the HRU polygons of the DRB region. 
+      NetCDF format is the same as the tabular format  of the GridMET data described above. This data is aggregated through area weighted mean to the HRU polygons of the DRB region.
 
 
 

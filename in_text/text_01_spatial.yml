@@ -23,6 +23,12 @@ cross-cites:
       Preliminary spatial parameters for PRMS based on the Geospatial Fabric, NLCD2001 and SSURGO
     pubdate: 2014
     link: http://dx.doi.org/doi:10.5066/F7WM1BF7
+  -
+    authors: ["U.S. Geological Survey"]
+    title: >-
+      NHDPlus high resolution: U.S. Geological Survey The National Map website
+    pubdate: 2018
+    link: https://www.usgs.gov/national-hydrography/nhdplus-high-resolution
 
 entities:
   -
@@ -118,9 +124,8 @@ entities:
       stream network included in study_stream_reaches.zip. Sites were limited to those
       that matched to our stream network and that met our distance critera (fish distance < 20,000 m and bird distance < 250 m).
 
-      Sites were matched to the closest river reach from the Geospatial Fabric v1.1, by Euclidean distance, 
-
-      Sites were matched to the closest river reach from the Geospatial Fabric v1.1, by Euclidean distance, from the monitoring site latitude and longitude.
+      Sites were matched to the closest river reach from the Geospatial Fabric v1.1, by Euclidean distance,
+      from the monitoring site latitude and longitude.
       Sites represent all sites within the Delaware River Basin boundary that were retrieved from
       EcoSHEDS, Water Quality Portal, or the National Water Information System. Sites were limited to those
       that matched to our stream network and that met our distance critera (fish distance < 20,000 m and bird distance < 250 m).
