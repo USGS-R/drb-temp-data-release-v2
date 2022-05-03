@@ -1,5 +1,5 @@
 title: >-
-  Data to support water quality modeling efforts in the Delaware River Basin: 3) Model driver Data
+  Data to support water quality modeling efforts in the Delaware River Basin: 3) Model Driver Data
 
 abstract: >-
   This child item includes model drivers such as gridded weather data pulled from NOAA GEFS and gridMET, and the stream network distance matrix for the Delaware River Basin.
@@ -753,14 +753,11 @@ entities:
   #     data-units: m day−1
 
   -
-    data-name: 'reanalysis_gefs_fy22.csv'
+    data-name: 'reanalysis_gefs_drb.csv'
     data-description: >-
-      NOAA Global Ensemble Forecasting System v12.0 0.25-degree operational model output for the 00 UTC forecast cycle from 2021-04-15 to 2021-07-16.
+      NOAA GEFSv12.0 reforcast data  for the 00 UTC forecast cycle spanning the period 2000-01-01 to 2019-12-31.
       These data are aggregated to the daily scale and NOAA GEFS grid cells are matched to the centroid of the target stream segment. The target stream segment
       seg_id_nat (National Geospatial Fabric segment code) is used as the location identifier for these data.
-
-      This csv XXX
-
 
     attributes:
     -
@@ -962,13 +959,31 @@ entities:
     #   data-units: integer
 
   -
-    data-name: 'gridmet_drb_agg_csv.zip'
+    data-name: 'gridmet_drb_agg.csv.zip'
     data-description: >-
-      Tabular aggregated version of the GridMET data collected for the DRB contains daily 4-km spatial resolution meterological data from 1979 to 2022. This data is maintained and collected by <li><a href="https://www.climatologylab.org/gridmet.html"> Climatology lab </a>
+      Tabular aggregated version of the GridMET data collected for the DRB contains spatial meterological data from 1979 to 2022, in daily time steps. This data is maintained and collected by <li><a href="https://www.climatologylab.org/gridmet.html"> Climatology lab </a>
       The meterological data variables used in this study include temperature min (tmin) and max (tmax), short wave radiation (srad), wind speed (vs), precipitation amount (pr), relative humidity min (rmin), relative humidity max (rmax) and specific humidity (sp). Derived from 4 km2 grids.
       The data is aggregated to PRMS segment scale (NHM catchment polygons) through an area-weighted mean, such that each segment evaluated in this study has associated meterological data for everyday since 01-01-1979.
 
     attributes:
+    -
+      attr-label: 
+      attr-def: >-
+        Daily Minimum Temperature (2m)
+      attr-defs:
+      data-min: NA
+      data-max: NA
+      data-units: 
+
+    -
+      attr-label: 
+      attr-def: >-
+        Daily Minimum Temperature (2m)
+      attr-defs:
+      data-min: NA
+      data-max: NA
+      data-units: 
+
     -
       attr-label: tmmn
       attr-def: >-
@@ -1038,9 +1053,41 @@ entities:
   -
     data-name: 'gridmet_drb_agg_csv.nc.zip'
     data-description: >-
-      NetCDF format is the same as the tabular format  of the GridMET data described above. This data is aggregated through area weighted mean to the HRU polygons of the DRB region.
+      NetCDF format is the same as the tabular format  of the GridMET data described above. This data is aggregated through area weighted mean to the HRU polygons of the DRB.
 
     attributes:
+    -
+      attr-label: hru_lat
+      attr-def: >-
+        Latitude of HRU centroid
+      attr-defs:
+      data-min: NA
+      data-max: NA
+      data-units: degrees_north
+    -
+      attr-label: hru_lon
+      attr-def: >-
+        Longitude of HRU centroid
+      attr-defs:
+      data-min: NA
+      data-max: NA
+      data-units: degrees_east
+    -
+      attr-label: geomid
+      attr-def: >-
+        local model hru id. Used to match to HRU ids for the PRMS-SNTemp model. Also matches to PRMS segments to produce gridmet_drb_agg.csv
+      attr-defs:
+      data-min: NA
+      data-max: NA
+      data-units: NA
+    -
+      attr-label: time
+      attr-def: >-
+        Date
+      attr-defs:
+      data-min: 1979-01-01
+      data-max: 2022-04-06
+      data-units: date
     -
       attr-label: tmmn
       attr-def: >-
@@ -1049,7 +1096,6 @@ entities:
       data-min: -26.0
       data-max: 82.2
       data-units: degrees F
-
     -
       attr-label: tmmx
       attr-def: >-
