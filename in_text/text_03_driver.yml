@@ -688,7 +688,7 @@ entities:
       data-min: NA
       data-max: NA
       data-units: NA
-  # -
+  -
   #   data-name: >-
   #     NLDAS_time[0.367700]_x[{x}]_y[{y}].csv
   #   data-description: >-
@@ -971,103 +971,80 @@ entities:
     #   data-max: NA
     #   data-units: integer
   
-    -
+  -
     data-name: 'gridmet_drb_agg_csv.zip'
     data-description: >-
       GridMET data collected for the DRB contains daily 4-km spatial resolution meterological data from 1979 to 2022. This data is maintained and collected by <a> Climatology lab 
-      The Meterological data variables used include temperature min (tmin) and max (tmax), short wave radiation (srad), wind speed (vs), precipitation amount (pr), relative humidity min (rmin), relative humidity max (rmax) and specific humidity (sp). Derived from 4 km2 grids. Time frame: 1979-2022, collected as daily time steps. Met data was pulled from and aggregated to the the PRMS catchments (NHM catchment polygons) in teh DRB, through an area wegihted mean.
+      The meterological data variables used in this study include temperature min (tmin) and max (tmax), short wave radiation (srad), wind speed (vs), precipitation amount (pr), relative humidity min (rmin), relative humidity max (rmax) and specific humidity (sp). Derived from 4 km2 grids. Time frame: 1979-2022, collected as daily time steps. Met data was pulled from and aggregated to the the PRMS catchments (NHM catchment polygons) in teh DRB, through an area wegihted mean.
       
     attributes:
     -
-      attr-label: ensemble
+      attr-label: tmin
       attr-def: >-
-        XX
+        Daily Minimum Temperature (2m)
       attr-defs: 
-      data-min: 0
-      data-max: 4
-      data-units: NA
+      data-min: NA
+      data-max: NA
+      data-units: degrees F
       
-    -
-      attr-label: srad
-      attr-def: >-
-        Downward short-wave radiation flux
-      attr-defs: https://www.nco.ncep.noaa.gov/pmb/products/gens/gec00.t00z.pgrb2s.0p25.f003.shtml
-      data-min: 0.0
-      data-max: 376.5
-      data-units: Watts per meter squared
-    -
-      attr-label: ws
-      attr-def: >-
-        Wind speed
-      attr-defs: https://www.nco.ncep.noaa.gov/pmb/products/gens/gec00.t00z.pgrb2s.0p25.f003.shtml
-      data-min: 0.45
-      data-max: 16.75
-      data-units: meters per second
     -
       attr-label: tmax
       attr-def: >-
-        Maximum air temperature
-      attr-defs: https://www.nco.ncep.noaa.gov/pmb/products/gens/gec00.t00z.pgrb2s.0p25.f003.shtml
-      data-min: -20.4
-      data-max: 39.05
-      data-units: degrees C
-    -
-      attr-label: tmin
-      attr-def: >-
-        Minimum air temperature
-      attr-defs: https://www.nco.ncep.noaa.gov/pmb/products/gens/gec00.t00z.pgrb2s.0p25.f003.shtml
-      data-min: -27.4
-      data-max: 27.88
-      data-units: degrees C
-    -
-      attr-label: prcp
-      attr-def: >-
-        Total accumulated precipitation
-      attr-defs: https://www.nco.ncep.noaa.gov/pmb/products/gens/gec00.t00z.pgrb2s.0p25.f003.shtml
-      data-min: 0
-      data-max: 0.2272
-      data-units: meters
-    -
-      attr-label: time
-      attr-def: >-
-        Valid time of the forecast
-      attr-defs: This data release
+         Daily Maximum Temperature (2m)\
+      attr-defs: 
       data-min: NA
       data-max: NA
-      data-units: date
+      data-units: degrees F
     -
-      attr-label: seg_id_nat
+      attr-label: srad
       attr-def: >-
-        National unique stream reach identifier. This is the ID named seg_id_nat from the Geospatial Fabric for National Hydrologic Modeling.
-      attr-defs: >-
-        https://www.sciencebase.gov/catalog/item/535eda80e4b08e65d60fc834
+        Daily Mean downward shortwave radiation at surface
+      attr-defs: 
       data-min: NA
       data-max: NA
-      data-units: dimensionless
+      data-units: W m-2
     -
-      attr-label: rhmax
+      attr-label: vs
       attr-def: >-
-         Maximum Relative Humidity
+        Daily Mean Wind Speed (10m)
       attr-defs: 
-      data-min: 0.35
-      data-max: 1.00
-      data-units: proportion (or fraction)
+      data-min: NA
+      data-max: NA
+      data-units: m/s
     -
-      attr-label: rhmin
+      attr-label: rmin
       attr-def: >-
-         Minimum Relative Humidity
+        Daily Minimum Relative Humidity (2m)
       attr-defs: 
-      data-min: 0.15
-      data-max: 1.00
-      data-units: proportion (or fraction)
+      data-min: NA
+      data-max: NA
+      data-units: %
     -
-      attr-label: rhmean
+      attr-label: rmax
       attr-def: >-
-         Mean Relative Humidity
+        Daily Maximum Relative Humidity (2m)
       attr-defs: 
-      data-min: 0.28
-      data-max: 1.00
-      data-units: proportion (or fraction)  
+      data-min: NA
+      data-max: NA
+      data-units: %
+    -
+      attr-label: pr
+      attr-def: >-
+        Daily Accumulated Precipitation
+      attr-defs: 
+      data-min: NA
+      data-max: NA
+      data-units: inch
+    -
+      attr-label: sph
+      attr-def: >-
+         Daily mean specific humidity (2m)
+      attr-defs: 
+      data-min: 
+      data-max: 
+      data-units: kg/kg
+    -
+  
     
       
   GridMet:
