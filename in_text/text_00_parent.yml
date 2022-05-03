@@ -1,12 +1,13 @@
 title: >-
-  Data release to support water quality modeling efforts in the Delaware River Basin
+  Data to support water quality modeling efforts in the Delaware River Basin
 
 abstract: >-
   <p> This data release contains information to support water quality modeling in the Delaware River Basin (DRB).
   These data support both process-based and machine learning approaches to water quality modeling, including
   the prediction of stream temperature. Reservoirs in the DRB serve an important role as a source of drinking
-  water, but also affect downstream water quality. Therefore, This data release includes data that
-  characterize both rivers and a subset of reservoirs in the basin.
+  water, but also affect downstream water quality. Therefore, this data release includes data that
+  characterize both rivers and a subset of reservoirs in the basin. This release provides an update
+  to many of the files provided in a previous data release (Oliver et al., 2021).
 
 
   The data are stored in 3 child folders: 1) spatial information, 2) observations, and 3) model driver data.</p>
@@ -20,7 +21,15 @@ abstract: >-
   at all 456 reaches in the DRB.
 
 
-  <p>This data compilation was funded by the USGS.</p>
+  This data compilation was funded by the USGS.
+
+cross-cites:
+  -
+    authors: ["Samantha K. Oliver", "Alison P. Appling", "Rasha Atshan", "William D. Watkins", "Jeffrey Sadler", "Hayley Corson-Dosch", "Jacob A. Zwart", "Jordan S. Read"]
+    title: >-
+        Predicting water temperature in the Delaware River Basin
+    pubdate: 2021
+    link: http://doi.org/10.5066/P9GD8I7A
 
 build-environment: Multiple computer operating systems were used to generate these data, including Windows, linux, OSX. The open source languages R and Python were used on all systems.
 
