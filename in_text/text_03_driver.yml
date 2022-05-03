@@ -296,7 +296,7 @@ entities:
     -
       attr-label: ensemble
       attr-def: >-
-        XX
+        NOAA GEFS ensemble member
       attr-defs:
       data-min: 0
       data-max: 4
@@ -383,113 +383,6 @@ entities:
       data-min: 0.28
       data-max: 1.00
       data-units: proportion (or fraction)
-
-    # data-name: noaagefs_meteo_files.zip
-    # data-description: >-
-    #   NOAA Global Ensemble Forecasting System v12.0 0.25-degree operational model output for the 00 UTC forecast cycle from 2021-04-15 to 2021-07-16.
-    #   These data are aggregated to the daily scale and NOAA GEFS grid cells are matched to the centroid of the target stream segment. The target stream segment
-    #   seg_id_nat (National Geospatial Fabric segment code) is used as the location identifier for these data.
-    #
-    #
-    #   The zipped folder contains one NetCDF file per forecast issue date evaluated in Zwart and others 2021, such
-    #   that the file name is final_noaa_gefs_{extent}_{YYYY-MM-DD}_00_forecast_segments.segments.nc. Archiving of the NOAA GEFS
-    #   product was changed from USGS NGWOS priority basins early in the record (extent = NGWOS) to the continental U.S. starting
-    #   on 2021-05-26 which is reflected in the name change (extent = CONUS).
-    #
-    #
-    #   Example code for how read the NOAA GEFS .nc files can be found in the "forecast-pgdl-da" repository in Zwart and others 2021 (https://doi.org/10.5281/zenodo.5164910).
-    #
-    # attributes:
-    # -
-    #   attr-label: RH
-    #   attr-def: >-
-    #     Relative humidity
-    #   attr-defs: https://www.nco.ncep.noaa.gov/pmb/products/gens/gec00.t00z.pgrb2s.0p25.f003.shtml
-    #   data-min: NA
-    #   data-max: NA
-    #   data-units: decimal fraction
-    # -
-    #   attr-label: TCDC
-    #   attr-def: >-
-    #     Total cloud cover
-    #   attr-defs: https://www.nco.ncep.noaa.gov/pmb/products/gens/gec00.t00z.pgrb2s.0p25.f003.shtml
-    #   data-min: NA
-    #   data-max: NA
-    #   data-units: decimal fraction
-    # -
-    #   attr-label: TMP
-    #   attr-def: >-
-    #     Air temperature
-    #   attr-defs: https://www.nco.ncep.noaa.gov/pmb/products/gens/gec00.t00z.pgrb2s.0p25.f003.shtml
-    #   data-min: NA
-    #   data-max: NA
-    #   data-units: degrees C
-    # -
-    #   attr-label: DSWRF
-    #   attr-def: >-
-    #     Downward short-wave radiation flux
-    #   attr-defs: https://www.nco.ncep.noaa.gov/pmb/products/gens/gec00.t00z.pgrb2s.0p25.f003.shtml
-    #   data-min: NA
-    #   data-max: NA
-    #   data-units: Watts per meter squared
-    # -
-    #   attr-label: WS
-    #   attr-def: >-
-    #     Wind speed
-    #   attr-defs: https://www.nco.ncep.noaa.gov/pmb/products/gens/gec00.t00z.pgrb2s.0p25.f003.shtml
-    #   data-min: NA
-    #   data-max: NA
-    #   data-units: meters per second
-    # -
-    #   attr-label: TMAX
-    #   attr-def: >-
-    #     Maximum air temperature
-    #   attr-defs: https://www.nco.ncep.noaa.gov/pmb/products/gens/gec00.t00z.pgrb2s.0p25.f003.shtml
-    #   data-min: NA
-    #   data-max: NA
-    #   data-units: degrees C
-    # -
-    #   attr-label: TMIN
-    #   attr-def: >-
-    #     Minimum air temperature
-    #   attr-defs: https://www.nco.ncep.noaa.gov/pmb/products/gens/gec00.t00z.pgrb2s.0p25.f003.shtml
-    #   data-min: NA
-    #   data-max: NA
-    #   data-units: degrees C
-    # -
-    #   attr-label: APCP
-    #   attr-def: >-
-    #     Total accumulated precipitation
-    #   attr-defs: https://www.nco.ncep.noaa.gov/pmb/products/gens/gec00.t00z.pgrb2s.0p25.f003.shtml
-    #   data-min: NA
-    #   data-max: NA
-    #   data-units: meters
-    # -
-    #   attr-label: time
-    #   attr-def: >-
-    #     Valid time of the forecast
-    #   attr-defs: This data release
-    #   data-min: NA
-    #   data-max: NA
-    #   data-units: >-
-    #     seconds since 1970-01-01 00:00:00.0 0:00
-    # -
-    #   attr-label: seg_id_nat
-    #   attr-def: >-
-    #     National unique stream reach identifier. This is the ID named seg_id_nat from the Geospatial Fabric for National Hydrologic Modeling.
-    #   attr-defs: >-
-    #     https://www.sciencebase.gov/catalog/item/535eda80e4b08e65d60fc834
-    #   data-min: NA
-    #   data-max: NA
-    #   data-units: dimensionless
-    # -
-    #   attr-label: E
-    #   attr-def: >-
-    #      NOAA GEFS ensemble member, 0 = control
-    #   attr-defs: This data release
-    #   data-min: NA
-    #   data-max: NA
-    #   data-units: integer
 
   -
     data-name: 'gridmet_drb_agg_csv.zip'
