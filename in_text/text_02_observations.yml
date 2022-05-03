@@ -41,43 +41,35 @@ cross-cites:
 
 entities:
   -
-    data-name: temperature_observations_{subset}.zip
+    data-name: unaggregated_temperature_observations.zip
     data-description: >-
       Daily water temperature observations with sites matched to model river segments in the Delaware River Basin.
-      Files represent various subsets of similar data, and are either sites matched to any of the 456 segments (temperature_observations_drb.zip),
-      sites matched to a subset of 56 river segments above the
-      Delaware River at Lordville, NY (temperature_observations_lordville.zip), or at the 5 priority forecast sites.
-      Water temperature observations were compiled from NWIS, EcoSHEDS, and WQP. If multiple sites were matched to a single
-      river reach and had measurements on the same day, the values were averaged.
+      Data are from the National Water Information System, EcoSHEDS, and the Water Quality Portal. Observations
+      were matched to the closest stream segments in the Geospatial Fabric and manually inspected. These data are unaggragated at
+      the reach scale, meaning that there may be multiple observations per seg_id_nat-day. This indicates there
+      were multiple sites along a single reach, or multiple sensors deployed at a single site.
 
-      Temperature observations for five priority forecasting sites in the Delaware River Basin
-      were first pulled from NWIS, and remaining data gaps in the modeling period
-      were filled if there was data available from other sources (WQP or EcoSHEDS).
+      Reported values are daily statistics that are often, but not always, derived from multiple sub-daily measurements.
+      In some cases, it is difficult to know whether the reported values actually represent multiple sub-daily measurements
+      because the data came aggregated. In this file, observations where the minimum and maximum value are equal likely
+      represent discrete measurements of water temperature. Additionally, observations with a time stamp represent discrete
+      values from the Water Quality Portal.
 
     attributes:
     -
-      attr-label: subseg_id
-      attr-def:  >-
-        An alternative unique reach identifier which was created in order to split segments such that
-        segment start and endpoints were connected by one reach with no intersecting reaches. The ID was created
-        using the seg_id from the Geospatial Fabric and an index from one to the number of splits (e.g., {subseg_id}_{index}).
+      attr-label: site_id
+      attr-def: >-
+        Site identifier from the data provider. For USGS sites, this is the USGS site number with a "USGS-" prefix.
       attr-defs: This data release
       data-min: NA
       data-max: NA
       data-units: NA
     -
-      attr-label: seg_id_nat
+      attr-label: sub_location
       attr-def: >-
-        The closest river reach from the Geospatial Fabric v1.1, by Euclidean distance, from the monitoring site.
-        Matches were limited to a 500m buffer of the monitoring site. The reach number is from the field "nsegment_v1_1" in the
-        Geospatial Fabric for the National Hydrologic Model v1.1.
-
-
-        Once the original reach match was assigned, the matched segment was reassigned if the endpoint of the
-        upstream reach was closer to the monitoring site (by river distance) than the endpoint of the matched reach.
-        If the upstream endpoint was closer, but there was a confluence directly upstream, then the original match was kept.
-      attr-defs:  >-
-        https://doi.org/10.5066/P971JAGF
+        If multiple sensors were deployed at a site, this field contains features of the sensor (e.g., placement information)
+        that distinguish it from other sensors. This field is only populated if the data source is NWIS.
+      attr-defs: This data release
       data-min: NA
       data-max: NA
       data-units: NA
@@ -87,7 +79,15 @@ entities:
         Date of temperature measurement
       attr-defs: This data release
       data-min: 19080802
-      data-max: 20210408
+      data-max: 20220331
+      data-units: NA
+    -
+      attr-label: time
+      attr-def: >-
+        Time of measurement (HH:MM), in UTC.
+      attr-defs: This data release
+      data-min: NA
+      data-max: NA
       data-units: NA
     -
       attr-label: mean_temp_c
@@ -114,13 +114,64 @@ entities:
       data-max: 34.9
       data-units: degrees C
     -
-      attr-label: site_id
+      attr-label: n_obs
       attr-def: >-
-        Site identifier from the data provider. For USGS sites, this is the USGS site number with a "USGS-" prefix.
+        Reported or calculated number of sub-daily measurements included in the daily statistic.
+        Note that data from NWIS daily values service (source = 'nwis_dv') does not report the number of sub-daily
+        observations, and data from nwis_dv will contain an NA in this field.
+      attr-defs: This data release
+      data-min: 1
+      data-max: 1440
+      data-units: NA
+    -
+      attr-label: source
+      attr-def: >-
+        Database source where temperature observations were obtained. Sources include EcoSHEDS (ecosheds),
+        the National Water Information System daily values service (nwis_dv) or instantaneous service (nwis_uv),
+        and the Water Quality Portal (wqp).
       attr-defs: This data release
       data-min: NA
       data-max: NA
       data-units: NA
+    -
+      attr-label: flag
+      attr-def: >-
+        Data quality flags that have come from both the original providers and an outlier detection
+        routine. Flags can include: o = potential outlier, P = provisional (from NWIS), Eqp = value affected by equipment malfunction (from NWIS),
+        Mnt = site under going maintenance (from NWIS), ef = .
+      attr-defs: This data release
+      data-min: NA
+      data-max: NA
+      data-units: NA
+
+    -
+      attr-label: subseg_id
+      attr-def:  >-
+        An alternative unique reach identifier which was created in order to split segments such that
+        segment start and endpoints were connected by one reach with no intersecting reaches. The ID was created
+        using the seg_id from the Geospatial Fabric and an index from one to the number of splits (e.g., {subseg_id}_{index}).
+      attr-defs: This data release
+      data-min: NA
+      data-max: NA
+      data-units: NA
+    -
+      attr-label: seg_id_nat
+      attr-def: >-
+        The closest river reach from the Geospatial Fabric v1.1, by Euclidean distance, from the monitoring site.
+        Matches were limited to a 500m buffer of the monitoring site. The reach number is from the field "nsegment_v1_1" in the
+        Geospatial Fabric for the National Hydrologic Model v1.1.
+
+
+        Once the original reach match was assigned, the matched segment was reassigned if the endpoint of the
+        upstream reach was closer to the monitoring site (by river distance) than the endpoint of the matched reach.
+        If the upstream endpoint was closer, but there was a confluence directly upstream, then the original match was kept.
+      attr-defs:  >-
+        https://doi.org/10.5066/P971JAGF
+      data-min: NA
+      data-max: NA
+      data-units: NA
+
+
     -
       attr-label: in_time_holdout
       attr-def: >-
