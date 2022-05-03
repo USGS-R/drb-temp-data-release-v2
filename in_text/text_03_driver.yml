@@ -974,8 +974,9 @@ entities:
   -
     data-name: 'gridmet_drb_agg_csv.zip'
     data-description: >-
-      GridMET data collected for the DRB contains daily 4-km spatial resolution meterological data from 1979 to 2022. This data is maintained and collected by <a> Climatology lab 
-      The meterological data variables used in this study include temperature min (tmin) and max (tmax), short wave radiation (srad), wind speed (vs), precipitation amount (pr), relative humidity min (rmin), relative humidity max (rmax) and specific humidity (sp). Derived from 4 km2 grids. Time frame: 1979-2022, collected as daily time steps. Met data was pulled from and aggregated to the the PRMS catchments (NHM catchment polygons) in teh DRB, through an area wegihted mean.
+      Tabular aggregated version of the GridMET data collected for the DRB contains daily 4-km spatial resolution meterological data from 1979 to 2022. This data is maintained and collected by <li><a href="https://www.climatologylab.org/gridmet.html"> Climatology lab </a>
+      The meterological data variables used in this study include temperature min (tmin) and max (tmax), short wave radiation (srad), wind speed (vs), precipitation amount (pr), relative humidity min (rmin), relative humidity max (rmax) and specific humidity (sp). Derived from 4 km2 grids.
+      The data is aggregated to PRMS segment scale (NHM catchment polygons) through an area-weighted mean, such that each segment evaluated in this study has associated meterological data for everyday since 01-01-1979.
       
     attributes:
     -
@@ -1043,17 +1044,15 @@ entities:
       data-min: 
       data-max: 
       data-units: kg/kg
-    -
   
-    
-      
-  GridMet:
-  The Meterological data variables used include temperature min (tmin) and max (tmax), short wave radiation  (srad), wind speed (vs), precipitation amount (pr), relative humidity min (rmin), relative humidity max (rmax) and specific humidity (sp).
-  Derived from 4 km2 grids. 
-  Time frame: 1979-2022, collected as daily time steps. 
-  Met data was pulled from and aggregated the PRMS catchments (NHM catchment polygons) through an area wegihted mean. 
+  -
+    data-name: 'gridmet_drb_agg_csv.nc.zip'
+    data-description: >-
+      NetCDF format is the same as the tabular format  of the GridMET data described above. This data is aggregated through area weighted mean to the HRU polygons of the DRB region. 
 
-    
+
+
+
 
 build-environment: Multiple computer systems were used to generate these data, including Windows, OSX, and linux. The open source languages R and Python was used on all systems.
 
