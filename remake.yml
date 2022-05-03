@@ -2,7 +2,7 @@ include:
   - 1_spatial.yml
   - 2_observations.yml
   - 3_driver.yml
-  
+
 packages:
   - yaml
   - dplyr
@@ -43,23 +43,23 @@ targets:
   #     "in_text/text_SHARED.yml",
   #     "in_text/text_00_parent.yml")
   #       river_metadata_verts)
-   
-  # Build xml for parent item 
+
+  # Build xml for parent item
   out_xml/00_parent_fgdc_metadata.xml:
     command: render(
       filename = target_name,
       "in_text/text_SHARED.yml",
       "in_text/text_00_parent.yml",
       river_metadata_segs)
-  
-  ## Push metadata xml to sb   
+
+  ## Push metadata xml to sb
   log/00_parent_sb.csv:
     command: sb_replace_files(
       filename = target_name,
       sb_id = sbid_00_parent,
       sources = 'src/sb_utils.R',
       'out_xml/00_parent_fgdc_metadata.xml')
-  
+
   ## Original xml metadata target for parent - Leaving out for now
   # 00_parent_sb_xml:
   #   command: sb_render_post_xml(sbid_00_parent,
@@ -67,15 +67,15 @@ targets:
   #     "in_text/text_SHARED.yml",
   #     "in_text/text_00_parent.yml",
   #     river_metadata_verts)
-  
+
   ## Build xml for spatial
   out_xml/01_spatial_fgdc_metadata.xml:
     command: render(filename = target_name,
       "in_text/text_SHARED.yml",
       "in_text/text_01_spatial.yml",
       river_metadata_segs)
-    
-  ## Push all spatial data + metadata xml to sb 
+
+  ## Push all spatial data + metadata xml to sb
   log/01_spatial_sb_data.csv:
     command: sb_replace_files(
       filename = target_name,
@@ -85,7 +85,7 @@ targets:
       "out_data/study_reservoirs.zip",
       "out_data/study_monitoring_sites.zip",
       'out_xml/01_spatial_fgdc_metadata.xml')
-      
+
   ## original xml metadata target for spatial - Leaving out for now
   # 01_spatial_sb_xml:
   #   command: sb_render_post_xml(
@@ -95,14 +95,14 @@ targets:
   #     "in_text/text_01_spatial.yml",
   #     river_metadata_segs)
 
-  ## build metadata xml for observations 
+  ## build metadata xml for observations
   out_xml/02_observations_fgdc_metadata.xml:
     command: render(filename = target_name,
       "in_text/text_SHARED.yml",
       "in_text/text_02_observations.yml",
       river_metadata_segs)
 
-  ## Push all obs data + metadata xml to sb 
+  ## Push all obs data + metadata xml to sb
   log/02_observations_sb_data.csv:
     command: sb_replace_files(
       filename = target_name,
@@ -110,12 +110,13 @@ targets:
       sources = 'src/sb_utils.R',
       'out_data/unaggregated_temperature_observations_drb.zip',
       'out_data/aggregated_temperature_observations_drb.zip',
+      'out_data/flow_observations_drb.zip',
       "out_data/reservoir_temp_obs.csv",
       "out_data/reservoir_level_obs.csv",
       "out_data/reservoir_releases_by_type_drb.csv",
       'in_data/02_observations/reservoir_diversions.csv',
       'out_xml/02_observations_fgdc_metadata.xml')
-      
+
   ## original xml metadata target for spatial - Leaving out for now
   # 02_observations_sb_xml:
   #   command: sb_render_post_xml(sbid_02_observations,
@@ -123,15 +124,15 @@ targets:
   #     "in_text/text_SHARED.yml",
   #     "in_text/text_02_observations.yml",
   #     river_metadata_segs)
-  
-  ## Build metadata xml for driver data 
+
+  ## Build metadata xml for driver data
   out_xml/03_driver_fgdc_metadata.xml:
     command: render(filename = target_name,
       "in_text/text_SHARED.yml",
       "in_text/text_03_driver.yml",
       river_metadata_segs
       )
-       
+
   ## Push all obs data + xml to sb
   log/03_driver_sb_data.csv:
     command: sb_replace_files(
@@ -145,7 +146,7 @@ targets:
       'out_data/uncal_sntemp_input_output.nc.zip',
       'out_xml/03_driver_fgdc_metadata.xml'
       )
-      
+
   # 03_driver_sb_xml:
   #   command: sb_render_post_xml(sbid_03_driver,
   #     xml_file = I('03_driver.xml'),

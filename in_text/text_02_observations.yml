@@ -137,8 +137,8 @@ entities:
       attr-label: flag
       attr-def: >-
         Data quality flags that have come from both the original providers and an outlier detection
-        routine. Flags can include: o = potential outlier, P = provisional (from NWIS), Eqp = value affected by equipment malfunction (from NWIS),
-        Mnt = site under going maintenance (from NWIS), ef = .
+        routine. Flags can include: NA = no flags, o = potential outlier, P = provisional (from NWIS), Eqp = value affected by equipment malfunction (from NWIS),
+        Mnt = site under going maintenance (from NWIS), ef = flag with unknown definition (from EcoSHEDS).
       attr-defs: This data release
       data-min: NA
       data-max: NA
@@ -171,46 +171,19 @@ entities:
       data-max: NA
       data-units: NA
 
-
-    -
-      attr-label: in_time_holdout
-      attr-def: >-
-        Logical, is the date within the test holdout periods?
-      attr-defs: This data release
-      data-min: NA
-      data-max: NA
-      data-units: NA
-    -
-      attr-label: in_space_holdout
-      attr-def: >-
-        Logical, is the site a spatial holdouts?
-      attr-defs: This data release
-      data-min: NA
-      data-max: NA
-      data-units: NA
-    -
-      attr-label: test
-      attr-def: >-
-        Logical, should the observation be used for testing (and withheld from training)?
-      attr-defs: This data release
-      data-min: NA
-      data-max: NA
-      data-units: NA
-
   -
     data-name: aggregated_temperature_observations_drb.zip
     data-description: >-
       Daily water temperature observations with sites matched to model river segments in the Delaware River Basin.
-      Files represent various subsets of similar data, and are either sites matched to any of the 456 segments (temperature_observations_drb.zip),
-      sites matched to a subset of 56 river segments above the
-      Delaware River at Lordville, NY (temperature_observations_lordville.zip), or at the 5 priority forecast sites.
-      Water temperature observations were compiled from NWIS, EcoSHEDS, and WQP. If multiple sites were matched to a single
-      river reach and had measurements on the same day, the values were averaged.
+      This file is the reach-aggregated version of unaggregated_temperature_observations_drb.zip,
+      where there is only a single water temperature observation reported per reach-day.
 
-      Temperature observations for five priority forecasting sites in the Delaware River Basin
-      were first pulled from NWIS, and remaining data gaps in the modeling period
-      were filled if there was data available from other sources (WQP or EcoSHEDS).
-
+      Multiple reach-day values in unaggregated_temperature_observations_drb.zip indicates either multiple
+      monitoring locations along a single reach or multiple sensors deployed at the same site. To aggregate to
+      a single value per reach-day, we first prioritized data coming from NWIS. That is, prior to taking the mean value
+      for a reach-day, we retained only data from NWIS (source = nwis_dv or nwis_uv). To aggregate multiple mean temperatures, we took
+      the mean of all values and also report a standard deviation of those values. To aggregate multiple minimum and maximum temperature,
+      we report the minimum and maximum of all values, respectively.
     attributes:
     -
       attr-label: subseg_id
@@ -244,7 +217,28 @@ entities:
         Date of temperature measurement
       attr-defs: This data release
       data-min: 19080802
-      data-max: 20210408
+      data-max: 20220331
+      data-units: NA
+    -
+      attr-label: site_id
+      attr-def: >-
+        Site identifier from the data provider. For USGS sites, this is the USGS site number with a "USGS-" prefix.
+        If multiple site_ids are reported, the observation represents an
+        aggregated value from multiple observation sites per reach.
+      attr-defs: This data release
+      data-min: NA
+      data-max: NA
+      data-units: NA
+    -
+      attr-label: source
+      attr-def: >-
+        Database source where temperature observations were obtained. Sources include EcoSHEDS (ecosheds),
+        the National Water Information System daily values service (nwis_dv) or instantaneous service (nwis_uv),
+        and the Water Quality Portal (wqp). If multiple sources are reported, the observation represents an
+        aggregated value from multiple observations sites per reach that came from two databases.
+      attr-defs: This data release
+      data-min: NA
+      data-max: NA
       data-units: NA
     -
       attr-label: mean_temp_c
@@ -268,12 +262,24 @@ entities:
         Maximum daily water temperature
       attr-defs: This data release
       data-min: -0.4
-      data-max: 34.9
+      data-max: 34.8
       data-units: degrees C
     -
-      attr-label: site_id
+      attr-label: sd_mean_temp_c
       attr-def: >-
-        Site identifier from the data provider. For USGS sites, this is the USGS site number with a "USGS-" prefix.
+        The standard deviation of the reported mean temperatures. This value is reported only for
+        instances where there were multiple values per reach-day, indicating multiple sites per reach
+        or multiple sensors per site.
+      attr-defs: This data release
+      data-min: 0
+      data-max: 15.6
+      data-units: degrees C
+    -
+      attr-label: flag
+      attr-def: >-
+        Data quality flags that have come from both the original providers and an outlier detection
+        routine. Flags can include: NA = no flags, o = potential outlier, P = provisional (from NWIS), Eqp = value affected by equipment malfunction (from NWIS),
+        Mnt = site under going maintenance (from NWIS), ef = flag with unknown definition (from EcoSHEDS).
       attr-defs: This data release
       data-min: NA
       data-max: NA
@@ -302,12 +308,11 @@ entities:
       data-min: NA
       data-max: NA
       data-units: NA
-    data-name: reservoir_diversions.csv
+  -
+    data-name: out_data/flow_observations_drb.zip
     data-description: >-
-      Daily mean flow observation data with sites matched to model river segments in the Delaware River Basin.
-      Data were compiled from the National Water Information System (NWIS). Three subsets of similar data are provided,
-      including sites from any of the 456 segments (flow_observations_drb.zip), sites from a subset of 56 segments above
-      the Delaware River at Lordville, NY (flow_observations_lordville.zip), or the 5 priority forecast sites.
+      Observed daily mean flow with sites matched to model river segments in the Delaware River Basin.
+      Data were compiled from the National Water Information System (NWIS).
     attributes:
     -
       attr-label: seg_id_nat
@@ -341,7 +346,7 @@ entities:
         Date of discharge measurement
       attr-defs: This data release
       data-min: 18840101
-      data-max: 20210423
+      data-max: 2022-03-23
       data-units: NA
     -
       attr-label: discharge_cms
@@ -504,6 +509,8 @@ entities:
     data-name: reservoir_temp_obs.csv
     data-description: >-
       Daily water temperature observations for the Pepacton and Cannonsville reservoirs.
+      Data were compiled from a data request to the New York Department of Environmental Protection
+      and the National Water Information System.
 
     attributes:
     -
@@ -523,12 +530,12 @@ entities:
         Date of temperature observation
       attr-defs: This data release
       data-min: 19920413
-      data-max: 20210419
+      data-max: 2022-02-17
       data-units: NA
     -
       attr-label: source_id
       attr-def: >-
-        Site identifier from the data provider.
+        Unique sampling location identifier from the data provider (source).
       attr-defs: This data release
       data-min: NA
       data-max: NA
@@ -536,7 +543,8 @@ entities:
     -
       attr-label: source
       attr-def: >-
-        Data provider.
+        Data provide, either the New York Department of Environmental Protection (ny_dep) or
+        the National Water Information System (nwis).
       attr-defs: This data release
       data-min: 0.1
       data-max: 50.25
@@ -544,7 +552,7 @@ entities:
     -
       attr-label: depth
       attr-def: >-
-        Depth of temperature observation
+        Depth of water temperature observation
       attr-defs: This data release.
       data-min: 0.01
       data-max: 50.25
@@ -554,66 +562,10 @@ entities:
       attr-def: >-
         Water temperature
       attr-defs: This data release
-      data-min: 1.2
+      data-min: 0.2
       data-max: 28.11
       data-units: degrees C
-  -
-    data-name: reservoir_temp_obs.csv
-    data-description: >-
-      Daily water temperature observations for the Pepacton and Cannonsville reservoirs.
 
-    attributes:
-    -
-      attr-label: site_id
-      attr-def: >-
-        Reservoir identification number for this dataset. Is the Prmnn_I from NHD high-res prefixed with source, as "nhdhr_{Prmnn_I}"
-
-
-        nhdhr_120022743 is Cannonsville Reservoir and nhdhr_151957878 is Pepacton Reservoir
-      attr-defs: http://nhd.usgs.gov/
-      data-min: NA
-      data-max: NA
-      data-units: NA
-    -
-      attr-label: date
-      attr-def: >-
-        Date of temperature observation
-      attr-defs: This data release
-      data-min: 19920413
-      data-max: 20210419
-      data-units: NA
-    -
-      attr-label: source_id
-      attr-def: >-
-        Site identifier from the data provider.
-      attr-defs: This data release
-      data-min: NA
-      data-max: NA
-      data-units: NA
-    -
-      attr-label: source
-      attr-def: >-
-        Data provider.
-      attr-defs: This data release
-      data-min: 0.1
-      data-max: 50.25
-      data-units: NA
-    -
-      attr-label: depth
-      attr-def: >-
-        Depth of temperature observation
-      attr-defs: This data release.
-      data-min: 0.01
-      data-max: 50.25
-      data-units: meters
-    -
-      attr-label: temp
-      attr-def: >-
-        Water temperature
-      attr-defs: This data release
-      data-min: 1.2
-      data-max: 28.11
-      data-units: degrees C
 
 process-date: !expr format(Sys.time(),'%Y%m%d')
 file-format: comma-delimited files (some compressed into zip files)
