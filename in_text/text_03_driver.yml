@@ -1009,7 +1009,7 @@ entities:
       attr-defs:
       data-min: 4.5
       data-max: 100
-      data-units: %
+      data-units: percent
     -
       attr-label: rmax
       attr-def: >- 
@@ -1017,7 +1017,7 @@ entities:
       attr-defs:
       data-min: 22.0
       data-max: 100
-      data-units: %
+      data-units: percent
     -
       attr-label: pr
       attr-def: >-
@@ -1081,7 +1081,7 @@ entities:
       attr-defs:
       data-min: 4.5
       data-max: 100
-      data-units: %
+      data-units: percent
     -
       attr-label: rmax
       attr-def: >-
@@ -1089,7 +1089,7 @@ entities:
       attr-defs:
       data-min: 22.0
       data-max: 100
-      data-units: %
+      data-units: percent
     -
       attr-label: pr
       attr-def: >-
@@ -1104,7 +1104,7 @@ entities:
          Daily mean specific humidity (2m)
       attr-defs:
       data-min: 0
-      data-max:0.02
+      data-max: 0.02
       data-units: kg/kg
 
 
