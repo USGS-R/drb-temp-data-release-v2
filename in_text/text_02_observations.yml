@@ -137,8 +137,8 @@ entities:
       attr-label: flag
       attr-def: >-
         Data quality flags that have come from both the original providers and an outlier detection
-        routine. Flags can include: o = potential outlier, P = provisional (from NWIS), Eqp = value affected by equipment malfunction (from NWIS),
-        Mnt = site under going maintenance (from NWIS), ef = .
+        routine. Flags can include: NA = no flags, o = potential outlier, P = provisional (from NWIS), Eqp = value affected by equipment malfunction (from NWIS),
+        Mnt = site under going maintenance (from NWIS), ef = flag with unknown definition (from EcoSHEDS).
       attr-defs: This data release
       data-min: NA
       data-max: NA
@@ -167,32 +167,6 @@ entities:
         If the upstream endpoint was closer, but there was a confluence directly upstream, then the original match was kept.
       attr-defs:  >-
         https://doi.org/10.5066/P971JAGF
-      data-min: NA
-      data-max: NA
-      data-units: NA
-
-
-    -
-      attr-label: in_time_holdout
-      attr-def: >-
-        Logical, is the date within the test holdout periods?
-      attr-defs: This data release
-      data-min: NA
-      data-max: NA
-      data-units: NA
-    -
-      attr-label: in_space_holdout
-      attr-def: >-
-        Logical, is the site a spatial holdouts?
-      attr-defs: This data release
-      data-min: NA
-      data-max: NA
-      data-units: NA
-    -
-      attr-label: test
-      attr-def: >-
-        Logical, should the observation be used for testing (and withheld from training)?
-      attr-defs: This data release
       data-min: NA
       data-max: NA
       data-units: NA
