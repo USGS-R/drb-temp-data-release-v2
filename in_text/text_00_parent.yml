@@ -1,20 +1,26 @@
 title: >-
-  Data release to support multiple modeling efforts in the Delaware River Basin
+  Data release to support water quality modeling efforts in the Delaware River Basin
 
 abstract: >-
-  <p> XXX This data release contains spatial, observational, and driver data used as inputs for multiple modeling efforts in the Delaware River Basin (DRB).  
-  The data  in this release primarily supports the 7-day ahead maximum water temperature forecasting models that output real-time predictions in the DRB for 2022(<li><a href="https://www.sciencebase.gov/catalog/item/6238fcead34e915b67cc4856"> Data to support network-wide 7-day ahead forecasting of water temperature in teh Delware River Basin</a>).
-  The model is driven by weather forecasts and observed reservoir releases and produces maximum water temperature forecasts for the issue day (day 0) and 7 days into the future (days 1-7) at five sites. This data release captures the entire forecasting period that is reported in Zwart et al. 2022 and is an extension of XX.
-  The data is stored in 3 child folders: 1_spatial folder, 2_observations and 3_driver data folder.</p>
-  <li><a href="https://www.sciencebase.gov/catalog/item/623e54c4d34e915b67d83580"> 1_spatial </a> - Spatial data used for modeling efforts in the Delaware River Basin</li> -
-  One shapefile of polylines for the 456 river segments in this study, a reservoir polygon metadata file, and one shapefile of reservoir polygons for the Pepacton, Cannonsville, and Neversink reservoirs.
-  <li><a href="https://www.sciencebase.gov/catalog/item/623e550ad34e915b67d8366e"> 2_observations </a> - Observations data ((e.g. temperature and flow observations) used for modeling efforts for river reaches in this study. </li> - 
-  Water temperature and streamflow observations for river reaches used in this study, raw and aggregated. Reservoir observations such as water temperature, water level, and release observations for the Pepacton, Cannonsville, and Neversink reservoirs reservoirs.
-  <li><a href="https://www.sciencebase.gov/catalog/item/623e5587d34e915b67d83806"> 3_driver </a> - Driver data  used for modeling efforts for the river reaches in this study </li>
-  <br/> This includes data used to drive predictive models such as distance matrices and daily meteorology data from NOAA and gridMET for river reaches and reservoirs.
-  This child item also includes PRMS-SNTemp predictions of water temperature for inflow and outflow reaches of the Pepacton and Cannonsville reservoirs, GLM 3.1 predictions of ourflow and water temperature for reservoir outflow reaches,
-  GLM 3.1 predictions of in-reservoir water temperatures at the depth of reservoir outlets, stream temperature predictions from the distance-weighted-average lotic-lentic input network, and 7-day ahead deep learning water temperature forecasts at 5 priority sites.
-  <p>This research was funded by the USGS.</p>
+  <p> This data release contains information to support water quality modeling in the Delaware River Basin (DRB).
+  These data support both process-based and machine learning approaches to water quality modeling, including
+  the prediction of stream temperature. Reservoirs in the DRB serve an important role as a source of drinking
+  water, but also affect downstream water quality. Therefore, This data release includes data that
+  characterize both rivers and a subset of reservoirs in the basin.
+
+
+  The data are stored in 3 child folders: 1) spatial information, 2) observations, and 3) model driver data.</p>
+  <li><a href="https://www.sciencebase.gov/catalog/item/623e54c4d34e915b67d83580"> 1) Spatial Information </a>- Spatial data used for modeling efforts in the Delaware River Basin</li> -
+  a shapefile of polylines for the 456 river segments, point data for observation locations, and polygons for the three (Pepacton, Cannonsville, and Neversink) reservoirs in this dataset.
+  <li><a href="https://www.sciencebase.gov/catalog/item/623e550ad34e915b67d8366e"> 2) Observations </a>- Reservoir (surface levels, releases, diversions, water temperature) and river (water temperature and flow)
+  observations that can be used to train and test water quality models. </li>
+  <li><a href="https://www.sciencebase.gov/catalog/item/623e5587d34e915b67d83806"> 3) Model driver data </a>- Driver data used to force water quality models, including
+  stream reach distance matrices and daily meteorology data from NOAA and gridMET. This child item also
+  includes the inputs and outputs of an uncalibrated run of PRMS-SNTemp which predicts mean water temperature
+  at all 456 reaches in the DRB.
+
+
+  <p>This data compilation was funded by the USGS.</p>
 
 build-environment: Multiple computer operating systems were used to generate these data, including Windows, linux, OSX. The open source languages R and Python were used on all systems.
 
@@ -30,4 +36,4 @@ entities:
   -
     data-name: Parent metadata landing page
     data-description: >-
-      This is the landing page for XX other data release units, described in the attributes section
+      This is the landing page for three other data release units, described in the attributes section
