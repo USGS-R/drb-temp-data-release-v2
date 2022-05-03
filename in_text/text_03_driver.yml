@@ -393,8 +393,8 @@ entities:
       attr-def: >-
         Area-weighted average cloud cover fraction for each segment from HRUs contributing flow to the segment.
       attr-defs: https://doi.org/10.1002/joc.3413
-      data-min: 0.2565
-      data-max: 0.8
+      data-min: 0.2542
+      data-max: 7667
       data-units: decimal fraction
     -
       attr-label: seg_humid
@@ -409,8 +409,8 @@ entities:
       attr-def: >-
         Streamflow leaving a segment
       attr-defs: This data release
-      data-min: 1.50589e-05
-      data-max: 838.4617
+      data-min: 0
+      data-max: 3086.54
       data-units: cubic meters per second
     -
       attr-label: seg_rain
