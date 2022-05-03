@@ -7,8 +7,7 @@ abstract: >-
   data in the Delaware River Basin included in this release. One shapefile of polylines
   describes the 456 river reaches that define the modeling network, and another shapefile of polygons includes
   the three reservoirs (Pepacton, Cannonsville, and Neversink) for which data are included in this release. Additionally, a point shapefile
-  contains locations of monitoring sites along the reaches with supporting attributes that describe
-  the monitoring location.
+  contains locations of monitoring sites along the reaches with supporting attributes that describe the monitoring location.
 
 cross-cites:
   -
