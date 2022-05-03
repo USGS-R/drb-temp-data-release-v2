@@ -52,7 +52,7 @@ extract_reach_attributes <- function(res_file, attr_file, out_file) {
 
   out <- left_join(res, select(attr, -subseg_updown, -start_pt, -end_pt, -to_subseg)) %>%
     mutate(subseg_length = round(subseg_length, 2))
-  
+
   readr::write_csv(out, out_file)
 
 }
@@ -144,7 +144,9 @@ combine_level_sources <- function(out_csv, nwis_levels, nyc_levels, hist_levels)
     arrange(site_id, date) %>%
     group_by(site_id) %>%
     mutate(surface_elevation_m = na.approx(surface_elevation_m)) %>%
-    mutate(data_type = ifelse(is.na(data_type), 'daily interpolated', data_type))
+    mutate(data_type = ifelse(is.na(data_type), 'daily interpolated', data_type),
+           source = ifelse(is.na(source), 'interpolated', source)) %>%
+    select(-source_id)
 
   out_dat$surface_elevation_m <- round(out_dat$surface_elevation_m, 2)
   readr::write_csv(out_dat, out_csv)

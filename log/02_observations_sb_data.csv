@@ -1,8 +1,9 @@
 filepath,sb_id,time_uploaded_to_sb
 out_data/unaggregated_temperature_observations_drb.zip,623e550ad34e915b67d8366e,2022-05-03 03:22 UTC
 out_data/aggregated_temperature_observations_drb.zip,623e550ad34e915b67d8366e,2022-05-03 03:22 UTC
+out_data/flow_observations_drb.zip,623e550ad34e915b67d8366e,2022-05-03 18:30 UTC
 out_data/reservoir_temp_obs.csv,623e550ad34e915b67d8366e,2022-05-03 03:22 UTC
-out_data/reservoir_level_obs.csv,623e550ad34e915b67d8366e,2022-05-03 03:22 UTC
+out_data/reservoir_level_obs.csv,623e550ad34e915b67d8366e,2022-05-03 18:31 UTC
 out_data/reservoir_releases_by_type_drb.csv,623e550ad34e915b67d8366e,2022-05-03 03:23 UTC
-in_data/02_observations/reservoir_diversions.csv,623e550ad34e915b67d8366e,2022-05-03 03:23 UTC
-out_xml/02_observations_fgdc_metadata.xml,623e550ad34e915b67d8366e,2022-05-03 03:23 UTC
+in_data/02_observations/reservoir_diversions.csv,623e550ad34e915b67d8366e,2022-05-03 19:38 UTC
+out_xml/02_observations_fgdc_metadata.xml,623e550ad34e915b67d8366e,2022-05-03 19:43 UTC
