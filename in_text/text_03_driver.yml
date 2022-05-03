@@ -349,7 +349,6 @@ entities:
       contributing hydrologic reach units and/or upstream segments can have streamflow but
       may not have streamflow at the current timestep (-98.9)
 
-
       Very negative groundwater and shallow subsurface water temperatures (e.g. less than -1 C) are
       not error codes, but rather are a product of the way this version of PRMS-SNTemp is coded. However,
       we advise against using these very low groundwater and shallow subsurface temperature values
@@ -364,14 +363,6 @@ entities:
       data-min: NA
       data-max: NA
       data-units: NA
-    # -
-    #   attr-label: model_idx
-    #   attr-def: >-
-    #     Unique river segment identifier from the model cutout.
-    #   attr-defs: https://www.sciencebase.gov/catalog/item/535eda80e4b08e65d60fc834
-    #   data-min: NA
-    #   data-max: NA
-    #   data-units: NA
 
     -
       attr-label: date
@@ -1116,7 +1107,6 @@ entities:
       data-min: 0
       data-max:0.02
       data-units: kg/kg
-
 
 
 build-environment: Multiple computer systems were used to generate these data, including Windows, OSX, and linux. The open source languages R and Python was used on all systems.
