@@ -142,7 +142,7 @@ targets:
       'out_data/distance_matrix_drb.csv',
       'out_data/gridmet_drb_agg.csv.zip',
       'out_data/gridmet_drb_agg.nc.zip',
-      'out_data/reanalysis_gefs_fy22.csv.zip',
+      'out_data/reanalysis_gefs_drb.csv.zip',
       'out_data/uncal_sntemp_input_output.nc.zip',
       'out_xml/03_driver_fgdc_metadata.xml'
       )
