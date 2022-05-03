@@ -980,69 +980,69 @@ entities:
 
     attributes:
     -
-      attr-label: tmin
+      attr-label: tmmn
       attr-def: >-
         Daily Minimum Temperature (2m)
       attr-defs:
-      data-min: NA
-      data-max: NA
+      data-min: -26
+      data-max: 82.2
       data-units: degrees F
 
     -
-      attr-label: tmax
+      attr-label: tmmx
       attr-def: >-
          Daily Maximum Temperature (2m)\
       attr-defs:
       data-min: -7.2
-      data-max: 
+      data-max: 108.2
       data-units: degrees F
     -
       attr-label: srad
       attr-def: >-
         Daily Mean downward shortwave radiation at surface
       attr-defs:
-      data-min: NA
-      data-max: NA
+      data-min: 0
+      data-max: 357.6
       data-units: W m-2
     -
       attr-label: vs
       attr-def: >-
         Daily Mean Wind Speed (10m)
       attr-defs:
-      data-min: NA
-      data-max: NA
+      data-min: 0
+      data-max: 17.6
       data-units: m/s
     -
       attr-label: rmin
       attr-def: >-
         Daily Minimum Relative Humidity (2m)
       attr-defs:
-      data-min: NA
-      data-max: NA
+      data-min: 4.5
+      data-max: 100
       data-units: %
     -
       attr-label: rmax
       attr-def: >-
         Daily Maximum Relative Humidity (2m)
       attr-defs:
-      data-min: NA
-      data-max: NA
+      data-min: 22.0
+      data-max: 100
       data-units: %
     -
       attr-label: pr
       attr-def: >-
         Daily Accumulated Precipitation
       attr-defs:
-      data-min: NA
-      data-max: NA
+      data-min: 0
+      data-max: 8.97
       data-units: inch
     -
       attr-label: sph
       attr-def: >-
          Daily mean specific humidity (2m)
       attr-defs:
-      data-min:
-      data-max:
+      data-min: 0
+      data-max: 0.02
       data-units: kg/kg
 
   -
@@ -1057,7 +1057,7 @@ entities:
         Daily Minimum Temperature (2m)
       attr-defs:
       data-min: -26.0
-      data-max: 82.5
+      data-max: 82.2
       data-units: degrees F
 
     -
