@@ -967,24 +967,22 @@ entities:
 
     attributes:
     -
-      attr-label: 
+      attr-label: PRMS_segid
       attr-def: >-
-        Daily Minimum Temperature (2m)
-      attr-defs:
+        PRMS segment identifier (NHM catchment polygons)
+      attr-defs: XX (link to documentation on PRMS identifiers)
       data-min: NA
       data-max: NA
       data-units: 
-
     -
-      attr-label: 
+      attr-label: time
       attr-def: >-
-        Daily Minimum Temperature (2m)
+        date
       attr-defs:
-      data-min: NA
-      data-max: NA
+      data-min: 1979-01-01
+      data-max: 2022-04-06
       data-units: 
 
-    -
       attr-label: tmmn
       attr-def: >-
         Daily Minimum Temperature (2m)
