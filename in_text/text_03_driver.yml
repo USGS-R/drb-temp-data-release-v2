@@ -550,145 +550,145 @@ entities:
       data-max: 618.24
       data-units: meters
   -
-    data-name: reservoir_interpolated_daily_water_budget_components.csv
-    data-description: >-
-      Daily reservoir water budget components calculated for Pepacton and Cannonsville Reservoirs.
-      When monthly values were available, we interpolated down to daily values which is tracked in
-      the column named data_type. Data were compiled from USGS New York Water Data Reports (e.g., https://ny.water.usgs.gov/pubs/wdr/wdrny051/) and
-      reservoir operation data from the Office of the Delaware River Master (e.g., https://webapps.usgs.gov/odrm/documents/tables/jun2013.pdf).
-
-
-      Note that these data are not collected by USGS, and elevation record and capacity table were provided by New York City Department of Environmental Protection.
-    attributes:
-    -
-      attr-label: reservoir
-      attr-def: >-
-        Reservoir name.
-      attr-defs: This data release
-      data-min: NA
-      data-max: NA
-      data-units: NA
-    -
-      attr-label: date
-      attr-def: >-
-        Date of diversion
-      attr-defs: This data release
-      data-min: 1979-10-01
-      data-max: 2020-12-31
-      data-units: NA
-    -
-      attr-label: diversion_cms
-      attr-def: >-
-        Volume of diversion
-      attr-defs: This data release
-      data-min: 0
-      data-max: 29.5212
-      data-units: cubic meters per second
-    -
-      attr-label: precip_in
-      attr-def: >-
-        Precipitation
-      attr-defs: This data release
-      data-min: 0
-      data-max: 4.87
-      data-units: inches
-    -
-      attr-label: storage_perc
-      attr-def: >-
-        Percent of total reservoir storage volume occupied by current reservoir volume.
-      attr-defs: This data release
-      data-min: 17.75855
-      data-max: 110.2272
-      data-units: NA
-    -
-      attr-label: data_type
-      attr-def: >-
-        Type of data - monthly or daily values.
-      attr-defs: This data release
-      data-min: NA
-      data-max: NA
-      data-units: NA
-    -
-      attr-label: res_level_m
-      attr-def: >-
-        Reservoir surface elevation.
-      attr-defs: This data release
-      data-min: 329.184
-      data-max: 391.0523
-      data-units: meters
-    -
-      attr-label: gross_storage_m3
-      attr-def: >-
-        Total reservoir storage.
-      attr-defs: This data release
-      data-min: 79358318
-      data-max: 663599577
-      data-units: cubic meters
-    -
-      attr-label: storage_change_cms
-      attr-def: >-
-        Reservoir storage change
-      attr-defs: This data release
-      data-min: -756.7326
-      data-max: 1060.398
-      data-units: cubic meters per second
-    -
-      attr-label: conservation_release_cms
-      attr-def: >-
-        Volume of reservoir conservation release
-      attr-defs: This data release
-      data-min: 0.0
-      data-max: 44.2818
-      data-units: cubic meters per second
-    -
-      attr-label: directed_release_cms
-      attr-def: >-
-        Volume of reservoir directed release
-      attr-defs: This data release
-      data-min: 0.0
-      data-max: 43.7124
-      data-units: cubic meters per second
-    -
-      attr-label: total_release_cms
-      attr-def: >-
-        Total volume released
-      attr-defs: This data release
-      data-min: 0.7446
-      data-max: 44.2818
-      data-units: cubic meters per second
-    -
-      attr-label: spillway_cms
-      attr-def: >-
-        Volume spilled over reservoir spillway
-      attr-defs: This data release
-      data-min: 0
-      data-max: 355.875
-      data-units: cubic meters per second
-    -
-      attr-label: total_runoff_cms
-      attr-def: >-
-        Total runoff contributing to discharge from reservoir.
-      attr-defs: This data release
-      data-min: -6.57
-      data-max: 789.5826
-      data-units: cubic meters per second
-    -
-      attr-label: storage_above_sill_m3
-      attr-def: >-
-        Storage above the reservoir sill
-      attr-defs: This data release
-      data-min: 243625103
-      data-max: 636738619
-      data-units: cubic meters
-    -
-      attr-label: source_file
-      attr-def: >-
-        Where the data originated
-      attr-defs: This data release
-      data-min: NA
-      data-max: NA
-      data-units: NA
-  -
+  #   data-name: reservoir_interpolated_daily_water_budget_components.csv
+  #   data-description: >-
+  #     Daily reservoir water budget components calculated for Pepacton and Cannonsville Reservoirs.
+  #     When monthly values were available, we interpolated down to daily values which is tracked in
+  #     the column named data_type. Data were compiled from USGS New York Water Data Reports (e.g., https://ny.water.usgs.gov/pubs/wdr/wdrny051/) and
+  #     reservoir operation data from the Office of the Delaware River Master (e.g., https://webapps.usgs.gov/odrm/documents/tables/jun2013.pdf).
+  # 
+  # 
+  #     Note that these data are not collected by USGS, and elevation record and capacity table were provided by New York City Department of Environmental Protection.
+  #   attributes:
+  #   -
+  #     attr-label: reservoir
+  #     attr-def: >-
+  #       Reservoir name.
+  #     attr-defs: This data release
+  #     data-min: NA
+  #     data-max: NA
+  #     data-units: NA
+  #   -
+  #     attr-label: date
+  #     attr-def: >-
+  #       Date of diversion
+  #     attr-defs: This data release
+  #     data-min: 1979-10-01
+  #     data-max: 2020-12-31
+  #     data-units: NA
+  #   -
+  #     attr-label: diversion_cms
+  #     attr-def: >-
+  #       Volume of diversion
+  #     attr-defs: This data release
+  #     data-min: 0
+  #     data-max: 29.5212
+  #     data-units: cubic meters per second
+  #   -
+  #     attr-label: precip_in
+  #     attr-def: >-
+  #       Precipitation
+  #     attr-defs: This data release
+  #     data-min: 0
+  #     data-max: 4.87
+  #     data-units: inches
+  #   -
+  #     attr-label: storage_perc
+  #     attr-def: >-
+  #       Percent of total reservoir storage volume occupied by current reservoir volume.
+  #     attr-defs: This data release
+  #     data-min: 17.75855
+  #     data-max: 110.2272
+  #     data-units: NA
+  #   -
+  #     attr-label: data_type
+  #     attr-def: >-
+  #       Type of data - monthly or daily values.
+  #     attr-defs: This data release
+  #     data-min: NA
+  #     data-max: NA
+  #     data-units: NA
+  #   -
+  #     attr-label: res_level_m
+  #     attr-def: >-
+  #       Reservoir surface elevation.
+  #     attr-defs: This data release
+  #     data-min: 329.184
+  #     data-max: 391.0523
+  #     data-units: meters
+  #   -
+  #     attr-label: gross_storage_m3
+  #     attr-def: >-
+  #       Total reservoir storage.
+  #     attr-defs: This data release
+  #     data-min: 79358318
+  #     data-max: 663599577
+  #     data-units: cubic meters
+  #   -
+  #     attr-label: storage_change_cms
+  #     attr-def: >-
+  #       Reservoir storage change
+  #     attr-defs: This data release
+  #     data-min: -756.7326
+  #     data-max: 1060.398
+  #     data-units: cubic meters per second
+  #   -
+  #     attr-label: conservation_release_cms
+  #     attr-def: >-
+  #       Volume of reservoir conservation release
+  #     attr-defs: This data release
+  #     data-min: 0.0
+  #     data-max: 44.2818
+  #     data-units: cubic meters per second
+  #   -
+  #     attr-label: directed_release_cms
+  #     attr-def: >-
+  #       Volume of reservoir directed release
+  #     attr-defs: This data release
+  #     data-min: 0.0
+  #     data-max: 43.7124
+  #     data-units: cubic meters per second
+  #   -
+  #     attr-label: total_release_cms
+  #     attr-def: >-
+  #       Total volume released
+  #     attr-defs: This data release
+  #     data-min: 0.7446
+  #     data-max: 44.2818
+  #     data-units: cubic meters per second
+  #   -
+  #     attr-label: spillway_cms
+  #     attr-def: >-
+  #       Volume spilled over reservoir spillway
+  #     attr-defs: This data release
+  #     data-min: 0
+  #     data-max: 355.875
+  #     data-units: cubic meters per second
+  #   -
+  #     attr-label: total_runoff_cms
+  #     attr-def: >-
+  #       Total runoff contributing to discharge from reservoir.
+  #     attr-defs: This data release
+  #     data-min: -6.57
+  #     data-max: 789.5826
+  #     data-units: cubic meters per second
+  #   -
+  #     attr-label: storage_above_sill_m3
+  #     attr-def: >-
+  #       Storage above the reservoir sill
+  #     attr-defs: This data release
+  #     data-min: 243625103
+  #     data-max: 636738619
+  #     data-units: cubic meters
+  #   -
+  #     attr-label: source_file
+  #     attr-def: >-
+  #       Where the data originated
+  #     attr-defs: This data release
+  #     data-min: NA
+  #     data-max: NA
+  #     data-units: NA
+  # -
   #   data-name: >-
   #     NLDAS_time[0.367700]_x[{x}]_y[{y}].csv
   #   data-description: >-
@@ -993,8 +993,8 @@ entities:
       attr-def: >-
          Daily Maximum Temperature (2m)\
       attr-defs:
-      data-min: NA
-      data-max: NA
+      data-min: -7.2
+      data-max: 
       data-units: degrees F
     -
       attr-label: srad
@@ -1050,7 +1050,72 @@ entities:
     data-description: >-
       NetCDF format is the same as the tabular format  of the GridMET data described above. This data is aggregated through area weighted mean to the HRU polygons of the DRB region.
 
+    attributes:
+    -
+      attr-label: tmmn
+      attr-def: >-
+        Daily Minimum Temperature (2m)
+      attr-defs:
+      data-min: -26.0
+      data-max: 82.5
+      data-units: degrees F
 
+    -
+      attr-label: tmmx
+      attr-def: >-
+         Daily Maximum Temperature (2m)\
+      attr-defs:
+      data-min: -7.2
+      data-max: 108.2
+      data-units: degrees F
+    -
+      attr-label: srad
+      attr-def: >-
+        Daily Mean downward shortwave radiation at surface
+      attr-defs:
+      data-min: 0
+      data-max: 359.7
+      data-units: W m-2
+    -
+      attr-label: vs
+      attr-def: >-
+        Daily Mean Wind Speed (10m)
+      attr-defs:
+      data-min: 0
+      data-max: 17.6
+      data-units: m/s
+    -
+      attr-label: rmin
+      attr-def: >-
+        Daily Minimum Relative Humidity (2m)
+      attr-defs:
+      data-min: 4.5
+      data-max: 100
+      data-units: %
+    -
+      attr-label: rmax
+      attr-def: >-
+        Daily Maximum Relative Humidity (2m)
+      attr-defs:
+      data-min: 22.0
+      data-max: 100
+      data-units: %
+    -
+      attr-label: pr
+      attr-def: >-
+        Daily Accumulated Precipitation
+      attr-defs:
+      data-min: 0
+      data-max: 9.1
+      data-units: inch
+    -
+      attr-label: sph
+      attr-def: >-
+         Daily mean specific humidity (2m)
+      attr-defs:
+      data-min: 0
+      data-max:0.02
+      data-units: kg/kg
 
 
 
