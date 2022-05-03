@@ -1,5 +1,5 @@
 title: >-
-  Data to support water quality modeling efforts in the Delaware River Basin: 3) Model driver Data
+  Data to support water quality modeling efforts in the Delaware River Basin: 3) Model driver data
 
 abstract: >-
   This child item includes model drivers such as gridded weather data pulled from NOAA GEFS and gridMET, and the stream network distance matrix for the Delaware River Basin.
@@ -461,7 +461,7 @@ entities:
   -
     data-name: 'gridmet_drb_agg_csv.nc.zip'
     data-description: >-
-      NetCDF format is the same as the tabular format  of the GridMET data described above. This data is aggregated through area weighted mean to the HRU polygons of the DRB region.
+      NetCDF format is the same as the tabular format of the GridMET data described above. This data is aggregated through area weighted mean to the HRU polygons of the DRB region.
 
     attributes:
     -
