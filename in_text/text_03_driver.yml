@@ -335,7 +335,7 @@ entities:
       uncal_sntemp_inputs_outputs.nc.zip
     data-description: >-
       PRMS-SNTemp inputs and outputs, including weather driver data, intermediate varibles, and
-      model predictions. There are two files; files either contain inputs/outputs from all 456 stream reaches in the
+      model predictions.  contain inputs/outputs from all 456 stream reaches in the
       Delaware River Basin modeling network, or for the 56 segments above Lordville, New York.
 
       Code used to generate these inputs and outputs can be found in the repository "run-prms-sntemp" in Zwart and others 2021 (https://doi.org/10.5281/zenodo.5164910).
@@ -981,7 +981,7 @@ entities:
     -
       attr-label: tmmx
       attr-def: >-
-         Daily Maximum Temperature (2m)\
+         Daily Maximum Temperature (2m)
       attr-defs:
       data-min: -7.2
       data-max: 108.2
