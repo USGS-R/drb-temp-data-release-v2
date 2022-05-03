@@ -509,6 +509,8 @@ entities:
     data-name: reservoir_temp_obs.csv
     data-description: >-
       Daily water temperature observations for the Pepacton and Cannonsville reservoirs.
+      Data were compiled from a data request to the New York Department of Environmental Protection
+      and the National Water Information System.
 
     attributes:
     -
@@ -528,12 +530,12 @@ entities:
         Date of temperature observation
       attr-defs: This data release
       data-min: 19920413
-      data-max: 20210419
+      data-max: 2022-02-17
       data-units: NA
     -
       attr-label: source_id
       attr-def: >-
-        Site identifier from the data provider.
+        Unique sampling location identifier from the data provider (source).
       attr-defs: This data release
       data-min: NA
       data-max: NA
@@ -541,7 +543,8 @@ entities:
     -
       attr-label: source
       attr-def: >-
-        Data provider.
+        Data provide, either the New York Department of Environmental Protection (ny_dep) or
+        the National Water Information System (nwis).
       attr-defs: This data release
       data-min: 0.1
       data-max: 50.25
@@ -549,7 +552,7 @@ entities:
     -
       attr-label: depth
       attr-def: >-
-        Depth of temperature observation
+        Depth of water temperature observation
       attr-defs: This data release.
       data-min: 0.01
       data-max: 50.25
@@ -559,66 +562,10 @@ entities:
       attr-def: >-
         Water temperature
       attr-defs: This data release
-      data-min: 1.2
+      data-min: 0.2
       data-max: 28.11
       data-units: degrees C
-  -
-    data-name: reservoir_temp_obs.csv
-    data-description: >-
-      Daily water temperature observations for the Pepacton and Cannonsville reservoirs.
 
-    attributes:
-    -
-      attr-label: site_id
-      attr-def: >-
-        Reservoir identification number for this dataset. Is the Prmnn_I from NHD high-res prefixed with source, as "nhdhr_{Prmnn_I}"
-
-
-        nhdhr_120022743 is Cannonsville Reservoir and nhdhr_151957878 is Pepacton Reservoir
-      attr-defs: http://nhd.usgs.gov/
-      data-min: NA
-      data-max: NA
-      data-units: NA
-    -
-      attr-label: date
-      attr-def: >-
-        Date of temperature observation
-      attr-defs: This data release
-      data-min: 19920413
-      data-max: 20210419
-      data-units: NA
-    -
-      attr-label: source_id
-      attr-def: >-
-        Site identifier from the data provider.
-      attr-defs: This data release
-      data-min: NA
-      data-max: NA
-      data-units: NA
-    -
-      attr-label: source
-      attr-def: >-
-        Data provider.
-      attr-defs: This data release
-      data-min: 0.1
-      data-max: 50.25
-      data-units: NA
-    -
-      attr-label: depth
-      attr-def: >-
-        Depth of temperature observation
-      attr-defs: This data release.
-      data-min: 0.01
-      data-max: 50.25
-      data-units: meters
-    -
-      attr-label: temp
-      attr-def: >-
-        Water temperature
-      attr-defs: This data release
-      data-min: 1.2
-      data-max: 28.11
-      data-units: degrees C
 
 process-date: !expr format(Sys.time(),'%Y%m%d')
 file-format: comma-delimited files (some compressed into zip files)
