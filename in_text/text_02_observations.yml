@@ -309,12 +309,10 @@ entities:
       data-max: NA
       data-units: NA
   -
-    data-name: reservoir_diversions.csv
+    data-name: out_data/flow_observations_drb.zip
     data-description: >-
-      Daily mean flow observation data with sites matched to model river segments in the Delaware River Basin.
-      Data were compiled from the National Water Information System (NWIS). Three subsets of similar data are provided,
-      including sites from any of the 456 segments (flow_observations_drb.zip), sites from a subset of 56 segments above
-      the Delaware River at Lordville, NY (flow_observations_lordville.zip), or the 5 priority forecast sites.
+      Observed daily mean flow with sites matched to model river segments in the Delaware River Basin.
+      Data were compiled from the National Water Information System (NWIS).
     attributes:
     -
       attr-label: seg_id_nat
@@ -348,7 +346,7 @@ entities:
         Date of discharge measurement
       attr-defs: This data release
       data-min: 18840101
-      data-max: 20210423
+      data-max: 2022-03-23
       data-units: NA
     -
       attr-label: discharge_cms
