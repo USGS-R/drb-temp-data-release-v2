@@ -2,7 +2,7 @@
 A data release to support temperature modeling in the Delaware River Basin (2nd iteration)
 
 
-## Running pipeline and pushing to Science base from Caldera: 
+## Running pipeline and pushing to science base from Caldera: 
 
 * Log into tallgrass (`ssh username@tallgrass.cr.usgs.gov`)
 * Navigate to `/caldera/projects/usgs/water/iidd/datasci/data_releases/drb-temp-data-release-v2`
