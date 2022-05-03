@@ -695,80 +695,80 @@ entities:
       data-min: NA
       data-max: NA
       data-units: NA
-  -
-    data-name: >-
-      NLDAS_time[0.367700]_x[{x}]_y[{y}].csv
-    data-description: >-
-      A csv file for each reservoir with input meteorological data. Files are named "NLDAS_time[0.367700]_x{x}_y{y}.csv" where the x and y locations are longitude and latitude indices from NLDAS
-      of the individual meteorological data cell (data are from Mitchell and others 2004).
-      The filename of the NLDAS file associated with each reservoir is listed in the "meteo_fl" fields in reservoir_nml_values.json, which is in the 3_config child item.
-    attributes:
-    -
-      attr-label: time
-      attr-def: >-
-        Date of this weather estimate.
-      attr-defs: This data release
-      data-min: NA
-      data-max: NA
-      data-units: NA
-    -
-      attr-label: ShortWave
-      attr-def: >-
-        Incoming radiant energy with wavelengths between ~300 and ~3000 nm,
-        emitted by the sun and reaching the reservoir surface after passing through the atmosphere, as a daily average.
-      attr-defs: This data release
-      data-min: NA
-      data-max: NA
-      data-units: Watts per meter squared
-    -
-      attr-label: LongWave
-      attr-def: >-
-        Incoming thermal radiation at wavelengths > 3000 nm directed from the atmosphere to the reservoir surface, as a daily average.
-      attr-defs: This data release
-      data-min: NA
-      data-max: NA
-      data-units: Watts per meter squared
-    -
-      attr-label: AirTemp
-      attr-def: >-
-        Air temperature above the surface of the reservoir, as a daily average.
-      attr-defs: This data release
-      data-min: NA
-      data-max: NA
-      data-units: degrees Celsius
-    -
-      attr-label: RelHum
-      attr-def: >-
-        Percent relative humidity of the air above the surface of the reservoir, as a daily average.
-      attr-defs: This data release
-      data-min: 0
-      data-max: 100
-      data-units: NA
-    -
-      attr-label: Windspeed
-      attr-def: >-
-        Speed of the wind above the reservoir, calculated to a daily number using the methods described in Winslow and others 2017.
-      attr-defs: This data release
-      data-min: 0
-      data-max: NA
-      data-units: meters per second
-    -
-      attr-label: Rain
-      attr-def: >-
-        Daily rate of rain reaching the reservoir surface in a day as described in Winslow and others 2017; rate as determined by Hipsey and others 2019.
-      attr-defs: This data release
-      data-min: 0
-      data-max: NA
-      data-units: NA
-    -
-      attr-label: Snow
-      attr-def: >-
-        Daily rate of snow reaching the reservoir surface in a day as described in Winslow and others 2017.
-      attr-defs: This data release
-      data-min: 0
-      data-max: NA
-      data-units: m day−1
-  -
+  # -
+  #   data-name: >-
+  #     NLDAS_time[0.367700]_x[{x}]_y[{y}].csv
+  #   data-description: >-
+  #     A csv file for each reservoir with input meteorological data. Files are named "NLDAS_time[0.367700]_x{x}_y{y}.csv" where the x and y locations are longitude and latitude indices from NLDAS
+  #     of the individual meteorological data cell (data are from Mitchell and others 2004).
+  #     The filename of the NLDAS file associated with each reservoir is listed in the "meteo_fl" fields in reservoir_nml_values.json, which is in the 3_config child item.
+  #   attributes:
+  #   -
+  #     attr-label: time
+  #     attr-def: >-
+  #       Date of this weather estimate.
+  #     attr-defs: This data release
+  #     data-min: NA
+  #     data-max: NA
+  #     data-units: NA
+  #   -
+  #     attr-label: ShortWave
+  #     attr-def: >-
+  #       Incoming radiant energy with wavelengths between ~300 and ~3000 nm,
+  #       emitted by the sun and reaching the reservoir surface after passing through the atmosphere, as a daily average.
+  #     attr-defs: This data release
+  #     data-min: NA
+  #     data-max: NA
+  #     data-units: Watts per meter squared
+  #   -
+  #     attr-label: LongWave
+  #     attr-def: >-
+  #       Incoming thermal radiation at wavelengths > 3000 nm directed from the atmosphere to the reservoir surface, as a daily average.
+  #     attr-defs: This data release
+  #     data-min: NA
+  #     data-max: NA
+  #     data-units: Watts per meter squared
+  #   -
+  #     attr-label: AirTemp
+  #     attr-def: >-
+  #       Air temperature above the surface of the reservoir, as a daily average.
+  #     attr-defs: This data release
+  #     data-min: NA
+  #     data-max: NA
+  #     data-units: degrees Celsius
+  #   -
+  #     attr-label: RelHum
+  #     attr-def: >-
+  #       Percent relative humidity of the air above the surface of the reservoir, as a daily average.
+  #     attr-defs: This data release
+  #     data-min: 0
+  #     data-max: 100
+  #     data-units: NA
+  #   -
+  #     attr-label: Windspeed
+  #     attr-def: >-
+  #       Speed of the wind above the reservoir, calculated to a daily number using the methods described in Winslow and others 2017.
+  #     attr-defs: This data release
+  #     data-min: 0
+  #     data-max: NA
+  #     data-units: meters per second
+  #   -
+  #     attr-label: Rain
+  #     attr-def: >-
+  #       Daily rate of rain reaching the reservoir surface in a day as described in Winslow and others 2017; rate as determined by Hipsey and others 2019.
+  #     attr-defs: This data release
+  #     data-min: 0
+  #     data-max: NA
+  #     data-units: NA
+  #   -
+  #     attr-label: Snow
+  #     attr-def: >-
+  #       Daily rate of snow reaching the reservoir surface in a day as described in Winslow and others 2017.
+  #     attr-defs: This data release
+  #     data-min: 0
+  #     data-max: NA
+  #     data-units: m day−1
+  # -
     data-name: noaagefs_meteo_files.zip
     data-description: >-
       NOAA Global Ensemble Forecasting System v12.0 0.25-degree operational model output for the 00 UTC forecast cycle from 2021-04-15 to 2021-07-16.
