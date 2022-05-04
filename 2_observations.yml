@@ -72,4 +72,3 @@ targets:
       
   out_data/reservoir_releases_by_type_drb.csv:
     command: file.copy('in_data/02_observations/reservoir_releases_by_type_drb.csv', to = target_name)
-    
