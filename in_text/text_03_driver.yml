@@ -42,8 +42,7 @@ cross-cites:
 
 entities:
   -
-    data-name: >-
-      distance_matrix_drb.csv
+    data-name: distance_matrix_drb.csv
     data-description: >-
       A matrix documenting the upstream (negative numbers) or downstream (positive numbers)
       distances between river reaches. There is one file for all 456 reaches in the Delaware
@@ -60,8 +59,7 @@ entities:
       data-max: 120381.61
       data-units: meters
     -
-      attr-label: >-
-        {seg_id_nat}
+      attr-label: {seg_id_nat}
       attr-def: >-
         All columns other than the "from" column are named with a seg_id_nat value, where the column values correspond to the
         distance (in meters) between the seg_id_nat in the "from"" column to the {seg_id_nat} in the column name.
@@ -73,8 +71,7 @@ entities:
       data-max: 120381.61
       data-units: meters
   -
-    data-name: >-
-      uncal_sntemp_inputs_outputs.nc.zip
+    data-name: uncal_sntemp_inputs_outputs.nc.zip
     data-description: >-
       PRMS-SNTemp inputs and outputs, including weather driver data, intermediate varibles, and
       model predictions. The file contain inputs/outputs from all 456 stream reaches in the
@@ -94,6 +91,7 @@ entities:
       not error codes, but rather are a product of the way this version of PRMS-SNTemp is coded. However,
       we advise against using these very low groundwater and shallow subsurface temperature values
       as they likely are far from actual water temperatures.
+
     attributes:
     -
       attr-label: seg_id_nat
@@ -298,7 +296,6 @@ entities:
       data-min: 0
       data-max: 4
       data-units: NA
-
     -
       attr-label: srad
       attr-def: >-
@@ -386,40 +383,41 @@ entities:
     data-description: >-
       Tabular aggregated version of the GridMET data collected for the DRB contains spatial meterological data from 1979 to 2022, in daily time steps. This data is maintained and collected by <li><a href="https://www.climatologylab.org/gridmet.html"> Climatology lab </a>
       The meterological data variables used in this study include temperature min (tmin) and max (tmax), short wave radiation (srad), wind speed (vs), precipitation amount (pr), relative humidity min (rmin), relative humidity max (rmax) and specific humidity (sp). Derived from 4 km2 grids.
-      The data is aggregated to PRMS segment scale (NHM catchment polygons) through an area-weighted mean, such that each segment evaluated in this study has associated meterological data for everyday since 01-01-1979. 
-      The aggregated csv version of gridmet is used for training the deep learning models in this study. 
+      The data is aggregated to PRMS river reach scale (from NHM hydrologic response units) through an area-weighted mean, such that each segment evaluated in this study has associated meterological data for everyday since 01-01-1979.
+      The aggregated csv version of gridmet is used for training the deep learning models in this study.
 
     attributes:
     -
       attr-label: PRMS_segid
       attr-def: >-
-        PRMS segment identifier (NHM catchment polygons)
-      attr-defs: XX [TBD - link to documentation on PRMS identifiers]
+        National unique stream reach identifier.
+        This is the ID named seg_id_nat from the Geospatial Fabric for National Hydrologic Modeling.
+        This feature corresponds to "seg_id_nat" in other data files.
+      attr-defs: https://www.sciencebase.gov/catalog/item/535eda80e4b08e65d60fc834
       data-min: NA
       data-max: NA
-      data-units: 
+      data-units: NA
     -
       attr-label: time
       attr-def: >-
         date
-      attr-defs:
+      attr-defs: https://doi.org/10.1002/joc.3413
       data-min: 1979-01-01
       data-max: 2022-04-06
-      data-units: 
-
+      data-units: NA
+    -
       attr-label: tmmn
       attr-def: >-
         Daily Minimum Temperature (2m)
-      attr-defs:
+      attr-defs: https://doi.org/10.1002/joc.3413
       data-min: -26
       data-max: 82.2
       data-units: degrees F
-
     -
       attr-label: tmmx
       attr-def: >-
          Daily Maximum Temperature (2m)
-      attr-defs:
+      attr-defs: https://doi.org/10.1002/joc.3413
       data-min: -7.2
       data-max: 108.2
       data-units: degrees F
@@ -427,7 +425,7 @@ entities:
       attr-label: srad
       attr-def: >-
         Daily Mean downward shortwave radiation at surface
-      attr-defs:
+      attr-defs: https://doi.org/10.1002/joc.3413
       data-min: 0
       data-max: 357.6
       data-units: W m-2
@@ -435,7 +433,7 @@ entities:
       attr-label: vs
       attr-def: >-
         Daily Mean Wind Speed (10m)
-      attr-defs:
+      attr-defs: https://doi.org/10.1002/joc.3413
       data-min: 0
       data-max: 17.6
       data-units: m/s
@@ -443,7 +441,7 @@ entities:
       attr-label: rmin
       attr-def: >-
         Daily Minimum Relative Humidity (2m)
-      attr-defs:
+      attr-defs: https://doi.org/10.1002/joc.3413
       data-min: 4.5
       data-max: 100
       data-units: percent
@@ -451,7 +449,7 @@ entities:
       attr-label: rmax
       attr-def: >-
         Daily Maximum Relative Humidity (2m)
-      attr-defs:
+      attr-defs: https://doi.org/10.1002/joc.3413
       data-min: 22.0
       data-max: 100
       data-units: percent
@@ -459,7 +457,7 @@ entities:
       attr-label: pr
       attr-def: >-
         Daily Accumulated Precipitation
-      attr-defs:
+      attr-defs: https://doi.org/10.1002/joc.3413
       data-min: 0
       data-max: 8.97
       data-units: inch
@@ -467,7 +465,7 @@ entities:
       attr-label: sph
       attr-def: >-
          Daily mean specific humidity (2m)
-      attr-defs:
+      attr-defs: https://doi.org/10.1002/joc.3413
       data-min: 0
       data-max: 0.02
       data-units: kg/kg
@@ -476,30 +474,30 @@ entities:
     data-name: 'gridmet_drb_agg_csv.nc.zip'
     data-description: >-
       NetCDF format is the same as the tabular format  of the GridMET data described above. This data is aggregated through area weighted mean to the HRU polygons of the DRB.
-      The spatial version of the gridmet data (with netcdf extension) is used to run the PRMS-SNTemp model. 
+      The spatial version of the gridmet data (with netcdf extension) is used to run the PRMS-SNTemp model.
 
     attributes:
     -
       attr-label: hru_lat
       attr-def: >-
         Latitude of HRU centroid
-      attr-defs:
+      attr-defs: https://doi.org/10.1002/joc.3413
       data-min: NA
       data-max: NA
-      data-units: degrees_north
+      data-units: degrees north
     -
       attr-label: hru_lon
       attr-def: >-
         Longitude of HRU centroid
-      attr-defs:
+      attr-defs: https://doi.org/10.1002/joc.3413
       data-min: NA
       data-max: NA
-      data-units: degrees_east
+      data-units: degrees east
     -
       attr-label: geomid
       attr-def: >-
         local model hru id. Used to match to HRU ids for the PRMS-SNTemp model. Also matches to PRMS segments to produce gridmet_drb_agg.csv
-      attr-defs:
+      attr-defs: https://doi.org/10.1002/joc.3413
       data-min: NA
       data-max: NA
       data-units: NA
@@ -507,7 +505,7 @@ entities:
       attr-label: time
       attr-def: >-
         Date
-      attr-defs:
+      attr-defs: NA
       data-min: 1979-01-01
       data-max: 2022-04-06
       data-units: date
@@ -515,7 +513,7 @@ entities:
       attr-label: tmmn
       attr-def: >-
         Daily Minimum Temperature (2m)
-      attr-defs:
+      attr-defs: https://doi.org/10.1002/joc.3413
       data-min: -26.0
       data-max: 82.2
       data-units: degrees F
@@ -523,7 +521,7 @@ entities:
       attr-label: tmmx
       attr-def: >-
          Daily Maximum Temperature (2m)
-      attr-defs:
+      attr-defs: https://doi.org/10.1002/joc.3413
       data-min: -7.2
       data-max: 108.2
       data-units: degrees F
@@ -531,7 +529,7 @@ entities:
       attr-label: srad
       attr-def: >-
         Daily Mean downward shortwave radiation at surface
-      attr-defs:
+      attr-defs: https://doi.org/10.1002/joc.3413
       data-min: 0
       data-max: 359.7
       data-units: W m-2
@@ -539,7 +537,7 @@ entities:
       attr-label: vs
       attr-def: >-
         Daily Mean Wind Speed (10m)
-      attr-defs:
+      attr-defs: https://doi.org/10.1002/joc.3413
       data-min: 0
       data-max: 17.6
       data-units: m/s
@@ -547,7 +545,7 @@ entities:
       attr-label: rmin
       attr-def: >-
         Daily Minimum Relative Humidity (2m)
-      attr-defs:
+      attr-defs: https://doi.org/10.1002/joc.3413
       data-min: 4.5
       data-max: 100
       data-units: percent
@@ -555,7 +553,7 @@ entities:
       attr-label: rmax
       attr-def: >-
         Daily Maximum Relative Humidity (2m)
-      attr-defs:
+      attr-defs: https://doi.org/10.1002/joc.3413
       data-min: 22.0
       data-max: 100
       data-units: percent
@@ -563,7 +561,7 @@ entities:
       attr-label: pr
       attr-def: >-
         Daily Accumulated Precipitation
-      attr-defs:
+      attr-defs: https://doi.org/10.1002/joc.3413
       data-min: 0
       data-max: 9.1
       data-units: inch
@@ -571,7 +569,7 @@ entities:
       attr-label: sph
       attr-def: >-
          Daily mean specific humidity (2m)
-      attr-defs:
+      attr-defs: https://doi.org/10.1002/joc.3413
       data-min: 0
       data-max: 0.02
       data-units: kg/kg
