@@ -102,9 +102,17 @@ entities:
       data-min: NA
       data-max: NA
       data-units: NA
-
     -
-      attr-label: date
+      attr-label: ens
+      attr-def: >-
+        ensemble member
+      attr-defs: >-
+        https://www.sciencebase.gov/catalog/item/535eda80e4b08e65d60fc834
+      data-min: 1
+      data-max: 1
+      data-units: 1
+    -
+      attr-label: time
       attr-def: >-
         Date of the observation or prediction.
       attr-defs: This data release
