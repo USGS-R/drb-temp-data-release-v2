@@ -2,7 +2,7 @@ title: >-
   Data to support water quality modeling efforts in the Delaware River Basin
 
 abstract: >-
-  This data release contains information to support water quality modeling in the Delaware River Basin (DRB).
+  <p> This data release contains information to support water quality modeling in the Delaware River Basin (DRB).
   These data support both process-based and machine learning approaches to water quality modeling, including
   the prediction of stream temperature. Reservoirs in the DRB serve an important role as a source of drinking
   water, but also affect downstream water quality. Therefore, this data release includes data that
