@@ -386,7 +386,8 @@ entities:
     data-description: >-
       Tabular aggregated version of the GridMET data collected for the DRB contains spatial meterological data from 1979 to 2022, in daily time steps. This data is maintained and collected by <li><a href="https://www.climatologylab.org/gridmet.html"> Climatology lab </a>
       The meterological data variables used in this study include temperature min (tmin) and max (tmax), short wave radiation (srad), wind speed (vs), precipitation amount (pr), relative humidity min (rmin), relative humidity max (rmax) and specific humidity (sp). Derived from 4 km2 grids.
-      The data is aggregated to PRMS segment scale (NHM catchment polygons) through an area-weighted mean, such that each segment evaluated in this study has associated meterological data for everyday since 01-01-1979.
+      The data is aggregated to PRMS segment scale (NHM catchment polygons) through an area-weighted mean, such that each segment evaluated in this study has associated meterological data for everyday since 01-01-1979. 
+      The aggregated csv version of gridmet is used for training the deep learning models in this study. 
 
     attributes:
     -
@@ -475,6 +476,7 @@ entities:
     data-name: 'gridmet_drb_agg_csv.nc.zip'
     data-description: >-
       NetCDF format is the same as the tabular format  of the GridMET data described above. This data is aggregated through area weighted mean to the HRU polygons of the DRB.
+      The spatial version of the gridmet data (with netcdf extension) is used to run the PRMS-SNTemp model. 
 
     attributes:
     -
@@ -520,7 +522,7 @@ entities:
     -
       attr-label: tmmx
       attr-def: >-
-         Daily Maximum Temperature (2m)\
+         Daily Maximum Temperature (2m)
       attr-defs:
       data-min: -7.2
       data-max: 108.2
