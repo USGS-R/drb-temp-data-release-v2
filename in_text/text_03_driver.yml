@@ -292,7 +292,7 @@ entities:
       attr-label: ensemble
       attr-def: >-
         NOAA GEFS ensemble member
-      attr-defs:
+      attr-defs: https://www.nco.ncep.noaa.gov/pmb/products/gens/gec00.t00z.pgrb2s.0p25.f003.shtml
       data-min: 0
       data-max: 4
       data-units: NA
@@ -357,7 +357,7 @@ entities:
       attr-label: rhmax
       attr-def: >-
          Maximum Relative Humidity
-      attr-defs:
+      attr-defs: https://www.nco.ncep.noaa.gov/pmb/products/gens/gec00.t00z.pgrb2s.0p25.f003.shtml
       data-min: 0.35
       data-max: 1.00
       data-units: proportion (or fraction)
@@ -365,7 +365,7 @@ entities:
       attr-label: rhmin
       attr-def: >-
          Minimum Relative Humidity
-      attr-defs:
+      attr-defs: https://www.nco.ncep.noaa.gov/pmb/products/gens/gec00.t00z.pgrb2s.0p25.f003.shtml
       data-min: 0.15
       data-max: 1.00
       data-units: proportion (or fraction)
@@ -373,7 +373,7 @@ entities:
       attr-label: rhmean
       attr-def: >-
          Mean Relative Humidity
-      attr-defs:
+      attr-defs: https://www.nco.ncep.noaa.gov/pmb/products/gens/gec00.t00z.pgrb2s.0p25.f003.shtml
       data-min: 0.28
       data-max: 1.00
       data-units: proportion (or fraction)
@@ -577,7 +577,7 @@ entities:
 
 build-environment: Multiple computer systems were used to generate these data, including Windows, OSX, and linux. The open source languages R and Python was used on all systems.
 
-process-date: !expr format(Sys.time(),'%Y%m%d')
+process-date: 20220504
 indirect-spatial: U.S.A.
 latitude-res: 0.1
 longitude-res: 0.1

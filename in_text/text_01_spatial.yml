@@ -115,9 +115,9 @@ entities:
       data-units: NA
   -
     data-name: 01_study_monitoring_sites_qa.zip
-    data-description: >- 
+    data-description: >-
       GIS point data for flow and temperature monitoring sites in the Delaware River Basin.
-      
+
       Sites represent all sites within the Delaware River Basin boundary that were retrieved from
       EcoSHEDS, Water Quality Portal, or the National Water Information System and matched to the
       stream network included in study_stream_reaches.zip. Sites were limited to those
@@ -155,7 +155,7 @@ entities:
     -
       attr-label: source
       attr-def: >-
-        One of four sources from which the temperature data were compiled, including NWIS (NWISdv and NWISuv), WQP, EcoSHEDS      
+        One of four sources from which the temperature data were compiled, including NWIS (NWISdv and NWISuv), WQP, EcoSHEDS
       attr-defs: This data release
       data-min: NA
       data-max: NA
@@ -200,16 +200,15 @@ entities:
     -
       attr-label: fish_filtered
       attr-def: >-
-        logical. Either TRUE or NA. 
-        
-      attr-defs: 
+        logical. Either TRUE or NA.
+      attr-defs: This data release
       data-min: NA
       data-max: NA
       data-units: NA
     -
       attr-label: bird_filtered
       attr-def: >-
-        logical. Either TRUE or NA. 
+        logical. Either TRUE or NA.
       attr-defs: This data release
       data-min: NA
       data-max: NA
@@ -226,7 +225,7 @@ entities:
       data-max: NA
       data-units: NA
 
-process-date: !expr format(Sys.time(),'%Y%m%d')
+process-date: 20220504
 file-format: Shapefile
 
 indirect-spatial: U.S.A.

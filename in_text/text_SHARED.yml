@@ -1,4 +1,4 @@
-authors: ["Samantha K. Oliver", "Margaux Sleckman", "Alison P. Appling", "Hayley Corson-Dosch", "Jacob A. Zwart", "Theodore Thompson", "Lauren Koenig", "Ellie White", "David Watkins", "Lindsay Platt", "Julie Padilla"]
+authors: ["Samantha K. Oliver", "Margaux Sleckman", "Alison P. Appling", "Hayley Corson-Dosch", "Jacob A. Zwart", "Theodore Thompson", "Lauren Koenig", "Ellie White", "David Watkins", "Lindsay Platt", "Julie Padilla", "Jeffrey M. Sadler"]
 pubdate: 2022
 doi: https://doi.org/10.5066/P9GUHX1U
 build-environment: >-
@@ -22,7 +22,7 @@ cross-cites:
 
 purpose: Decision support, limnological research, water quality, reservoir management.
 start-date: 19790101
-end-date: 20220515
+end-date: 20220331
 
 update: none planned
 themekeywords: ["water","temperature","water quality","reservoirs","streams","modeling"]
@@ -43,14 +43,16 @@ contact-city: Madison
 contact-state: WI
 contact-zip: 53726
 
-metadata-person: Margaux J. Sleckman
+metadata-person: Samantha K. Oliver
+metadata-phone: 608-821-3824
+metadata-fax: 608-821-3817
 metadata-position: Data Scientist
-metadata-email: msleckman@usgs.gov
-metadata-address: "8505 Research Way"
-metadata-city: Middleton
+metadata-email: soliver@usgs.gov
+metadata-address: "1 Gifford Pinchot Dr"
+metadata-city: Madison
 metadata-state: WI
-metadata-zip: 53562
-metadata-date: !expr format(Sys.time(),'%Y%m%d')
+metadata-zip: 53726
+metadata-date: 20220504
 
 accur-test: No formal attribute accuracy tests were conducted.
 funding-credits: >-
