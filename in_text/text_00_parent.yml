@@ -31,6 +31,12 @@ cross-cites:
     pubdate: 2021
     link: http://doi.org/10.5066/P9GD8I7A
 
+entities:
+  -
+    data-name: Parent metadata landing page
+    data-description: >-
+      This is the landing page for three other data release units, described in the attributes section
+
 build-environment: Multiple computer operating systems were used to generate these data, including Windows, linux, OSX. The open source languages R and Python were used on all systems.
 
 process-date: 20220504
@@ -41,8 +47,4 @@ data-description: >-
   This is the landing page for the other data release units, described in the attributes section
 file-format: parent data item for released data products
 
-entities:
-  -
-    data-name: Parent metadata landing page
-    data-description: >-
-      This is the landing page for three other data release units, described in the attributes section
+
