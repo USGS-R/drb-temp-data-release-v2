@@ -188,8 +188,8 @@ entities:
       attr-def: >-
         Subsurface temperature.
       attr-defs: This data release
-      data-min: 31.36
-      data-max: -21.41
+      data-min: -21.41
+      data-max: 31.36
       data-units: degrees Celsius
     -
       attr-label: seg_tave_upstream
