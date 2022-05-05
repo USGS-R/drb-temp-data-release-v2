@@ -32,7 +32,7 @@ cross-cites:
 entities:
   -
     data-name: study_stream_reaches.zip
-    data-description: GIS polylines data for the 456 stream segments included in this study
+    data-description: GIS polyline data for the 456 stream segments in the DRB that have been included in this study. Stream network is originally dervied from the USGS Geospatial Fabric (link in attributes below).
     attributes:
     -
       attr-label: subsegid
@@ -41,7 +41,7 @@ entities:
         segment start and endpoints were connected by one reach with no intersecting reaches. The ID was created
         using the seg_id from the Geospatial Fabric and an index from one to the number of splits (e.g., {subseg_id}_{index}).
         This feature corresponds to subseg_id in other files.
-      attr-defs: This data release
+      attr-defs: https://www.sciencebase.gov/catalog/item/535eda80e4b08e65d60fc834
       data-min: NA
       data-max: NA
       data-units: NA
@@ -66,7 +66,7 @@ entities:
       attr-label: fromsegs
       attr-def: >-
         Reach identifier (subsegseg) of the upstream segment. NA indicates a headwater stream with no upstream segments.
-        Multiple upstream segments are seperated with a semicolon.
+        Multiple upstream segments are separated with a semicolon.
       attr-defs: https://www.sciencebase.gov/catalog/item/535eda80e4b08e65d60fc834
       data-min: NA
       data-max: NA
@@ -100,7 +100,7 @@ entities:
       data-max: NA
       data-units: NA
   -
-    data-name: 01_study_reservoirs.zip
+    data-name: study_reservoirs.zip
     data-description: GIS polygon data for the Pepacton, Cannonsville, Neversink reservoirs
     attributes:
     -
@@ -114,7 +114,7 @@ entities:
       data-max: NA
       data-units: NA
   -
-    data-name: 01_study_monitoring_sites_qa.zip
+    data-name: study_monitoring_sites.zip
     data-description: >-
       GIS point data for flow and temperature monitoring sites in the Delaware River Basin.
 
