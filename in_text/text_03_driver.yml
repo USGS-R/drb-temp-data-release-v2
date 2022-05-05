@@ -228,16 +228,16 @@ entities:
       attr-def: >-
           Area-weighted average groundwater discharge for each segment from HRUs contributing flow to the segment.
       attr-defs: This data release
-      data-min: 30.045
-      data-max: 0
+      data-min: 0
+      data-max: 30.045
       data-units: cubic meters per second
     -
       attr-label: seginc_potet
       attr-def: >-
         Area-weighted average potential ET for each segment from HRUs contributing flow to the segment.
       attr-defs: This data release
-      data-min: 0.35
-      data-max: 2.12e-8
+      data-min: 2.12e-08
+      data-max: 0.35
       data-units: meters
     -
       attr-label: seginc_sroff
