@@ -110,7 +110,7 @@ entities:
         https://www.sciencebase.gov/catalog/item/535eda80e4b08e65d60fc834
       data-min: 1
       data-max: 1
-      data-units: 1
+      data-units: NA
     -
       attr-label: time
       attr-def: >-
@@ -317,24 +317,24 @@ entities:
       attr-def: >-
         Wind speed
       attr-defs: https://www.nco.ncep.noaa.gov/pmb/products/gens/gec00.t00z.pgrb2s.0p25.f003.shtml
-      data-min: 0.45
-      data-max: 16.75
+      data-min: 0.35
+      data-max: 20.29
       data-units: meters per second
     -
       attr-label: tmax
       attr-def: >-
         Maximum air temperature
       attr-defs: https://www.nco.ncep.noaa.gov/pmb/products/gens/gec00.t00z.pgrb2s.0p25.f003.shtml
-      data-min: -20.4
-      data-max: 39.05
+      data-min: -20.53
+      data-max: 40.99
       data-units: degrees C
     -
       attr-label: tmin
       attr-def: >-
         Minimum air temperature
       attr-defs: https://www.nco.ncep.noaa.gov/pmb/products/gens/gec00.t00z.pgrb2s.0p25.f003.shtml
-      data-min: -27.4
-      data-max: 27.88
+      data-min: -29.29
+      data-max: 30.69
       data-units: degrees C
     -
       attr-label: prcp
@@ -342,15 +342,15 @@ entities:
         Total accumulated precipitation
       attr-defs: https://www.nco.ncep.noaa.gov/pmb/products/gens/gec00.t00z.pgrb2s.0p25.f003.shtml
       data-min: 0
-      data-max: 0.2272
+      data-max: 0.469
       data-units: meters
     -
       attr-label: time
       attr-def: >-
         Valid time of the forecast
       attr-defs: This data release
-      data-min: NA
-      data-max: NA
+      data-min: 2000-01-01
+      data-max: 2019-12-31
       data-units: date
     -
       attr-label: seg_id_nat
@@ -366,25 +366,25 @@ entities:
       attr-def: >-
          Maximum Relative Humidity
       attr-defs: https://www.nco.ncep.noaa.gov/pmb/products/gens/gec00.t00z.pgrb2s.0p25.f003.shtml
-      data-min: 0.35
+      data-min: 0.27
       data-max: 1.00
-      data-units: proportion (or fraction)
+      data-units: decimal fraction
     -
       attr-label: rhmin
       attr-def: >-
          Minimum Relative Humidity
       attr-defs: https://www.nco.ncep.noaa.gov/pmb/products/gens/gec00.t00z.pgrb2s.0p25.f003.shtml
-      data-min: 0.15
+      data-min: 0.094
       data-max: 1.00
-      data-units: proportion (or fraction)
+      data-units: decimal fraction
     -
       attr-label: rhmean
       attr-def: >-
          Mean Relative Humidity
       attr-defs: https://www.nco.ncep.noaa.gov/pmb/products/gens/gec00.t00z.pgrb2s.0p25.f003.shtml
-      data-min: 0.28
+      data-min: 0.18
       data-max: 1.00
-      data-units: proportion (or fraction)
+      data-units: decimal fraction
 
   -
     data-name: 'gridmet_drb_agg.csv.zip'
