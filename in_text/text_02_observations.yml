@@ -9,7 +9,10 @@ abstract: >-
   including the National Water Inventory System, Water Quality Portal, EcoSHEDS stream water temperature
   database, and the New York Department of Environmental Protection.
   The data are formatted as a single csv (comma separated values) or zipped csv.
-
+  
+  <p>Site observation data has been matched to stream reach segments, and the data files included contain identifiers for
+  both observation sites and affiliated stream reached. Please see <li><a href="https://www.sciencebase.gov/catalog/item/623e54c4d34e915b67d83580"> metadata for 1) Spatial data for rivers, reservoirs, and monitoring
+  locations </a> for further information on how monitoring location sites were matched to river segments.</li>
 
   <p>For modeling purposes, we created a holdout test set of flow and temperature observations that were
   representative of dynamics throughout the Delaware River basin from water year 1980-present. Test holdouts
@@ -43,8 +46,8 @@ entities:
   -
     data-name: unaggregated_temperature_observations_drb.zip
     data-description: >-
-      Daily water temperature observations with sites matched to model river segments in the Delaware River Basin.
-      Data are from the National Water Information System, EcoSHEDS, and the Water Quality Portal. Observations
+      Daily water temperature observations reported at measurement sites and matched to model river segments in the Delaware River Basin.
+      Observation data are from the National Water Information System, EcoSHEDS, and the Water Quality Portal. Observations
       were matched to the closest stream segments in the Geospatial Fabric and manually inspected. These data are unaggragated at
       the reach scale, meaning that there may be multiple observations per seg_id_nat-day. This indicates there
       were multiple sites along a single reach, or multiple sensors deployed at a single site.
@@ -68,7 +71,7 @@ entities:
       attr-label: sub_location
       attr-def: >-
         If multiple sensors were deployed at a site, this field contains features of the sensor (e.g., placement information)
-        that distinguish it from other sensors. This field is only populated if the data source is NWIS.
+        that distinguish it from other sensors. This field is only populated if the data source is NWIS; all other sources have this field filled with NA.
       attr-defs: This data release
       data-min: NA
       data-max: NA
@@ -84,13 +87,13 @@ entities:
     -
       attr-label: time
       attr-def: >-
-        Time of measurement (HH:MM), in UTC.
+        Time of measurement (HH:MM:SS), in UTC.
       attr-defs: This data release
       data-min: NA
       data-max: NA
       data-units: NA
     -
-      attr-label: mean_temp_c
+      attr-label: mean_temp_degC
       attr-def: >-
         Mean daily water temperature
       attr-defs: This data release
@@ -98,7 +101,7 @@ entities:
       data-max: 34
       data-units: degrees C
     -
-      attr-label: min_temp_c
+      attr-label: min_temp_degC
       attr-def: >-
         Minimum daily water temperature
       attr-defs: This data release
@@ -106,7 +109,7 @@ entities:
       data-max: 34
       data-units: degrees C
     -
-      attr-label: max_temp_c
+      attr-label: max_temp_degC
       attr-def: >-
         Maximum daily water temperature
       attr-defs: This data release
@@ -138,7 +141,7 @@ entities:
       attr-def: >-
         Data quality flags that have come from both the original providers and an outlier detection
         routine. Flags can include: NA = no flags, o = potential outlier, P = provisional (from NWIS), Eqp = value affected by equipment malfunction (from NWIS),
-        Mnt = site under going maintenance (from NWIS), ef = flag with unknown definition (from EcoSHEDS).
+        Mnt = site under going maintenance (from NWIS), ef = flag with unknown definition (from EcoSHEDS). If multiple flags are present, they are separated by a semi-colon.
       attr-defs: This data release
       data-min: NA
       data-max: NA
@@ -224,7 +227,7 @@ entities:
       attr-def: >-
         Site identifier from the data provider. For USGS sites, this is the USGS site number with a "USGS-" prefix.
         If multiple site_ids are reported, the observation represents an
-        aggregated value from multiple observation sites per reach.
+        aggregated value from multiple observation sites within the reach.
       attr-defs: This data release
       data-min: NA
       data-max: NA
@@ -235,7 +238,7 @@ entities:
         Database source where temperature observations were obtained. Sources include EcoSHEDS (ecosheds),
         the National Water Information System daily values service (nwis_dv) or instantaneous service (nwis_uv),
         and the Water Quality Portal (wqp). If multiple sources are reported, the observation represents an
-        aggregated value from multiple observations sites per reach that came from two databases.
+        aggregated value from multiple observations sites within the reach that came from two databases.
       attr-defs: This data release
       data-min: NA
       data-max: NA
@@ -279,7 +282,7 @@ entities:
       attr-def: >-
         Data quality flags that have come from both the original providers and an outlier detection
         routine. Flags can include: NA = no flags, o = potential outlier, P = provisional (from NWIS), Eqp = value affected by equipment malfunction (from NWIS),
-        Mnt = site under going maintenance (from NWIS), ef = flag with unknown definition (from EcoSHEDS).
+        Mnt = site under going maintenance (from NWIS), ef = flag with unknown definition (from EcoSHEDS). If multiple flags are present, they are separated by a semi-colon. 
       attr-defs: This data release
       data-min: NA
       data-max: NA
@@ -309,10 +312,11 @@ entities:
       data-max: NA
       data-units: NA
   -
-    data-name: out_data/flow_observations_drb.zip
+    data-name: flow_observations_drb.zip
     data-description: >-
-      Observed daily mean flow with sites matched to model river segments in the Delaware River Basin.
-      Data were compiled from the National Water Information System (NWIS).
+      Observed daily mean flow from National Water Information System (NWIS) sites.
+      Each site has been matched to model river segments in the Delaware River Basin. 
+    
     attributes:
     -
       attr-label: seg_id_nat
@@ -347,88 +351,6 @@ entities:
       attr-defs: This data release
       data-min: 18840101
       data-max: 2022-03-23
-      data-units: NA
-    -
-      attr-label: discharge_cms
-      attr-def: >-
-        River flow or discharge
-      attr-defs: This data release
-      data-min: -180.3047
-      data-max: 7900.4
-      data-units: cubic meters per second
-    -
-      attr-label: site_id
-      attr-def: >-
-        Site identifier from the data provider.
-      attr-defs: This data release
-      data-min: NA
-      data-max: NA
-      data-units: NA
-    -
-      attr-label: in_time_holdout
-      attr-def: >-
-        Logical, is the date within the test holdout periods?
-      attr-defs: This data release.
-      data-min: NA
-      data-max: NA
-      data-units: NA
-    -
-      attr-label: in_space_holdout
-      attr-def: >-
-        Logical, is the site a spatial holdouts?
-      attr-defs: This data release
-      data-min: NA
-      data-max: NA
-      data-units: NA
-    -
-      attr-label: test
-      attr-def: >-
-        Logical, should the observation be used for testing (and withheld from training)?
-      attr-defs: This data release
-      data-min: NA
-      data-max: NA
-      data-units: NA
-  -
-    data-name: reservoir_releases_by_type_drb.csv
-    data-description: >-
-      Daily mean flow observation data with sites matched to model river segments in the Delaware River Basin.
-      Data were compiled from the National Water Information System (NWIS). Three subsets of similar data are provided,
-      including sites from any of the 456 segments (flow_observations_drb.zip), sites from a subset of 56 segments above
-      the Delaware River at Lordville, NY (flow_observations_lordville.zip), or the 5 priority forecast sites.
-    attributes:
-    -
-      attr-label: seg_id_nat
-      attr-def: >-
-        The closest river reach from the Geospatial Fabric v1.1, by Euclidean distance, from the monitoring site.
-        Matches were limited to a 500m buffer of the monitoring site. The reach number is from the field "nsegment_v1_1" in the
-        Geospatial Fabric for the National Hydrologic Model v1.1.
-
-
-        Once the original reach match was assigned, the matched segment was reassigned if the endpoint of the
-        upstream reach was closer to the monitoring site (by river distance) than the endpoint of the matched reach.
-        If the upstream endpoint was closer, but there was a confluence directly upstream, then the original match was kept.
-      attr-defs:  >-
-        https://doi.org/10.5066/P971JAGF
-      data-min: NA
-      data-max: NA
-      data-units: NA
-    -
-      attr-label: subseg_id
-      attr-def:  >-
-        An alternative unique reach identifier which was created in order to split segments such that
-        segment start and endpoints were connected by one reach with no intersecting reaches. The ID was created
-        using the seg_id from the Geospatial Fabric and an index from one to the number of splits (e.g., {subseg_id}_{index}).
-      attr-defs: This data release
-      data-min: NA
-      data-max: NA
-      data-units: NA
-    -
-      attr-label: date
-      attr-def: >-
-        Date of discharge measurement
-      attr-defs: This data release
-      data-min: 18840101
-      data-max: 20210423
       data-units: NA
     -
       attr-label: discharge_cms
@@ -516,11 +438,11 @@ entities:
     -
       attr-label: site_id
       attr-def: >-
-        Reservoir identification number for this dataset. Is the Prmnn_I from NHD high-res prefixed with source, as "nhdhr_{Prmnn_I}"
+        Reservoir identification number for this dataset. This field is Prmnn_I from NHD high-res prefixed with source, as "nhdhr_{Prmnn_I}"
 
 
         nhdhr_120022743 is Cannonsville Reservoir and nhdhr_151957878 is Pepacton Reservoir
-      attr-defs: http://nhd.usgs.gov/
+      attr-defs: https://www.usgs.gov/national-hydrography/nhdplus-high-resolution
       data-min: NA
       data-max: NA
       data-units: NA
@@ -530,7 +452,7 @@ entities:
         Date of temperature observation
       attr-defs: This data release
       data-min: 19920413
-      data-max: 2022-02-17
+      data-max: 20220217
       data-units: NA
     -
       attr-label: source_id
@@ -543,7 +465,7 @@ entities:
     -
       attr-label: source
       attr-def: >-
-        Data provide, either the New York Department of Environmental Protection (ny_dep) or
+        Data provider, either the New York Department of Environmental Protection (ny_dep) or
         the National Water Information System (nwis).
       attr-defs: This data release
       data-min: 0.1
@@ -554,8 +476,8 @@ entities:
       attr-def: >-
         Depth of water temperature observation
       attr-defs: This data release.
-      data-min: 0.01
-      data-max: 50.25
+      data-min: NA
+      data-max: NA
       data-units: meters
     -
       attr-label: temp
@@ -583,7 +505,7 @@ entities:
       attr-label: source
       attr-def: >-
         Data provider; either an observation from the National Water Information System (nwis),
-        historical USGS reports (usgs), New York Department of Environmental Protenction (nyc),
+        historical USGS reports (USGS), New York Department of Environmental Protection (nyc),
         or was an interpolated value (interpolated).
       attr-defs: This data release.
       data-min: NA
@@ -592,10 +514,10 @@ entities:
     -
       attr-label: site_id
       attr-def: >-
-        Reservoir identification number for this dataset. Is the Prmnn_I from NHD high-res prefixed with source, as "nhdhr_{Prmnn_I}"
-
+        Reservoir identification number for this dataset. This field is the Prmnn_I from NHD high-res prefixed with source, as "nhdhr_{Prmnn_I}"
 
         nhdhr_120022743 is Cannonsville Reservoir and nhdhr_151957878 is Pepacton Reservoir
+
       attr-defs: http://nhd.usgs.gov/
       data-min: NA
       data-max: NA
@@ -605,8 +527,8 @@ entities:
       attr-def: >-
         Elevation of reservoir surface
       attr-defs: This data release
-      data-min: 324.3
-      data-max: 391.1
+      data-min: 324.33
+      data-max: 391.05
       data-units: meters
     -
       attr-label: data_type
