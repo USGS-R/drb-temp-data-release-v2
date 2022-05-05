@@ -164,8 +164,8 @@ entities:
       attr-def: >-
          Area-weighted average air temperature for each segment from HRUs contributing flow to the segment
       attr-defs: https://doi.org/10.1002/joc.3413
-      data-min: 33.6
-      data-max: -26.15
+      data-min: -26.15
+      data-max: 33.6
       data-units: degrees Celsius
     -
       attr-label: seg_tave_gw
