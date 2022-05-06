@@ -73,11 +73,11 @@ entities:
   -
     data-name: uncal_sntemp_inputs_outputs.nc.zip
     data-description: >-
-      PRMS-SNTemp inputs and outputs, including weather driver data, intermediate varibles, and
+      PRMS-SNTemp inputs and outputs, including weather driver data, intermediate variables, and
       model predictions. The file contain inputs/outputs from all 456 stream reaches in the
       Delaware River Basin modeling network.
 
-      Code used to generate these inputs and outputs can be found in the repository "run-prms-sntemp" in Zwart and others 2021 (https://doi.org/10.5281/zenodo.5164910 (to update with latest DOI)).
+      Code used to generate these inputs and outputs can be found in the repository "run-prms-sntemp" in Zwart and others 2021 (https://doi.org/10.5281/zenodo.5164910 [TBD - to update with latest DOI]).
 
       There are two error codes in PRMS-SNTemp v5.1.0_rc that can be present in the
       seg_tave_water and seg_tave_upstream attributes indicating no streamflow for the current
@@ -118,7 +118,7 @@ entities:
         Date of the observation or prediction.
       attr-defs: This data release
       data-min: 1979-01-01
-      data-max: 2022-04-04
+      data-max: 2022-04-06
       data-units: NA
     -
       attr-label: seg_ccov
@@ -279,7 +279,7 @@ entities:
       attr-defs: https://www.sciencebase.gov/catalog/item/535eda80e4b08e65d60fc834
       data-min: 2e-06
       data-max: 0.186
-      data-units: NA
+      data-units: decimal fraction
     -
       attr-label: seg_elev
       attr-def: >-
@@ -292,7 +292,7 @@ entities:
   -
     data-name: 'reanalysis_gefs_drb.csv'
     data-description: >-
-      NOAA GEFSv12.0 reforcast data  for the 00 UTC forecast cycle spanning the period 2000-01-01 to 2019-12-31.
+      NOAA GEFSv12.0 reforecast data for the 00 UTC forecast cycle spanning the period 2000-01-01 to 2019-12-31.
       These data are aggregated to the daily scale and NOAA GEFS grid cells are matched to the centroid of the target stream segment. The target stream segment
       seg_id_nat (National Geospatial Fabric segment code) is used as the location identifier for these data.
 
@@ -348,7 +348,7 @@ entities:
     -
       attr-label: time
       attr-def: >-
-        Valid time of the forecast
+        Valid date of the forecast
       attr-defs: This data release
       data-min: 2000-01-01
       data-max: 2019-12-31
@@ -361,7 +361,7 @@ entities:
         https://www.sciencebase.gov/catalog/item/535eda80e4b08e65d60fc834
       data-min: NA
       data-max: NA
-      data-units: dimensionless
+      data-units: NA
     -
       attr-label: rhmax
       attr-def: >-
@@ -390,10 +390,10 @@ entities:
   -
     data-name: 'gridmet_drb_agg.csv.zip'
     data-description: >-
-      Tabular aggregated version of the GridMET data collected for the DRB contains spatial meterological data from 1979 to 2022, in daily time steps. This data is maintained and collected by <li><a href="https://www.climatologylab.org/gridmet.html"> Climatology lab </a>
-      The meterological data variables used in this study include temperature min (tmin) and max (tmax), short wave radiation (srad), wind speed (vs), precipitation amount (pr), relative humidity min (rmin), relative humidity max (rmax) and specific humidity (sp). Derived from 4 km2 grids.
-      The data is aggregated to PRMS river reach scale (from NHM hydrologic response units) through an area-weighted mean, such that each segment evaluated in this study has associated meterological data for everyday since 01-01-1979.
-      The aggregated csv version of gridmet is used for training the deep learning models in this study.
+      Tabular aggregated version of the GridMET data collected for the DRB contains spatial meterological data from 1979 to 2022, in daily time steps. This data is maintained and collected by the Climatology lab (https://www.climatologylab.org/gridmet.html).
+      The data is aggregated to PRMS river reach scale (from NHM hydrologic response units) through an area-weighted mean, such that each segment evaluated in this study has associated meteorological data at daily time-steps since 01-01-1979.
+      The meteorological data variables used in this study include temperature, radiation, wind speed, precipitation, and humidity measurements, derived from GridMET's original 4-square kilometer gridded measurements.
+      The aggregated csv version of this dataset is used for training the deep learning models in this study.
 
     attributes:
     -
@@ -412,7 +412,7 @@ entities:
         date
       attr-defs: https://doi.org/10.1002/joc.3413
       data-min: 1979-01-01
-      data-max: 2022-04-06
+      data-max: 2022-04-05
       data-units: NA
     -
       attr-label: tmmn
@@ -482,8 +482,8 @@ entities:
   -
     data-name: 'gridmet_drb_agg_csv.nc.zip'
     data-description: >-
-      NetCDF format is the same as the tabular format  of the GridMET data described above. This data is aggregated through area weighted mean to the HRU polygons of the DRB.
-      The spatial version of the gridmet data (with netcdf extension) is used to run the PRMS-SNTemp model.
+      NetCDF format is the same as the tabular format of the GridMET data described above. This data is aggregated through area weighted mean to the HRU polygons of the DRB.
+      The spatial version of the GridMET data (with netcdf extension) is used to run the PRMS-SNTemp model.
 
     attributes:
     -
@@ -516,7 +516,7 @@ entities:
         Date
       attr-defs: NA
       data-min: 1979-01-01
-      data-max: 2022-04-06
+      data-max: 2022-04-05
       data-units: date
     -
       attr-label: tmmn
@@ -524,7 +524,7 @@ entities:
         Daily Minimum Temperature (2m)
       attr-defs: https://doi.org/10.1002/joc.3413
       data-min: -26.0
-      data-max: 82.2
+      data-max: 82.5
       data-units: degrees F
     -
       attr-label: tmmx
