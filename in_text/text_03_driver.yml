@@ -91,7 +91,8 @@ entities:
       not error codes, but rather are a product of the way this version of PRMS-SNTemp is coded. However,
       we advise against using these very low groundwater and shallow subsurface temperature values
       as they likely are far from actual water temperatures.
-
+      
+      Seg_id_nat:3558 was identified as an outlier with output variables inconsistent with physical reality and therefore remove from this final dataset.
     attributes:
     -
       attr-label: seg_id_nat
