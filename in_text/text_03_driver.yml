@@ -52,24 +52,24 @@ entities:
     -
       attr-label: from
       attr-def: >-
-        The segment ID (seg_id_nat) of the starting segment for the distance calculation.
+        The segment ID (seg_id_nat) rom the Geospatial Fabric for National Hydrologic Modeling of the starting segment for the distance calculation.
       attr-defs: >-
         https://www.sciencebase.gov/catalog/item/535eda80e4b08e65d60fc834
-      data-min: -138821.4
-      data-max: 120381.61
-      data-units: meters
+      data-min: NA
+      data-max: NA
+      data-units: NA
     -
-      attr-label: {seg_id_nat}
+      attr-label: X{seg_id_nat}
       attr-def: >-
-        All columns other than the "from" column are named with a seg_id_nat value, where the column values correspond to the
-        distance (in meters) between the seg_id_nat in the "from"" column to the {seg_id_nat} in the column name.
-        Positive numbers indicate a downstream direction, while positive numbers indicate an upstream direction.
+        All columns other than the "from" column are named with a seg_id_nat from the Geospatial Fabric for National Hydrologic Modeling. 
+        The column values correspond to the distance (in meters) between the seg_id_nat in the "from"" column to the {seg_id_nat} in the column name.
+        Positive numbers indicate a downstream direction, while negative numbers indicate an upstream direction.
         "Inf" indicates the two segments are not connected by streamflow (e.g., water from two separate
         branches that share the same mainstem are not connected via streamflow).
       attr-defs: This data release
-      data-min: -138821.4
-      data-max: 120381.61
-      data-units: meters
+      data-min: NA
+      data-max: NA
+      data-units: NA
   -
     data-name: uncal_sntemp_inputs_outputs.nc.zip
     data-description: >-
