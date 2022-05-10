@@ -100,7 +100,7 @@ entities:
       data-max: NA
       data-units: NA
   -
-    data-name: 01_study_reservoirs.zip
+    data-name: study_reservoirs.zip
     data-description: GIS polygon data for the Pepacton, Cannonsville, Neversink reservoirs
     attributes:
     -
@@ -114,7 +114,7 @@ entities:
       data-max: NA
       data-units: NA
   -
-    data-name: 01_study_monitoring_sites_qa.zip
+    data-name: study_monitoring_sites_qa.zip
     data-description: >-
       GIS point data for flow and temperature monitoring sites in the Delaware River Basin.
 
