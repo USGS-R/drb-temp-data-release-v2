@@ -87,7 +87,6 @@ entities:
       data-min: NA
       data-max: NA
       data-units: NA
-
     -
       attr-label: segidnat
       attr-def: >-

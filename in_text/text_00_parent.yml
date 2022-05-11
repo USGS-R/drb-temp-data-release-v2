@@ -9,7 +9,6 @@ abstract: >-
   characterize both rivers and a subset of reservoirs in the basin. This release provides an update
   to many of the files provided in a previous data release (Oliver et al., 2021).
 
-
   The data are stored in 3 child folders: 1) spatial information, 2) observations, and 3) model driver data.</p>
   <li><a href="https://www.sciencebase.gov/catalog/item/623e54c4d34e915b67d83580"> 1) Spatial Information </a>- Spatial data used for modeling efforts in the Delaware River Basin</li> -
   a shapefile of polylines for the 456 river segments, point data for observation locations, and polygons for the three (Pepacton, Cannonsville, and Neversink) reservoirs in this dataset.
