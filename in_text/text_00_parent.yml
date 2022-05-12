@@ -10,18 +10,18 @@ abstract: >-
   to many of the files provided in a previous data release (Oliver et al., 2021).
 
 
-  The data are stored in 3 child folders: 1) spatial information, 2) observations, and 3) model driver data.</p>
+  <p> The data are stored in 3 child folders: 1) spatial information, 2) observations, and 3) model driver data.</p>
   <li><a href="https://www.sciencebase.gov/catalog/item/623e54c4d34e915b67d83580"> 1) Spatial Information </a>- Spatial data used for modeling efforts in the Delaware River Basin</li> -
-  a shapefile of polylines for the 456 river segments, point data for observation locations, and polygons for the three (Pepacton, Cannonsville, and Neversink) reservoirs in this dataset.
+  a shapefile of polylines for the river segments, point data for observation locations, and polygons for the three (Pepacton, Cannonsville, and Neversink) reservoirs in this dataset.
   <li><a href="https://www.sciencebase.gov/catalog/item/623e550ad34e915b67d8366e"> 2) Observations </a>- Reservoir (surface levels, releases, diversions, water temperature) and river (water temperature and flow)
   observations that can be used to train and test water quality models. </li>
   <li><a href="https://www.sciencebase.gov/catalog/item/623e5587d34e915b67d83806"> 3) Model driver data </a>- Driver data used to force water quality models, including
-  stream reach distance matrices and daily meteorology data from NOAA and gridMET. This child item also
+  stream reach distance matrices and daily meteorology data from NOAA GEFS and gridMET. This child item also
   includes the inputs and outputs of an uncalibrated run of PRMS-SNTemp which predicts mean water temperature
-  at all 456 reaches in the DRB.
+  at all reaches in the DRB.
 
 
-  This data compilation was funded by the USGS.
+  <p> This data compilation was funded by the USGS.
 
 cross-cites:
   -
@@ -46,5 +46,5 @@ longitude-res: 0.1
 data-description: >-
   This is the landing page for the other data release units, described in the attributes section
 file-format: parent data item for released data products
-
-
+process-description: >-
+  This is the landing page for the other data release units; processing descriptions can be found on each child item.
