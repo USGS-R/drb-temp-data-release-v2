@@ -21,8 +21,8 @@ cross-cites:
 
 
 purpose: Decision support, limnological research, water quality, reservoir management.
-start-date: 1979-01-01
-end-date: 2022-04-06
+start-date: 19790101
+end-date: 20220406
 
 update: none planned
 themekeywords: ["water","temperature","water quality","reservoirs","streams","modeling"]
@@ -52,7 +52,7 @@ metadata-address: "1 Gifford Pinchot Dr"
 metadata-city: Madison
 metadata-state: WI
 metadata-zip: 53726
-metadata-date: 2022-05-04
+metadata-date: 20220504
 
 accur-test: No formal attribute accuracy tests were conducted.
 funding-credits: >-
