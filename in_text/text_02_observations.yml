@@ -696,7 +696,7 @@ entities:
       data-max: NA
       data-units: cubic meters per second
 
-process-date: 20220504
+process-date: !expr format(Sys.time(),'%Y%m%d')
 file-format: comma-delimited files (some compressed into zip files)
 
 indirect-spatial: U.S.A.
