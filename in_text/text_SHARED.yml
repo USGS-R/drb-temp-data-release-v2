@@ -32,6 +32,9 @@ usage-rules: >-
 
 descgeog: "The Delaware River Basin. River reach polylines as defined by the Geospatial Fabric for National Hydrologic Modeling. Reservoir polygons as defined by the national hydrography dataset high resolution"
 data-publisher: U.S. Geological Survey
+indirect-spatial: U.S.A.
+latitude-res: 0.00001
+longitude-res: 0.00001
 
 # ----contacts----
 contact-person: Samantha K. Oliver
