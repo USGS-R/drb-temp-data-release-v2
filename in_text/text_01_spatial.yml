@@ -100,15 +100,18 @@ entities:
       data-units: NA
   -
     data-name: study_reservoirs.zip
-    data-description: GIS polygon data for the Pepacton, Cannonsville, Neversink reservoirs
+    data-description: >-
+      GIS polygon data for the Pepacton, Cannonsville, Neversink reservoirs.
+      Polygons are from the National Hydrography Dataset High Resolution (NHDPlus HR).
     attributes:
     -
       attr-label: site_id
       attr-def: >-
         Reservoir identification number for this dataset.
-        nhdhr_120022743 is Cannonsville Reservoir, nhdhr_151957878 is Pepacton Reservoir, and nhdhr_149269381 is Neversink
+        nhdhr_120022743 is Cannonsville Reservoir, nhdhr_151957878 is Pepacton Reservoir, and nhdhr_149269381 is Neversink.
+        This field corresponds to the Permanent_Identifier field in the NHDPlus HR with an added "nhdhr_" prefix.
       attr-defs: >-
-        http://nhd.usgs.gov/
+        https://www.usgs.gov/national-hydrography/nhdplus-high-resolution
       data-min: NA
       data-max: NA
       data-units: NA
@@ -122,7 +125,10 @@ entities:
       stream network included in study_stream_reaches.zip.
 
       Sites were matched to the closest river reach from the Geospatial Fabric v1.1, by Euclidean distance,
-      from the monitoring site latitude and longitude.
+      from the monitoring site latitude and longitude. The Euclidean distance between the site and the nearest point
+      along the polyline is referred to as the bird distance, and the distance along the stream polyline between the matched nearest point
+      and the polyline endpoint is referred to as the fish distance.
+
       Sites were limited to those that matched to our stream network and that met our distance criteria (fish distance < 20,000 m and bird distance < 250 m).
       Once the original reach match was assigned, the matched segment was reassigned if the endpoint of the
       upstream reach was closer to the monitoring site (by river distance) than the endpoint of the matched reach.
@@ -143,7 +149,7 @@ entities:
     -
       attr-label: sitetype
       attr-def: >-
-        Site type from the data source. This includes site_tp_cd from NWIS. Site types include unclassified (blank), springs (SP), streams (ST), tidal streams (ST-TS), canals (ST-CA), ditches (ST-DCH).
+        Site type from the data source. This includes site_tp_cd from NWIS. Site types include streams, tidal streams, and springs.
       attr-defs: This data release
       data-min: NA
       data-max: NA
@@ -159,7 +165,7 @@ entities:
     -
       attr-label: origsource
       attr-def: >-
-        WQP, EcoSHEDS, and NorWeST are compilations of temperature data from other sources. This identifies the original collection organization.
+        WQP and EcoSHEDS are compilations of temperature data from other sources. This identifies the original collection organization.
       attr-defs: This data release
       data-min: NA
       data-max: NA
@@ -179,6 +185,8 @@ entities:
       attr-label: fishdist
       attr-def: >-
         Fish distance to outlet in meters. Distance along the stream between the monitoring site and the outlet of the matched stream reach.
+        If the site latitude and longitude was not directly on the stream reach, the site was matched to the closest point
+        along the reach, and this distance represents the distance between the matched point and the reach outlet.
         Positive values indicate the monitoring site is upstream of the outlet of the matched stream reach.
         Negative values indicate the monitoring site is downstream of the outlet of the matched stream reach.
       attr-defs: This data release
