@@ -110,7 +110,7 @@ entities:
         https://www.sciencebase.gov/catalog/item/535eda80e4b08e65d60fc834
       data-min: 1
       data-max: 1
-      data-units: 1
+      data-units: NA
     -
       attr-label: time
       attr-def: >-
@@ -124,32 +124,32 @@ entities:
       attr-def: >-
         Area-weighted average cloud cover fraction for each segment from HRUs contributing flow to the segment.
       attr-defs: https://doi.org/10.1002/joc.3413
-      data-min: NA
-      data-max: NA
+      data-min: 0.25
+      data-max: 0.8
       data-units: decimal fraction
     -
       attr-label: seg_humid
       attr-def: >-
         Area-weighted average relative humidity for each segment from HRUs contributing flow to the segment
       attr-defs: https://doi.org/10.1002/joc.3413
-      data-min: NA
-      data-max: NA
+      data-min: 0
+      data-max: 0
       data-units: decimal fraction
     -
       attr-label: seg_outflow
       attr-def: >-
         Streamflow leaving a segment
       attr-defs: This data release
-      data-min: NA
-      data-max: NA
+      data-min: 2.6
+      data-max: 3086.53
       data-units: cubic meters per second
     -
       attr-label: seg_rain
       attr-def: >-
         Area-weighted average rainfall for each segment from HRUs contributing flow to the segment
       attr-defs: https://doi.org/10.1002/joc.3413
-      data-min: NA
-      data-max: NA
+      data-min: 0
+      data-max: 0.227
       data-units: meters
     -
       attr-label: seg_shade
@@ -164,40 +164,40 @@ entities:
       attr-def: >-
          Area-weighted average air temperature for each segment from HRUs contributing flow to the segment
       attr-defs: https://doi.org/10.1002/joc.3413
-      data-min: NA
-      data-max: NA
+      data-min: -26.15
+      data-max: 33.6
       data-units: degrees Celsius
     -
       attr-label: seg_tave_gw
       attr-def: >-
         Groundwater temperature.
       attr-defs: This data release
-      data-min: NA
-      data-max: NA
+      data-min: -13.26
+      data-max: 28.32
       data-units: degrees Celsius
     -
       attr-label: seg_tave_sroff
       attr-def: >-
         Surface runoff temperature.
       attr-defs: This data release
-      data-min: NA
-      data-max: NA
+      data-min: 0
+      data-max: 0
       data-units: degrees Celsius
     -
       attr-label: seg_tave_ss
       attr-def: >-
         Subsurface temperature.
       attr-defs: This data release
-      data-min: NA
-      data-max: NA
+      data-min: -21.41
+      data-max: 31.36
       data-units: degrees Celsius
     -
       attr-label: seg_tave_upstream
       attr-def: >-
         Temperature of streamflow entering each segment.
       attr-defs: This data release
-      data-min: NA
-      data-max: NA
+      data-min: -98.9
+      data-max: 37.42
       data-units: degrees Celsius
     -
       attr-label: seg_tave_water
@@ -212,80 +212,80 @@ entities:
       attr-def: >-
         Sum of inflow from upstream segments
       attr-defs: This data release
-      data-min: NA
-      data-max: NA
+      data-min: 0
+      data-max: 3080.87
       data-units: cubic meters per second
     -
       attr-label: seg_width
       attr-def: >-
         Width of each segment.
       attr-defs: This data release.
-      data-min: NA
-      data-max: NA
+      data-min: 0
+      data-max: 125.7
       data-units: meters
     -
       attr-label: seginc_gwflow
       attr-def: >-
           Area-weighted average groundwater discharge for each segment from HRUs contributing flow to the segment.
       attr-defs: This data release
-      data-min: NA
-      data-max: NA
+      data-min: 0
+      data-max: 30.045
       data-units: cubic meters per second
     -
       attr-label: seginc_potet
       attr-def: >-
         Area-weighted average potential ET for each segment from HRUs contributing flow to the segment.
       attr-defs: This data release
-      data-min: NA
-      data-max: NA
+      data-min: 2.12e-08
+      data-max: 0.35
       data-units: meters
     -
       attr-label: seginc_sroff
       attr-def: >-
         Area-weighted average surface runoff for each segment from HRUs contributing flow to the segment.
       attr-defs: This data release
-      data-min: NA
-      data-max: NA
+      data-min: 0
+      data-max: 362.17
       data-units: cubic meters per second
     -
       attr-label: seginc_ssflow
       attr-def: >-
         Area-weighted average interflow for each segment from HRUs contributing flow to the segment.
       attr-defs: This data release
-      data-min: NA
-      data-max: NA
+      data-min: 0
+      data-max: 260.46
       data-units: cubic meters per second
     -
       attr-label: seginc_swrad
       attr-def: >-
         Area-weighted average solar radiation for each segment from HRUs contributing flow to the segment.
       attr-defs: This data release
-      data-min: NA
-      data-max: NA
+      data-min: 0
+      data-max: 344.4
       data-units: watts per square meter
     -
       attr-label: seg_length
       attr-def: >-
         Length of stream segment.
       attr-defs: https://www.sciencebase.gov/catalog/item/535eda80e4b08e65d60fc834
-      data-min: NA
-      data-max: NA
+      data-min: 47.244884
+      data-max: 36592.38
       data-units: meters
     -
       attr-label: seg_slope
       attr-def: >-
         Stream segment slope.
       attr-defs: https://www.sciencebase.gov/catalog/item/535eda80e4b08e65d60fc834
-      data-min: NA
-      data-max: NA
+      data-min: 2e-06
+      data-max: 0.186
       data-units: NA
     -
       attr-label: seg_elev
       attr-def: >-
         Stream segment average elevation above mean sea level.
       attr-defs: https://www.sciencebase.gov/catalog/item/535eda80e4b08e65d60fc834
-      data-min: NA
-      data-max: NA
+      data-min: -1.2
+      data-max: 787.33
       data-units: meters
 
   -
@@ -317,24 +317,24 @@ entities:
       attr-def: >-
         Wind speed
       attr-defs: https://www.nco.ncep.noaa.gov/pmb/products/gens/gec00.t00z.pgrb2s.0p25.f003.shtml
-      data-min: 0.45
-      data-max: 16.75
+      data-min: 0.35
+      data-max: 20.29
       data-units: meters per second
     -
       attr-label: tmax
       attr-def: >-
         Maximum air temperature
       attr-defs: https://www.nco.ncep.noaa.gov/pmb/products/gens/gec00.t00z.pgrb2s.0p25.f003.shtml
-      data-min: -20.4
-      data-max: 39.05
+      data-min: -20.53
+      data-max: 40.99
       data-units: degrees C
     -
       attr-label: tmin
       attr-def: >-
         Minimum air temperature
       attr-defs: https://www.nco.ncep.noaa.gov/pmb/products/gens/gec00.t00z.pgrb2s.0p25.f003.shtml
-      data-min: -27.4
-      data-max: 27.88
+      data-min: -29.29
+      data-max: 30.69
       data-units: degrees C
     -
       attr-label: prcp
@@ -342,15 +342,15 @@ entities:
         Total accumulated precipitation
       attr-defs: https://www.nco.ncep.noaa.gov/pmb/products/gens/gec00.t00z.pgrb2s.0p25.f003.shtml
       data-min: 0
-      data-max: 0.2272
+      data-max: 0.469
       data-units: meters
     -
       attr-label: time
       attr-def: >-
         Valid time of the forecast
       attr-defs: This data release
-      data-min: NA
-      data-max: NA
+      data-min: 2000-01-01
+      data-max: 2019-12-31
       data-units: date
     -
       attr-label: seg_id_nat
@@ -366,25 +366,25 @@ entities:
       attr-def: >-
          Maximum Relative Humidity
       attr-defs: https://www.nco.ncep.noaa.gov/pmb/products/gens/gec00.t00z.pgrb2s.0p25.f003.shtml
-      data-min: 0.35
+      data-min: 0.27
       data-max: 1.00
-      data-units: proportion (or fraction)
+      data-units: decimal fraction
     -
       attr-label: rhmin
       attr-def: >-
          Minimum Relative Humidity
       attr-defs: https://www.nco.ncep.noaa.gov/pmb/products/gens/gec00.t00z.pgrb2s.0p25.f003.shtml
-      data-min: 0.15
+      data-min: 0.094
       data-max: 1.00
-      data-units: proportion (or fraction)
+      data-units: decimal fraction
     -
       attr-label: rhmean
       attr-def: >-
          Mean Relative Humidity
       attr-defs: https://www.nco.ncep.noaa.gov/pmb/products/gens/gec00.t00z.pgrb2s.0p25.f003.shtml
-      data-min: 0.28
+      data-min: 0.18
       data-max: 1.00
-      data-units: proportion (or fraction)
+      data-units: decimal fraction
 
   -
     data-name: 'gridmet_drb_agg.csv.zip'
@@ -585,7 +585,7 @@ entities:
 
 build-environment: Multiple computer systems were used to generate these data, including Windows, OSX, and linux. The open source languages R and Python was used on all systems.
 
-process-date: 20220504
+process-date: !expr format(Sys.time(),'%Y%m%d')
 indirect-spatial: U.S.A.
 latitude-res: 0.1
 longitude-res: 0.1
