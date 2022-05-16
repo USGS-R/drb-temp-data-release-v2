@@ -106,6 +106,7 @@ entities:
     data-description: >-
       GIS polygon data for the Pepacton, Cannonsville, Neversink reservoirs.
       Polygons are from the National Hydrography Dataset High Resolution (NHDPlus HR).
+
     attributes:
     -
       attr-label: site_id
