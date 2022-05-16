@@ -32,7 +32,7 @@ cross-cites:
 entities:
   -
     data-name: study_stream_reaches.zip
-    data-description: GIS polyline data for the 459 stream segments in the DRB that have been included in this study. Stream network is originally dervied from the USGS Geospatial Fabric (link in attributes below).
+    data-description: GIS polyline data for the 459 stream segments in the Delaware River Basin that have been included in this study. Stream network is originally dervied from the USGS Geospatial Fabric (link in attributes below).
     attributes:
     -
       attr-label: subsegid
@@ -41,7 +41,7 @@ entities:
         segment start and endpoints were connected by one reach with no intersecting reaches. The ID was created
         using the seg_id from the Geospatial Fabric and an index from one to the number of splits (e.g., {subseg_id}_{index}).
         This feature corresponds to subseg_id in other files. There are 459 unique identifiers in this field.
-      attr-defs: https://www.sciencebase.gov/catalog/item/535eda80e4b08e65d60fc834
+      attr-defs: This data release
       data-min: NA
       data-max: NA
       data-units: NA
@@ -50,7 +50,7 @@ entities:
       attr-def: >-
         An alternative reach identifier, which corresponds to seg_id in the Geospatial Fabric.
         This feature corresponds to subseg_seg in other files. There are 456 unique identifiers in this field.
-      attr-defs: https://www.sciencebase.gov/catalog/item/535eda80e4b08e65d60fc834
+      attr-defs: http://dx.doi.org/doi:10.5066/F7542KMD
       data-min: NA
       data-max: NA
       data-units: NA
@@ -58,7 +58,7 @@ entities:
       attr-label: subseglen
       attr-def: >-
         Length of stream reach.
-      attr-defs: https://www.sciencebase.gov/catalog/item/535eda80e4b08e65d60fc834
+      attr-defs: http://dx.doi.org/doi:10.5066/F7542KMD
       data-min: NA
       data-max: NA
       data-units: meters
@@ -67,7 +67,7 @@ entities:
       attr-def: >-
         Reach identifier (subsegseg) of the upstream segment. NA indicates a headwater stream with no upstream segments.
         Multiple upstream segments are separated with a semicolon.
-      attr-defs: https://www.sciencebase.gov/catalog/item/535eda80e4b08e65d60fc834
+      attr-defs: http://dx.doi.org/doi:10.5066/F7542KMD
       data-min: NA
       data-max: NA
       data-units: NA
@@ -75,7 +75,7 @@ entities:
       attr-label: toseg
       attr-def: >-
         Reach identifier (subsegseg) of the downstream segment. NA indicates a terminal stream.
-      attr-defs: https://www.sciencebase.gov/catalog/item/535eda80e4b08e65d60fc834
+      attr-defs: http://dx.doi.org/doi:10.5066/F7542KMD
       data-min: NA
       data-max: NA
       data-units: NA
@@ -94,7 +94,7 @@ entities:
         This is the ID named seg_id_nat from the Geospatial Fabric for National Hydrologic Modeling.
         This feature corresponds to "seg_id_nat" in other data files. There are 456 unique identifiers in this field.
       attr-defs: >-
-        https://www.sciencebase.gov/catalog/item/535eda80e4b08e65d60fc834
+        http://dx.doi.org/doi:10.5066/F7542KMD
       data-min: NA
       data-max: NA
       data-units: NA
@@ -200,7 +200,7 @@ entities:
         reach identifier. This is the ID named seg_id_nat from the Geospatial Fabric for National Hydrologic Modeling.
         This feature corresponds to "seg_id_nat" in other data files.
       attr-defs: >-
-        https://www.sciencebase.gov/catalog/item/535eda80e4b08e65d60fc834
+        http://dx.doi.org/doi:10.5066/F7542KMD
       data-min: NA
       data-max: NA
       data-units: NA
