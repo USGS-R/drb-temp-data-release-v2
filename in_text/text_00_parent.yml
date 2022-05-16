@@ -9,8 +9,8 @@ abstract: >-
   characterize both rivers and a subset of reservoirs in the basin. This release provides an update
   to many of the files provided in a previous data release (Oliver et al., 2021).
 
-
   <p> The data are stored in 3 child folders: 1) spatial information, 2) observations, and 3) model driver data.</p>
+
   <li><a href="https://www.sciencebase.gov/catalog/item/623e54c4d34e915b67d83580"> 1) Spatial Information </a>- Spatial data used for modeling efforts in the Delaware River Basin</li> -
   a shapefile of polylines for the river segments, point data for observation locations, and polygons for the three (Pepacton, Cannonsville, and Neversink) reservoirs in this dataset.
   <li><a href="https://www.sciencebase.gov/catalog/item/623e550ad34e915b67d8366e"> 2) Observations </a>- Reservoir (surface levels, releases, diversions, water temperature) and river (water temperature and flow)
@@ -39,7 +39,7 @@ entities:
 
 build-environment: Multiple computer operating systems were used to generate these data, including Windows, linux, OSX. The open source languages R and Python were used on all systems.
 
-process-date: 20220504
+process-date: !expr format(Sys.time(),'%Y%m%d')
 indirect-spatial: U.S.A.
 latitude-res: 0.1
 longitude-res: 0.1
