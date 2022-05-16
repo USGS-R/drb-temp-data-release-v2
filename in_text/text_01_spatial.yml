@@ -32,7 +32,10 @@ cross-cites:
 entities:
   -
     data-name: study_stream_reaches.zip
-    data-description: GIS polyline data for the 459 stream segments in the Delaware River Basin that have been included in this study. Stream network is originally dervied from the USGS Geospatial Fabric (link in attributes below).
+    data-description: >-
+      GIS polyline data for the 459 stream segments in the Delaware River Basin that
+      have been included in this study. The stream network is originally dervied from
+      the USGS Geospatial Fabric v1.
     attributes:
     -
       attr-label: subsegid
