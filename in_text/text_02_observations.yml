@@ -602,14 +602,14 @@ process-date: !expr format(Sys.time(),'%Y%m%d')
 file-format: comma-delimited files (some compressed into zip files)
 process-description: >-
   Stream and reservoir observations were combined from multiple sources to achieve the most complete temporal coverage possible
-  from 1980-2022. The intended modeling framework requires a single observation per waterbody
-  per day. For reservoirs, this means that if multiple sites were monitored per reservoir-day,
+  from 1980-2022. For reservoir water budget data (water levels, diversions), we interpolated monthly data
+  or between daily observerations to achieve complete temporal coverage. For temperature and flow observations,
+  the intended modeling framework requires the data to be reduced to a single observation
+  per waterbody per day. For reservoirs, this means that if multiple sites were monitored per reservoir-day,
   the data were collapsed to a single value. For reservoir temperature data, this was done by taking the
-  observations closest to the dam, or if that site was not monitored on a given day, an average of all other sites.
-  For streams, data were reduced to one value per reach-day for each of the 456 stream reaches defined in this
-  data release. If there were multiple monitoring sites per reach-day, only NWIS data were retained, and if multiple
-  sites per reach were still present, an average of all sites was reported. We have also included the spatiallyl unaggregated
-  stream temperature data in this release.
+  observations from the site closest to the dam, or if that site was not monitored on a given day, an average of all other sites.
+  For streams, flow and temperature data were reduced to one value per reach-day for each of the 456 stream reaches defined in this
+  data release. We have also included the spatially unaggregated stream temperature data in this release.
 
 indirect-spatial: U.S.A.
 latitude-res: 0.1
