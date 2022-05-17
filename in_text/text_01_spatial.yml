@@ -112,7 +112,7 @@ entities:
       attr-label: site_id
       attr-def: >-
         Reservoir identification number for this dataset.
-        nhdhr_120022743 is Cannonsville Reservoir, nhdhr_151957878 is Pepacton Reservoir, and nhdhr_149269381 is Neversink.
+        nhdhr_120022743 is Cannonsville Reservoir, nhdhr_151957878 is Pepacton Reservoir, and nhdhr_149269381 is Neversink Reservoir.
         This field corresponds to the Permanent_Identifier field in the NHDPlus HR with an added "nhdhr_" prefix.
       attr-defs: >-
         https://www.usgs.gov/national-hydrography/nhdplus-high-resolution
