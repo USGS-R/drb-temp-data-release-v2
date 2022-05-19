@@ -24,11 +24,12 @@ targets:
        - out_data/uncal_sntemp_input_output.nc.zip
 
   # Distance matrix
+  # from
   out_data/distance_matrix_drb.csv:
      command: get_distance_matrix(out_file = target_name, in_file = 'in_data/03_driver/distance_matrix.rds')
 
   ## gridmet
-  out_data/gridmet_drb_agg.csv:
+  out_data/gridmet_drb_agg_csv.zip:
     command: file.copy(from = 'in_data/03_driver/drb_climate_2022_04_06_segments.csv', to = target_name)
 
   out_data/gridmet_drb_agg.zip:
@@ -37,7 +38,7 @@ targets:
   out_data/gridmet_drb_agg.nc:
     command: file.copy(from = 'in_data/03_driver/drb_climate_2022_04_06.nc', to = target_name)
 
-  out_data/gridmet_drb_agg.zip:
+  out_data/gridmet_drb_agg_nc.zip:
     command: zip_this(out_file = target_name, .object = 'out_data/gridmet_drb_agg.nc')
 
   # Noaa gefs
