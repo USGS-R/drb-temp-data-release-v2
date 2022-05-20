@@ -9,12 +9,13 @@ abstract: >-
 
   This section includes model drivers such as gridded weather data (NOAA GEFS and GridMET), and the stream network distance matrix for the Delaware River Basin.
   Additionally, inputs and outputs from an uncalibrated process-based stream temperature model (PRMS-SNTemp) are included.
+
 cross-cites:
    -
     authors: ['Jacob A. Zwart', 'XX']
     title: >-
       XX title of forecast code
-    pudate: 2022
+    pubdate: 2022
     form: publication
     link: XX link to forecast code
   -
@@ -22,14 +23,14 @@ cross-cites:
     title: >-
       P2S-Coupled simulation with the Precipitation-Runoff Modeling
       System (PRMS) and the Stream Temperature Network (SNTemp) Models
-    pudate: 2012
+    pubdate: 2012
     form: publication
     link: https://doi.org/10.3133/ofr20121116
   -
     authors: ['Michael J. Sanders', 'Steven L. Markstrom', 'R. Steven Regan', 'R. Dwight Atkinson']
     title: >-
       Documentation of a Daily Mean Stream Temperature Module—An Enhancement to the Precipitation-Runoff Modeling System
-    pudate: 2017
+    pubdate: 2017
     form: publication
     link: https://doi.org/10.3133/tm6D4
 
