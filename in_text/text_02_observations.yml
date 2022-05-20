@@ -2,7 +2,12 @@ title: >-
   Data to support water quality modeling efforts in the Delaware River Basin: 2) River and Reservoir Observations
 
 abstract: >-
-  <p>This section contains observations related to the amount and quality of water in the Delaware River Basin.
+  This data release contains information to support water quality modeling in the Delaware River Basin (DRB).
+  These data support both process-based and machine learning approaches to water quality modeling, including
+  the prediction of stream temperature.
+
+
+  This section contains observations related to the amount and quality of water in the Delaware River Basin.
   Data from a subset of reservoirs in the basin include observed daily depth-resolved water temperature,
   water levels, diversions, and releases. Data from streams in the basin include daily flow and temperature
   observations. Observations were compiled from a variety of sources,
@@ -10,11 +15,13 @@ abstract: >-
   database, and the New York Department of Environmental Protection.
   The data are formatted as a single csv (comma separated values) or zipped csv.
 
-  <p>Site observation data was matched to stream reach segments, and the data files included contain identifiers for
+
+  Site observation data was matched to stream reach segments, and the data files included contain identifiers for
   both observation sites and affiliated stream reaches. Please see <li><a href="https://www.sciencebase.gov/catalog/item/623e54c4d34e915b67d83580"> metadata for 1) Spatial data for rivers, reservoirs, and monitoring
   locations </a> for further information on how monitoring location sites were matched to river segments.</li>
 
-  <p>For modeling purposes, we created a holdout test set of flow and temperature observations that were
+
+  For modeling purposes, we created a holdout test set of flow and temperature observations that were
   representative of dynamics throughout the Delaware River basin from water year 1980-present. Test holdouts
   are documented in the flow and temperature files, and details describing the holdout decisions
   can be found in Oliver et al. (2021).

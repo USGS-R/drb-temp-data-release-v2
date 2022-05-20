@@ -3,6 +3,10 @@ title: >-
 
 abstract: >-
 
+  This data release contains information to support water quality modeling in the Delaware River Basin (DRB).
+  These data support both process-based and machine learning approaches to water quality modeling, including
+  the prediction of stream temperature.
+
   This section provides spatial data files that describe the rivers, reservoirs, and observational
   data in the Delaware River Basin included in this release. One shapefile of polylines
   describes the 459 river reaches that define the modeling network, and another shapefile of polygons includes
