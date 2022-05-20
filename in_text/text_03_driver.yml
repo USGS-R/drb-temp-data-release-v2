@@ -2,9 +2,21 @@ title: >-
   Data to support water quality modeling efforts in the Delaware River Basin: 3) Model Driver Data
 
 abstract: >-
-  This child item includes model drivers such as gridded weather data pulled from NOAA GEFS and gridMET, and the stream network distance matrix for the Delaware River Basin.
-  Additionally, inputs and outputs from an uncalibrated process-based stream temperature model are included.
+  This data release contains information to support water quality modeling in the Delaware River Basin (DRB).
+  These data support both process-based and machine learning approaches to water quality modeling, including
+  the prediction of stream temperature.
+
+
+  This section includes model drivers such as gridded weather data (NOAA GEFS and GridMET), and the stream network distance matrix for the Delaware River Basin.
+  Additionally, inputs and outputs from an uncalibrated process-based stream temperature model (PRMS-SNTemp) are included.
 cross-cites:
+   -
+    authors: ['Jacob A. Zwart', 'XX']
+    title: >-
+      XX title of forecast code
+    pudate: 2022
+    form: publication
+    link: XX link to forecast code
   -
     authors: ['Steven L. Markstrom']
     title: >-
@@ -13,6 +25,14 @@ cross-cites:
     pudate: 2012
     form: publication
     link: https://doi.org/10.3133/ofr20121116
+  -
+    authors: ['Michael J. Sanders', 'Steven L. Markstrom', 'R. Steven Regan', 'R. Dwight Atkinson']
+    title: >-
+      Documentation of a Daily Mean Stream Temperature Module—An Enhancement to the Precipitation-Runoff Modeling System
+    pudate: 2017
+    form: publication
+    link: https://doi.org/10.3133/tm6D4
+
   -
     authors: ['John T. Abatzoglou']
     title: >-
@@ -59,25 +79,26 @@ entities:
       data-max: NA
       data-units: NA
     -
-      attr-label: X{seg_id_nat}
+      attr-label: {seg_id_nat}
       attr-def: >-
-        All columns other than the "from" column are named with a seg_id_nat from the Geospatial Fabric for National Hydrologic Modeling. 
-        The column values correspond to the distance (in meters) between the seg_id_nat in the "from"" column to the {seg_id_nat} in the column name.
+        All columns other than the "from" column are named with a seg_id_nat from the Geospatial Fabric for National Hydrologic Modeling.
+        The column values correspond to the distance (in meters) between the seg_id_nat in the "from" column to the {seg_id_nat} in the column name.
         Positive numbers indicate a downstream direction, while negative numbers indicate an upstream direction.
-        "Inf" indicates the two segments are not connected by streamflow (e.g., water from two separate
+        "inf" indicates the two segments are not connected by streamflow (e.g., water from two separate
         branches that share the same mainstem are not connected via streamflow).
       attr-defs: This data release
       data-min: NA
       data-max: NA
-      data-units: NA
+      data-units: meters
   -
-    data-name: uncal_sntemp_inputs_outputs.nc.zip
+    data-name: uncal_sntemp_inputs_outputs.zip
     data-description: >-
-      PRMS-SNTemp inputs and outputs, including weather driver data, intermediate variables, and
+      PRMS-SNTemp inputs and outputs,
+      including weather driver data, intermediate variables, and
       model predictions. The file contain inputs/outputs from all 456 stream reaches in the
       Delaware River Basin modeling network.
 
-      Code used to generate these inputs and outputs can be found in the repository "run-prms-sntemp" in Zwart and others 2021 (https://doi.org/10.5281/zenodo.5164910 [TBD - to update with latest DOI]).
+      Code used to generate these inputs and outputs can be found in the repository "run-prms-sntemp" in Zwart and others 2022 (XX - update with new citation).
 
       There are two error codes in PRMS-SNTemp v5.1.0_rc that can be present in the
       seg_tave_water and seg_tave_upstream attributes indicating no streamflow for the current
@@ -91,7 +112,7 @@ entities:
       not error codes, but rather are a product of the way this version of PRMS-SNTemp is coded. However,
       we advise against using these very low groundwater and shallow subsurface temperature values
       as they likely are far from actual water temperatures.
-      
+
       Seg_id_nat:3558 was identified as an outlier with output variables inconsistent with physical reality and therefore remove from this final dataset.
     attributes:
     -
@@ -108,7 +129,7 @@ entities:
       attr-def: >-
         ensemble member
       attr-defs: >-
-        https://www.sciencebase.gov/catalog/item/535eda80e4b08e65d60fc834
+        This data release.
       data-min: 1
       data-max: 1
       data-units: NA
@@ -117,14 +138,14 @@ entities:
       attr-def: >-
         Date of the observation or prediction.
       attr-defs: This data release
-      data-min: 1979-01-01
-      data-max: 2022-04-06
+      data-min: 19790101
+      data-max: 20220406
       data-units: NA
     -
       attr-label: seg_ccov
       attr-def: >-
         Area-weighted average cloud cover fraction for each segment from HRUs contributing flow to the segment.
-      attr-defs: https://doi.org/10.1002/joc.3413
+      attr-defs: https://doi.org/10.3133/tm6D4
       data-min: 0.25
       data-max: 0.8
       data-units: decimal fraction
@@ -132,7 +153,7 @@ entities:
       attr-label: seg_humid
       attr-def: >-
         Area-weighted average relative humidity for each segment from HRUs contributing flow to the segment
-      attr-defs: https://doi.org/10.1002/joc.3413
+      attr-defs: https://doi.org/10.3133/tm6D4
       data-min: 0
       data-max: 0
       data-units: decimal fraction
@@ -140,7 +161,7 @@ entities:
       attr-label: seg_outflow
       attr-def: >-
         Streamflow leaving a segment
-      attr-defs: This data release
+      attr-defs: https://doi.org/10.3133/tm6D4
       data-min: 2.6
       data-max: 3086.53
       data-units: cubic meters per second
@@ -148,7 +169,7 @@ entities:
       attr-label: seg_rain
       attr-def: >-
         Area-weighted average rainfall for each segment from HRUs contributing flow to the segment
-      attr-defs: https://doi.org/10.1002/joc.3413
+      attr-defs: https://doi.org/10.3133/tm6D4
       data-min: 0
       data-max: 0.227
       data-units: meters
@@ -156,7 +177,7 @@ entities:
       attr-label: seg_shade
       attr-def: >-
         Area-weighted average shade fraction for each segment
-      attr-defs: https://www.sciencebase.gov/catalog/item/535eda80e4b08e65d60fc834
+      attr-defs: https://doi.org/10.3133/tm6D4
       data-min: 0
       data-max: 0
       data-units: decimal fraction
@@ -164,7 +185,7 @@ entities:
       attr-label: seg_tave_air
       attr-def: >-
          Area-weighted average air temperature for each segment from HRUs contributing flow to the segment
-      attr-defs: https://doi.org/10.1002/joc.3413
+      attr-defs: https://doi.org/10.3133/tm6D4
       data-min: -26.15
       data-max: 33.6
       data-units: degrees Celsius
@@ -172,7 +193,7 @@ entities:
       attr-label: seg_tave_gw
       attr-def: >-
         Groundwater temperature.
-      attr-defs: This data release
+      attr-defs: https://doi.org/10.3133/tm6D4
       data-min: -13.26
       data-max: 28.32
       data-units: degrees Celsius
@@ -180,7 +201,7 @@ entities:
       attr-label: seg_tave_sroff
       attr-def: >-
         Surface runoff temperature.
-      attr-defs: This data release
+      attr-defs: https://doi.org/10.3133/tm6D4
       data-min: 0
       data-max: 0
       data-units: degrees Celsius
@@ -188,7 +209,7 @@ entities:
       attr-label: seg_tave_ss
       attr-def: >-
         Subsurface temperature.
-      attr-defs: This data release
+      attr-defs: https://doi.org/10.3133/tm6D4
       data-min: -21.41
       data-max: 31.36
       data-units: degrees Celsius
@@ -196,31 +217,31 @@ entities:
       attr-label: seg_tave_upstream
       attr-def: >-
         Temperature of streamflow entering each segment.
-      attr-defs: This data release
+      attr-defs: https://doi.org/10.3133/tm6D4
       data-min: -98.9
       data-max: 37.42
       data-units: degrees Celsius
     -
       attr-label: seg_tave_water
       attr-def: >-
-        Computed daily mean stream temperature for each segment
-      attr-defs: This data release
-      data-min: NA
-      data-max: NA
+        Daily mean stream temperature for each segment
+      attr-defs: https://doi.org/10.3133/tm6D4
+      data-min: -99.9
+      data-max: 43.18
       data-units: degrees Celsius
     -
       attr-label: seg_upstream_inflow
       attr-def: >-
         Sum of inflow from upstream segments
-      attr-defs: This data release
+      attr-defs: https://doi.org/10.3133/tm6D4
       data-min: 0
       data-max: 3080.87
       data-units: cubic meters per second
     -
       attr-label: seg_width
       attr-def: >-
-        Width of each segment.
-      attr-defs: This data release.
+        The average top width of the channel.
+      attr-defs: https://doi.org/10.3133/tm6D4
       data-min: 0
       data-max: 125.7
       data-units: meters
@@ -228,7 +249,7 @@ entities:
       attr-label: seginc_gwflow
       attr-def: >-
           Area-weighted average groundwater discharge for each segment from HRUs contributing flow to the segment.
-      attr-defs: This data release
+      attr-defs: https://doi.org/10.3133/tm6D4
       data-min: 0
       data-max: 30.045
       data-units: cubic meters per second
@@ -236,7 +257,7 @@ entities:
       attr-label: seginc_potet
       attr-def: >-
         Area-weighted average potential ET for each segment from HRUs contributing flow to the segment.
-      attr-defs: This data release
+      attr-defs: https://doi.org/10.3133/tm6D4
       data-min: 2.12e-08
       data-max: 0.35
       data-units: meters
@@ -244,7 +265,7 @@ entities:
       attr-label: seginc_sroff
       attr-def: >-
         Area-weighted average surface runoff for each segment from HRUs contributing flow to the segment.
-      attr-defs: This data release
+      attr-defs: https://doi.org/10.3133/tm6D4
       data-min: 0
       data-max: 362.17
       data-units: cubic meters per second
@@ -252,7 +273,7 @@ entities:
       attr-label: seginc_ssflow
       attr-def: >-
         Area-weighted average interflow for each segment from HRUs contributing flow to the segment.
-      attr-defs: This data release
+      attr-defs: https://doi.org/10.3133/tm6D4
       data-min: 0
       data-max: 260.46
       data-units: cubic meters per second
@@ -260,7 +281,7 @@ entities:
       attr-label: seginc_swrad
       attr-def: >-
         Area-weighted average solar radiation for each segment from HRUs contributing flow to the segment.
-      attr-defs: This data release
+      attr-defs: https://doi.org/10.3133/tm6D4
       data-min: 0
       data-max: 344.4
       data-units: watts per square meter
@@ -290,7 +311,7 @@ entities:
       data-units: meters
 
   -
-    data-name: 'reanalysis_gefs_drb.csv'
+    data-name: reanalysis_gefs_drb.zip
     data-description: >-
       NOAA GEFSv12.0 reforecast data for the 00 UTC forecast cycle spanning the period 2000-01-01 to 2019-12-31.
       These data are aggregated to the daily scale and NOAA GEFS grid cells are matched to the centroid of the target stream segment. The target stream segment
@@ -350,9 +371,9 @@ entities:
       attr-def: >-
         Valid date of the forecast
       attr-defs: This data release
-      data-min: 2000-01-01
-      data-max: 2019-12-31
-      data-units: date
+      data-min: 20000101
+      data-max: 20191231
+      data-units: NA
     -
       attr-label: seg_id_nat
       attr-def: >-
@@ -388,12 +409,12 @@ entities:
       data-units: decimal fraction
 
   -
-    data-name: 'gridmet_drb_agg.csv.zip'
+    data-name: gridmet_drb_agg_csv.zip
     data-description: >-
-      Tabular aggregated version of the GridMET data collected for the DRB contains spatial meterological data from 1979 to 2022, in daily time steps. This data is maintained and collected by the Climatology lab (https://www.climatologylab.org/gridmet.html).
+      Tabular aggregated version of the GridMET data collected for the DRB contains spatial meterological data from 1979 to 2022, in daily time steps. This data is maintained and collected by the Climatology Lab (https://www.climatologylab.org/gridmet.html).
       The data is aggregated to PRMS river reach scale (from NHM hydrologic response units) through an area-weighted mean, such that each segment evaluated in this study has associated meteorological data at daily time-steps since 01-01-1979.
       The meteorological data variables used in this study include temperature, radiation, wind speed, precipitation, and humidity measurements, derived from GridMET's original 4-square kilometer gridded measurements.
-      The aggregated csv version of this dataset is used for training the deep learning models in this study.
+      The aggregated version of this dataset provides model-ready data because it contains one value per reach-day.
 
     attributes:
     -
@@ -411,8 +432,8 @@ entities:
       attr-def: >-
         date
       attr-defs: https://doi.org/10.1002/joc.3413
-      data-min: 1979-01-01
-      data-max: 2022-04-05
+      data-min: 19790101
+      data-max: 20220405
       data-units: NA
     -
       attr-label: tmmn
@@ -480,9 +501,9 @@ entities:
       data-units: kg/kg
 
   -
-    data-name: 'gridmet_drb_agg_csv.nc.zip'
+    data-name: gridmet_drb_agg_nc.zip
     data-description: >-
-      NetCDF format is the same as the tabular format of the GridMET data described above. This data is aggregated through area weighted mean to the HRU polygons of the DRB.
+      NetCDF format of the GridMET data in tabular format as data described above (gridmet_drb_agg_csv.zip). This data is aggregated through area weighted mean to the HRU polygons of the DRB.
       The spatial version of the GridMET data (with netcdf extension) is used to run the PRMS-SNTemp model.
 
     attributes:
@@ -490,7 +511,7 @@ entities:
       attr-label: hru_lat
       attr-def: >-
         Latitude of HRU centroid
-      attr-defs: https://doi.org/10.1002/joc.3413
+      attr-defs: This data release
       data-min: NA
       data-max: NA
       data-units: degrees north
@@ -498,7 +519,7 @@ entities:
       attr-label: hru_lon
       attr-def: >-
         Longitude of HRU centroid
-      attr-defs: https://doi.org/10.1002/joc.3413
+      attr-defs: This data release
       data-min: NA
       data-max: NA
       data-units: degrees east
@@ -516,9 +537,9 @@ entities:
       attr-def: >-
         Date
       attr-defs: NA
-      data-min: 1979-01-01
-      data-max: 2022-04-05
-      data-units: date
+      data-min: 19790101
+      data-max: 20220405
+      data-units: NA
     -
       attr-label: tmmn
       attr-def: >-
@@ -587,7 +608,15 @@ entities:
 
 build-environment: Multiple computer systems were used to generate these data, including Windows, OSX, and linux. The open source languages R and Python was used on all systems.
 
-process-date: 20220504
+process-date: !expr format(Sys.time(),'%Y%m%d')
+process-description: >-
+  The modeling framework for process-based flow and temperature prediction is a coupled hydrologic-thermodynamic model that
+  uses inputs of reach-specific properties and local meteorology to estimate flow and water temperature.
+  Our chosen process-based stream model is the open source, Precipitation Runoff Modeling System (PRMS) with
+  the coupled Stream Network Temperature Model (SNTemp) version 5.1.0 RC (Markstron, 2012; Regan et al. 2017).
+  PRMS is a deterministic model that simulates watershed hydrology as a function of climate and land use,
+  and the coupled SNTemp module simulates the change in stream temperature as a function of changes in hydrology
+  and energy.
 indirect-spatial: U.S.A.
 latitude-res: 0.1
 longitude-res: 0.1
