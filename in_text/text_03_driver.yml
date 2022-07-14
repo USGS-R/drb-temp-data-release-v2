@@ -11,7 +11,7 @@ abstract: >-
   Additionally, inputs and outputs from an uncalibrated process-based stream temperature model (PRMS-SNTemp) are included.
 
 cross-cites:
-   -
+  -
     authors: ['Jacob A. Zwart', 'XX']
     title: >-
       XX title of forecast code
