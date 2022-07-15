@@ -11,7 +11,7 @@ abstract: >-
   Additionally, inputs and outputs from an uncalibrated process-based stream temperature model (PRMS-SNTemp) are included.
 
 cross-cites:
-   -
+  -
     authors: ['Jacob A. Zwart', 'XX']
     title: >-
       XX title of forecast code
@@ -33,7 +33,6 @@ cross-cites:
     pubdate: 2017
     form: publication
     link: https://doi.org/10.3133/tm6D4
-
   -
     authors: ['John T. Abatzoglou']
     title: >-
@@ -53,7 +52,6 @@ cross-cites:
       Preliminary spatial parameters for PRMS based on the Geospatial Fabric, NLCD2001 and SSURGO
     pubdate: 2014
     link: http://dx.doi.org/doi:10.5066/F7WM1BF7
-
   -
     authors: ['NA']
     title: >-
