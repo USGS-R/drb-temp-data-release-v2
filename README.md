@@ -5,7 +5,7 @@ A data release to support temperature modeling in the Delaware River Basin (2nd 
 ## Running pipeline and pushing to science base from Caldera: 
 
 * Log into tallgrass (`ssh username@tallgrass.cr.usgs.gov`)
-* Navigate to `/caldera/projects/usgs/water/iidd/datasci/data_releases/drb-temp-data-release-v2`
+* Navigate to the data science branch dir in `/datasci/data_releases/drb-temp-data-release-v2`
 * Run `git pull` to make sure latest changes from the remote repo are in the caldera repo
 * Open R using srun 
   * If you are in the repo base dir (as above), then you can run:
