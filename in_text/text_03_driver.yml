@@ -14,7 +14,7 @@ cross-cites:
   -
     authors: ['Jacob A. Zwart', 'Samantha K. Oliver', 'William D. Watkins','Jeffrey Sadler','Alison P. Appling','Hayley Corson-Dosch','Xiaowei Jia','Vipin Kumar','Jordan S. Read']
     title: >-
-      Source code: Near-term forecasts of stream temperature using process-guided deep learning and data assimilation [TBD - this will be link to new source code in a level 1 revision]
+      Source code: Near-term forecasts of stream temperature using process-guided deep learning and data assimilation
     pubdate: 2021
     form: publication
     link: https://zenodo.org/record/5786612#.YtG75MZlBYx
@@ -97,7 +97,7 @@ entities:
       model predictions. The file contain inputs/outputs from all 456 stream reaches in the
       Delaware River Basin modeling network.
 
-      Code used to generate these inputs and outputs can be found in the repository "run-prms-sntemp" in Zwart and others 2022 (XX - update with new citation).
+      Code used to generate these inputs and outputs can be found in the repository "run-prms-sntemp" in Zwart and others 2021 (XX - update with new citation).
 
       There are two error codes in PRMS-SNTemp v5.1.0_rc that can be present in the
       seg_tave_water and seg_tave_upstream attributes indicating no streamflow for the current
