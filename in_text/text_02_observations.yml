@@ -16,9 +16,11 @@ abstract: >-
   The data are formatted as a single csv (comma separated values) or zipped csv.
 
 
-  Site observation data was matched to stream reach segments, and the data files included contain identifiers for
+
+  Site observation data were matched to stream reach segments, and the data files included contain identifiers for
   both observation sites and affiliated stream reaches. Please see metadata for <li><a href="https://www.sciencebase.gov/catalog/item/623e54c4d34e915b67d83580"> 1) Spatial data for rivers, reservoirs, and monitoring
   locations </a> for further information on how monitoring location sites were matched to river segments.</li>
+
 
 
   For modeling purposes, we created a holdout test set of flow and temperature observations that were
