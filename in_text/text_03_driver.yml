@@ -525,7 +525,7 @@ entities:
     -
       attr-label: geomid
       attr-def: >-
-        Local model hru id. This attribute is a product of the xarray package through the regridding of the meteorological spatial data (raster format) to the spatial polygon input. For this study, the spatial polygon input is the Delaware River Basin PRMS HRU polygon geopackage. 
+        Local model hru id. This attribute is a product of the xarray package through the regridding of the meteorological spatial data (raster format) to the spatial polygon input. For this study, the spatial polygon input is the Delaware River Basin PRMS HRU polygon geopackage.
         This ID attribute is used to match back to the PRMS HRU IDs of catchment geopackage, to 1) run PRMS-SNTemp and to 2) produce the gridmet_drb_agg.csv.
       attr-defs: https://doi.org/10.1002/joc.3413
       data-min: NA
