@@ -2,14 +2,14 @@ title: >-
   Data to support water quality modeling efforts in the Delaware River Basin
 
 abstract: >-
-  <p> This data release contains information to support water quality modeling in the Delaware River Basin (DRB).
+  This data release contains information to support water quality modeling in the Delaware River Basin (DRB).
   These data support both process-based and machine learning approaches to water quality modeling, including
   the prediction of stream temperature. Reservoirs in the DRB serve an important role as a source of drinking
   water, but also affect downstream water quality. Therefore, this data release includes data that
   characterize both rivers and a subset of reservoirs in the basin. This release provides an update
   to many of the files provided in a previous data release (Oliver et al., 2021).
 
-  <p> The data are stored in 3 child folders: 1) spatial information, 2) observations, and 3) model driver data.</p>
+  The data are stored in 3 child folders: 1) spatial information, 2) observations, and 3) model driver data.
 
   <li><a href="https://www.sciencebase.gov/catalog/item/623e54c4d34e915b67d83580"> 1) Spatial Information </a>- Spatial data used for modeling efforts in the Delaware River Basin</li> -
   a shapefile of polylines for the river segments, point data for observation locations, and polygons for the three (Pepacton, Cannonsville, and Neversink) reservoirs in this dataset.
@@ -20,8 +20,7 @@ abstract: >-
   includes the inputs and outputs of an uncalibrated run of PRMS-SNTemp which predicts mean water temperature
   at all reaches in the DRB.
 
-
-  <p> This data compilation was funded by the USGS.</p>
+  This data compilation was funded by the USGS.
 
 cross-cites:
   -
