@@ -1,3 +1,5 @@
+Active development moved to https://code.usgs.gov/wma/wp/data-releases/drb-temp-data-release-v2
+
 # drb-temp-data-release-v2
 A data release to support temperature modeling in the Delaware River Basin (2nd iteration)
 
